@@ -11,7 +11,7 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-<img alt="Layout" src="https://res.cloudinary.com/dovu0ma4y/image/upload/v1602012205/newjob/agrilogo_w81ydc.png>
+<img alt="Layout" src="https://res.cloudinary.com/dovu0ma4y/image/upload/v1602012205/newjob/agrilogo_w81ydc.png">
 
 ## 🎓 Sobre o projeto
 
