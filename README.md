@@ -11,17 +11,17 @@
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-<img alt="Layout" src="https://res.cloudinary.com/eliasgcf/image/upload/v1586302738/assets/previewApp_fnt7hm.png">
+<img alt="Layout" src="https://res.cloudinary.com/dovu0ma4y/image/upload/v1602012205/newjob/agrilogo_w81ydc.png>
 
-## 👨🏻‍💻 Sobre o projeto
+## 🎓 Sobre o projeto
 
-- <p style="color: red;">(explicação do projeto</p>
+- <p style="color: red;">(explicação do projeto)</p>
 
-## 🚀 Tecnologias
+## 🚜 Tecnologias
 
 Tecnologias usadas na construção do projeto.
 
-- [Vue.js](https://nodejs.org/en/)
+- [Vue.js](https://vuejs.org/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
@@ -34,7 +34,7 @@ Tecnologias usadas na construção do projeto.
 **Clone o projeto e acesse a pasta**
 
 ```bash
-$ git clone ssh://git@git.fabricadesoftware.ifc.edu.br:1022/newjob/newjob.git && cd newJob
+$ git clone ssh://git@git.fabricadesoftware.ifc.edu.br:1022/newjob/newjob.git && cd newjob
 ```
 
 **Siga os passos abaixos**
