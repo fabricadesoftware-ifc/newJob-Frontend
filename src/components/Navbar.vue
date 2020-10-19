@@ -1,5 +1,5 @@
 <template>
-  <b-navbar>
+  <b-navbar class="is-white">
     <template slot="brand">
       <b-navbar-item tag="router-link" :to="{ path: '/' }">
         <img
@@ -12,20 +12,9 @@
       <b-navbar-item href="#">
         <router-link to="/">Home </router-link>
       </b-navbar-item>
-
-      <b-navbar-dropdown label="Info">
-        <b-navbar-item>
-          <router-link :to="'/about'">
-            About
-          </router-link>
-        </b-navbar-item>
-        <b-navbar-item href="#">
-          Contact
-        </b-navbar-item>
-      </b-navbar-dropdown>
     </template>
 
-    <template slot="end">
+    <template slot="end ">
       <b-navbar-item tag="div">
         <div class="buttons">
           <a class="button has-background-success">

@@ -2,7 +2,7 @@
   <div class="card ">
     <div class="card-image">
       <figure class="image is-4by3">
-        <img :src="job.img" alt="Placeholder image" />
+        <img class="card-image" :src="job.img" alt="Placeholder image" />
       </figure>
     </div>
     <div class="card-content">
@@ -13,19 +13,31 @@
       </div>
       <strong>{{ job.date }}</strong>
       <br />
-
+      <button><Modal :job="job" /></button>
       <div class="content">
         {{ job.description }}
-        <br />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Modal from './Modal'
 export default {
+  components: { Modal },
   props: { job: Object }
 }
 </script>
 
-<style></style>
+<style>
+.card {
+  /* background-color: #d3d3d3; */
+  background-color: #0000;
+  color: #0000;
+}
+
+.card-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+</style>

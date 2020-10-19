@@ -1,7 +1,9 @@
 '<template>
   <div class="home">
     <!-- <Carousel /> -->
-    <CardGrid />
+    <div class="container mt-4">
+      <CardGrid />
+    </div>
   </div>
 </template>
 
