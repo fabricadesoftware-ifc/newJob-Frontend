@@ -18,7 +18,7 @@ export default {
           id: 1,
           company: 'IFC',
           img:
-            'https://64.media.tumblr.com/7c34747877409694e112bc2f772fdfed/c9b392ccbf2098ab-62/s640x960/876be844c75bc0133e3bc24c0f9b1349c4022877.jpg',
+            'https://64.media.tumblr.com/579fe09790669fac0ec89720631da87b/tumblr_oqrikjbSCw1vmg74ho1_400.jpg',
           date: '10-10-2020',
           description: 'Descrição 1 Descrição 1 Descrição 1 '
         },
