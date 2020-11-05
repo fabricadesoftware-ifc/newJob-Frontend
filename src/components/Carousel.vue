@@ -9,10 +9,12 @@
       :icon-next="iconNext"
       :icon-size="iconSize"
     >
-      <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-        <section :class="`hero is-medium is-${carousel.color}`">
+      <b-carousel-item v-for="(job, i) in jobs" :key="i">
+        <section :class="`hero is-medium is-success`">
           <div class="hero-body has-text-centered">
-            <h1 class="title">{{ carousel.title }}</h1>
+            <h1 class="title">{{ job.company }}</h1>
+            <p>{{ job.description }}</p>
+            <small> postada: {{ job.date }}</small>
           </div>
         </section>
       </b-carousel-item>
@@ -23,6 +25,7 @@
 <script>
 export default {
   name: 'Carousel',
+  props: { jobs: Array },
   data() {
     return {
       arrow: true,
@@ -31,13 +34,7 @@ export default {
       iconPack: 'mdi',
       iconPrev: 'arrow-left',
       iconNext: 'arrow-right',
-      iconSize: 'is-small',
-      carousels: [
-        { title: 'Vaga 1', color: 'info' },
-        { title: 'Vaga 2', color: 'success' },
-        { title: 'Vaga 3', color: 'warning' },
-        { title: 'Vaga 4', color: 'danger' }
-      ]
+      iconSize: 'is-small'
     }
   }
 }
