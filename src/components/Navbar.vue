@@ -17,16 +17,16 @@
       </b-navbar-item>
     </template>
 
-    <template slot="end ">
+    <template slot="end">
       <b-navbar-item tag="div">
-        <div class="buttons">
-          <a class="button has-background-success">
-            <strong>Sign up</strong>
-          </a>
-          <a class="button is-light">
-            Log in
-          </a>
-        </div>
+        <a class="button is-light">
+          <router-link to="/login">Entrar</router-link>
+        </a>
+      </b-navbar-item>
+      <b-navbar-item tag="div">
+        <a class="button has-background-success">
+          <router-link to="/signup"><strong>Cadastre-se</strong></router-link>
+        </a>
       </b-navbar-item>
     </template>
   </b-navbar>
