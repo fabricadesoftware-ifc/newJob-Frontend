@@ -1,6 +1,9 @@
 <template>
-  <div class="columns center is-one-third">
-    <div v-for="column in columnNumber" :key="column" class="column">
+  <div class="center is-one-third columns">
+    <div>
+      <SideMenu class="column" />
+    </div>
+    <div class="column">
       <Card v-for="job in content" :key="job.id" :job="job" />
     </div>
   </div>
@@ -8,9 +11,10 @@
 
 <script>
 import Card from './Card'
+import SideMenu from './SideMenu'
 export default {
   name: 'CardGrid',
-  components: { Card },
+  components: { Card, SideMenu },
   props: { content: Array },
   computed: {
     columnNumber: function() {
