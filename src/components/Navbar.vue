@@ -31,3 +31,9 @@
     </template>
   </b-navbar>
 </template>
+
+<style scoped>
+.nav-color {
+  background-color: aquamarine;
+}
+</style>

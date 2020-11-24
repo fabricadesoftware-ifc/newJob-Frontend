@@ -2,46 +2,44 @@
   <div class="tile is-ancestor">
     <div class="tile is-4 is-vertical is-parent">
       <div class="tile is-child box">
-        <p class="title">Titulo 1</p>
+        <p class="title">facere-amet-dignissimos</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare
-          magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa
-          sem. Etiam finibus odio quis feugiat facilisis.
+          Excepturi minus nam quia enim est commodi occaecati unde ut. Iusto
+          eligendi pariatur. Atque sit quibusdam et tempore id ut tempore rerum.
+          Suscipit in velit. Corporis quia consequatur id eum mollitia.
         </p>
       </div>
       <div class="tile is-child box">
-        <p class="title">Titulo 2</p>
+        <p class="title">Omnis dolores officiis nam et accusantium.</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare
-          magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa
-          sem. Etiam finibus odio quis feugiat facilisis.
+          Qui quibusdam numquam et consequatur maiores. Voluptatem dicta dolorum
+          consequatur accusantium consequatur autem sapiente molestiae possimus.
+          Veniam rerum vero eveniet veritatis voluptatem aliquid voluptas.
+          Repudiandae beatae consequatur doloremque qui sint impedit nobis. Id
+          vel modi vero non asperiores sit quia est. Explicabo sapiente non
+          possimus quos id quis alias.
         </p>
       </div>
     </div>
     <div class="tile is-parent">
       <div class="tile is-child box">
-        <p class="title">Titulo 3</p>
+        <p class="title">Fugiat voluptates dolore</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
-          diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat
-          tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo
-          sit amet vehicula eleifend, nunc dui porta orci, quis semper odio
-          felis ut quam.
+          Exercitationem voluptatem inventore maiores repudiandae dolorem itaque
+          repellendus repudiandae aliquam. Assumenda eveniet est cumque. Aut
+          iusto tenetur perferendis aliquid numquam voluptas et.
         </p>
         <p>
-          Suspendisse varius ligula in molestie lacinia. Maecenas varius eget
-          ligula a sagittis. Pellentesque interdum, nisl nec interdum maximus,
-          augue diam porttitor lorem, et sollicitudin felis neque sit amet erat.
-          Maecenas imperdiet felis nisi, fringilla luctus felis hendrerit sit
-          amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget
-          varius ligula, at volutpat tortor.
+          Consequatur molestiae atque. Quibusdam praesentium qui veniam
+          perspiciatis rerum ad adipisci quod. Necessitatibus voluptatem qui
+          deserunt natus.
         </p>
         <p>
-          Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus
-          erat, vitae congue lectus dolor consequat libero. Donec leo ligula,
-          maximus et pellentesque sed, gravida a metus. Cras ullamcorper a nunc
-          ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
-          semper leo.
+          Voluptatem pariatur sunt. Ipsa temporibus fugiat nulla necessitatibus
+          libero explicabo eos. Itaque porro corporis est qui qui natus quis et.
+          Facilis tenetur debitis sed repudiandae voluptatem. Suscipit nostrum
+          id qui culpa et earum nulla. Qui sit esse non voluptatem rem iure
+          neque tempore.
         </p>
       </div>
     </div>

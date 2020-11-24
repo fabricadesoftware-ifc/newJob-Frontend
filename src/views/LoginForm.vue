@@ -57,18 +57,18 @@ export default {
 </script>
 
 <style scoped>
-.login-form {
+/* .login-form {
   background-color: #e1e1e1;
 }
 
 .login-form .form {
   width: 55%;
-  /* background-color: #aaaaaa; */
+  background-color: #aaaaaa;
 }
 
 @media screen and (max-width: 700px) {
   .form {
     width: 85%;
   }
-}
+} */
 </style>

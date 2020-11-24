@@ -1,6 +1,6 @@
 <template>
-  <section class="login-form mt-2">
-    <div class="form container">
+  <section class="login-form ">
+    <div class="form container mt-2">
       <b-field label="Nome" :type="types.name" :message="messages.name">
         <b-input placeholder="Nome" v-model="name"></b-input>
       </b-field>
@@ -83,10 +83,10 @@ export default {
 </script>
 
 <style scoped>
-.login-form {
-  background-color: #e1e1e1;
-  /* background-color: #000000; */
-}
+/* .login-form { */
+/* background-color: #e1e1e1; */
+/* background-color: #000000; */
+/* } */
 
 /* .login-form .form {
   width: 55%;
