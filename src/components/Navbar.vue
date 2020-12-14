@@ -10,22 +10,24 @@
     </template>
     <template slot="start">
       <b-navbar-item href="#">
-        <router-link to="/">Inicio</router-link>
+        <router-link class="nav-text" to="/">Inicio</router-link>
       </b-navbar-item>
       <b-navbar-item href="#">
-        <router-link to="/jobs">Vagas</router-link>
+        <router-link class="nav-text" to="/jobs">Vagas</router-link>
       </b-navbar-item>
     </template>
 
     <template slot="end">
       <b-navbar-item tag="div">
-        <a class="button is-light">
-          <router-link to="/login">Entrar</router-link>
+        <a class="button">
+          <router-link class="nav-text" to="/login">Entrar</router-link>
         </a>
       </b-navbar-item>
       <b-navbar-item tag="div">
-        <a class="button has-background-success">
-          <router-link to="/signup"><strong>Cadastre-se</strong></router-link>
+        <a class="button has-background-grey-lighter">
+          <router-link class="nav-text" to="/signup"
+            ><strong>Cadastre-se</strong></router-link
+          >
         </a>
       </b-navbar-item>
     </template>
@@ -35,5 +37,9 @@
 <style scoped>
 .nav-color {
   background-color: aquamarine;
+}
+
+.nav-text {
+  color: black;
 }
 </style>

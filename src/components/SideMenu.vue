@@ -4,7 +4,7 @@
       Geral
     </p>
     <ul class="menu-list">
-      <li><a>Inicio</a></li>
+      <li><router-link class="nav-text" to="/">Inicio</router-link></li>
       <li><a>Perfil</a></li>
     </ul>
     <p class="menu-label">
