@@ -10,17 +10,12 @@
 </template>
 
 <script>
-import Card from './Card'
+import Card from './JobCard'
 import SideMenu from './SideMenu'
 export default {
   name: 'CardGrid',
   components: { Card, SideMenu },
-  props: { content: Array },
-  computed: {
-    columnNumber: function() {
-      return Math.round(this.content.length / 2)
-    }
-  }
+  props: { content: Array }
 }
 </script>
 

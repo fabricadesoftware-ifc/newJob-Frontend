@@ -1,11 +1,11 @@
 <template>
   <div class="card columns mb-5">
-    <div class="column card-image is-one-fifth">
+    <!-- <div class="column card-image is-one-fifth">
       <figure class="image is-1by1">
         <img class="card-image" :src="job.img" alt="Placeholder image" />
       </figure>
       <small>Data de anúncio: {{ job.date }}</small>
-    </div>
+    </div> -->
     <div class="card-content column">
       <div class="media">
         <div class="media-content">

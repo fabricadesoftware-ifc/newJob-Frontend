@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Navbar class="is-fixed-top" />
     <router-view />
-    <Footer />
+    <Footer class="is-align-content-end" />
   </div>
 </template>
 
