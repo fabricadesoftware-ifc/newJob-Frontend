@@ -48,6 +48,8 @@
 </template>
 
 <script>
+// import api from '@/services/api'
+
 export default {
   data() {
     return {
@@ -77,7 +79,8 @@ export default {
       console.log(this.username)
       console.log(this.password)
       console.log(this.gender)
-    }
+    },
+    mount() {}
   }
 }
 </script>

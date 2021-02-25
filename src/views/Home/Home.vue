@@ -1,5 +1,6 @@
 '<template>
   <div class="home">
+    <Navbar class="is-fixed-top" />
     <Hero
       msg="Eos aperiam in non facilis vitae repellendus sequi vel molestiae. Quo voluptas facere fugiat adipisci molestiae quia. Eum inventore non. Itaque ut aliquid et rerum. Nihil fugit aut qui."
       title="New Job AgriBusiness"
@@ -17,18 +18,19 @@
 </template>
 
 <script>
-import Hero from '../components/Hero'
-import Contact from '../components/Contact'
-import Tiles from '../components/Tiles'
-import Supporters from '../components/Supporters.vue'
+import Hero from '@/components/Hero'
+import Contact from '@/components/Contact'
+import Tiles from '@/components/Tiles'
+import Supporters from '@/components/Supporters.vue'
+import Navbar from '@/components/Navbar.vue'
 export default {
   name: 'Home',
-  components: { Hero, Contact, Tiles, Supporters }
+  components: { Hero, Contact, Tiles, Supporters, Navbar }
 }
 </script>
 
 <style>
-.home {
-  /* background-color: lightgray; */
-}
+/* .home {
+  background-color: lightgray;
+} */
 </style>

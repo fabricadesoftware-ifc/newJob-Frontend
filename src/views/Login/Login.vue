@@ -1,5 +1,5 @@
 <template>
-  <section class="login-form mt-2">
+  <section class="login-form mt-3">
     <div class="form container">
       <b-field
         label="Usuário ou Email"
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import api from '@/services/api'
 export default {
   data() {
     return {
@@ -47,10 +48,29 @@ export default {
     }
   },
   methods: {
-    log() {
-      console.log(this.username)
-      console.log(this.email)
-      console.log(this.password)
+    async log() {
+      try {
+        const response = await api.post('token/', {
+          email: this.email,
+          password: this.password
+        })
+        console.log(response.data.access)
+        localStorage.setItem('token', `Bearer ${response.data.access}`)
+
+        const profile = await api.get('v1/accounts/profile/', {
+          headers: {
+            Authorization: `${localStorage.getItem('token')}`
+          }
+        })
+        console.log(profile)
+      } catch (e) {
+        // console.log(e)
+        this.messages.password = 'Email ou Senha incorretos'
+        this.types.email = 'is-danger'
+        this.types.password = 'is-danger'
+      }
+
+      // console.log(`${response.data}`)
     }
   }
 }

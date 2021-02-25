@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home/Home.vue'
 import JobGrid from '../views/JobGrid.vue'
-import LoginForm from '../views/LoginForm.vue'
-import Signup from '../views/Signup.vue'
+import LoginForm from '../views/Login/Login.vue'
+import Signup from '../views/Signup/Signup.vue'
 import JobRegistration from '../views/JobRegistration.vue'
 
 Vue.use(VueRouter)
