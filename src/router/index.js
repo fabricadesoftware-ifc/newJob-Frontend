@@ -1,49 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home/Home.vue'
-import JobGrid from '../views/JobGrid.vue'
-import LoginForm from '../views/Login/Login.vue'
-import Signup from '../views/Signup/Signup.vue'
-import JobRegistration from '../views/JobRegistration.vue'
+import Home from '../views/Home/routes'
+import Jobs from '../views/JobsGrid/routes'
+import Login from '../views/Login/routes'
+import Signup from '../views/Signup/routes'
+import JobRegistration from '../views/JobRegister/routes'
+import About from '../views/About/routes'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/jobs',
-    name: 'JobGrid',
-    component: JobGrid
-  },
-  {
-    path: '/login',
-    name: 'LoginForm',
-    component: LoginForm
-  },
-  {
-    path: '/signup',
-    name: 'Signup',
-    component: Signup
-  },
-  {
-    path: '/job-registration',
-    name: 'JobRegistration',
-    component: JobRegistration
-  }
-]
+const routes = [Home, About, Jobs, Login, Signup, JobRegistration]
 
 const router = new VueRouter({
   mode: 'history',
