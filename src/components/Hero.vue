@@ -3,7 +3,7 @@
     <div class="hero-body">
       <div class="container has-text-centered has-text-white">
         <h1 class="title has-text-white">{{ title }}</h1>
-        <p>{{ msg }}</p>
+        <span>{{ msg }}</span>
         <slot></slot>
       </div>
     </div>

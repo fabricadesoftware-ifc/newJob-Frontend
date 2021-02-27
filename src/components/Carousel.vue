@@ -13,8 +13,9 @@
         <section :class="`hero is-medium is-success`">
           <div class="hero-body has-text-centered">
             <h1 class="title">{{ job.company }}</h1>
-            <p>{{ job.description }}</p>
-            <small> postada: {{ job.date }}</small>
+            <span>{{ job.description }}</span>
+            <br />
+            <small> Postada: {{ job.date }}</small>
           </div>
         </section>
       </b-carousel-item>
@@ -39,3 +40,5 @@ export default {
   }
 }
 </script>
+
+c
