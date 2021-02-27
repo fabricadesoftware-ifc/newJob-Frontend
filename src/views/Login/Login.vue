@@ -22,13 +22,14 @@
         ></b-input>
       </b-field>
 
-      <b-button @click="log" type="is-primary" outlined>Entrar</b-button>
+      <b-button @click="handleLog" type="is-primary" outlined>Entrar</b-button>
     </div>
   </section>
 </template>
 
 <script>
 import api from '@/services/api'
+import { mapActions } from 'vuex'
 export default {
   data() {
     return {
@@ -47,8 +48,10 @@ export default {
       password: ''
     }
   },
+
   methods: {
-    async log() {
+    ...mapActions('auth', ['ActionSetUser']),
+    async handleLogIn() {
       try {
         const response = await api.post('token/', {
           email: this.email,
@@ -64,13 +67,17 @@ export default {
         })
         console.log(profile)
       } catch (e) {
-        // console.log(e)
         this.messages.password = 'Email ou Senha incorretos'
         this.types.email = 'is-danger'
         this.types.password = 'is-danger'
       }
-
-      // console.log(`${response.data}`)
+    },
+    async handleLog() {
+      this.ActionSetUser({
+        username: this.username,
+        email: this.email,
+        password: this.password
+      }).then(res => console.log(res))
     }
   }
 }
