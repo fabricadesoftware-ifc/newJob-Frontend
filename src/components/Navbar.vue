@@ -23,7 +23,11 @@
           <router-link class="nav-text" to="/login">Entrar</router-link>
         </a>
       </b-navbar-item>
-      <h1 v-else>foto aqui</h1>
+      <a v-else @click="handleProfile">
+        <figure class="image is-32x32">
+          <img src="https://bulma.io/images/placeholders/128x128.png" />
+        </figure>
+      </a>
       <b-navbar-item tag="div">
         <a v-if="!token" class="button has-background-grey-lighter">
           <router-link class="nav-text" to="/signup"
@@ -45,12 +49,16 @@
 </template>
 
 <script>
-import api from '../services/api'
+// import { APIProfileGet } from '../services/api'
+import { mapGetters } from 'vuex'
 
 export default {
+  computed: {
+    ...mapGetters({ token: 'auth/hasToken' })
+  },
   data() {
     return {
-      token: false,
+      //   token: false,
       picture: null
     }
   },
@@ -58,26 +66,10 @@ export default {
     handleLogout() {
       localStorage.removeItem('token')
       console.log('token removido')
-    }
-  },
-  async mounted() {
-    const token = localStorage.getItem('token')
-    // console.log(token)
-    if (token) {
-      console.log('tem token')
-      this.token = true
-
-      const profile = await api.get('v1/accounts/profile/', {
-        headers: {
-          Authorization: `${localStorage.getItem('token')}`
-        }
-      })
-
-      console.log(profile.data.avatar)
-      //   if (profile.data.avatar === null) {
-      //   }
-    } else {
-      this.token = false
+      this.$router.push({ name: 'Home' })
+    },
+    handleProfile() {
+      this.$router.push({ name: 'Profile' })
     }
   }
 }
