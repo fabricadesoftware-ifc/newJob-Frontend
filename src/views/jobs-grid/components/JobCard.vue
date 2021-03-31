@@ -16,7 +16,7 @@
         {{ job.description }}
       </div>
       <br />
-      <button><Modal :job="job" /></button>
+      <Modal type="button" :job="job" />
     </div>
   </div>
 </template>
