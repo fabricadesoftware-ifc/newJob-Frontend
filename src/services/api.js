@@ -24,7 +24,7 @@ const APIProfileGet = async payload =>
   })
 
 const APIFilePost = async payload => {
-  await api.get('v1/files/images/', payload.file)
+  await api.get('v1/files/images/', payload)
 }
 
 const APIProfilePut = async payload => {
