@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Hero from '@/components/Hero'
+import Hero from '@/views/home/components/Hero'
 import Contact from '@/components/Contact'
-import Tiles from '@/components/Tiles'
-import Supporters from '@/components/Supporters.vue'
+import Tiles from '@/views/home/components/Tiles'
+import Supporters from '@/views/home/components/Supporters.vue'
 import Navbar from '@/components/Navbar.vue'
 export default {
   name: 'Home',

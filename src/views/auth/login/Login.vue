@@ -1,5 +1,6 @@
 <template>
   <section class="login-form mt-3">
+    <div class="title">Login</div>
     <div class="form container">
       <b-field
         label="Usuário ou Email"
@@ -20,6 +21,11 @@
           v-model="form.password"
           password-reveal
         ></b-input>
+      </b-field>
+      <b-field>
+        <a @click="$router.push('/signup')"
+          ><small>Não possui conta? Cadastre-se</small></a
+        >
       </b-field>
 
       <b-button @click="handleLogin" type="is-primary" outlined
@@ -61,15 +67,7 @@ export default {
           email: this.email,
           password: this.password
         })
-        console.log(response.data.access)
         localStorage.setItem('token', `Bearer ${response.data.access}`)
-
-        const profile = await api.get('v1/accounts/profile/', {
-          headers: {
-            Authorization: `${localStorage.getItem('token')}`
-          }
-        })
-        console.log(profile)
       } catch (e) {
         this.messages.password = 'Email ou Senha incorretos'
         this.types.email = 'is-danger'
@@ -79,7 +77,7 @@ export default {
     async handleLogin() {
       try {
         await this.ActionDoLogin(this.form)
-        this.$router.push({ path: 'Home' })
+        this.$router.push({ path: '/' })
       } catch (err) {
         alert(err ? err.message : 'oi')
       }

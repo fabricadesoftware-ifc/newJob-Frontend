@@ -10,11 +10,10 @@
 </template>
 
 <script>
-import Carousel from '@/components/Carousel'
-import CardGrid from '@/components/CardGrid'
-import SideMenu from '@/components/SideMenu'
+import Carousel from '@/views/jobs-grid/components/Carousel'
+import CardGrid from '@/views/jobs-grid/components/CardGrid'
 export default {
-  components: { Carousel, CardGrid, SideMenu },
+  components: { Carousel, CardGrid },
   data() {
     return {
       content: [

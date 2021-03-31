@@ -1,5 +1,6 @@
 <template>
   <section class="login-form ">
+    <h1 class="title"><strong>Seu Perfil</strong></h1>
     <div class="form container mt-2">
       <b-field
         label="Primeiro Nome"
@@ -30,11 +31,7 @@
         :type="types.linkedin"
         :message="messages.linkedin"
       >
-        <b-input
-          placeholder="Url"
-          v-model="form.linkedin"
-          maxlength="30"
-        ></b-input>
+        <b-input placeholder="Url" v-model="form.linkedin"></b-input>
       </b-field>
 
       <b-field
@@ -45,11 +42,11 @@
         <b-input
           placeholder="Senha"
           type="password"
-          v-model="form.profile_title"
+          v-model="form.password"
           password-reveal
         ></b-input>
       </b-field>
-      <div class="center">
+      <div class="file-button mb-4">
         <b-field class="file is-primary" :class="{ 'has-name': !!file }">
           <b-upload v-model="file" class="file-label">
             <span class="file-cta">
@@ -61,13 +58,14 @@
             </span>
           </b-upload>
         </b-field>
-        <b-button @click="log" type="is-black" outlined>Salvar</b-button>
       </div>
+      <b-button @click="log" type="is-black" outlined>Salvar</b-button>
     </div>
   </section>
 </template>
 
 <script>
+// eslint-disable-next-line no-unused-vars
 import { APIFilePost, APIProfilePut } from '@/services/api'
 
 export default {
@@ -99,21 +97,24 @@ export default {
   },
   methods: {
     async log() {
-      console.log(this.form)
+      let newForm = {}
+
+      for (let field in this.form) {
+        if (this.form[field].trim() !== '') {
+          newForm[field] = this.form[field]
+        }
+      }
       console.log(this.file)
+
       if (this.file) {
         const response = await APIFilePost(this.file, {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         })
         console.log(response)
       }
-      const profile = await APIProfilePut(
-        { first_name: this.form.first_name, last_name: this.form.last_name },
-        {
-          Authorization: `Bearer ${localStorage.getItem('token')}`
-        }
-      )
-      console.log(profile)
+      //   await APIProfilePut(newForm, {
+      //     Authorization: `Bearer ${localStorage.getItem('token')}`
+      //   })
     },
     mount() {}
   }
@@ -136,4 +137,8 @@ export default {
     width: 85%;
   }
 } */
+.file-button {
+  display: flex;
+  justify-content: center;
+}
 </style>
