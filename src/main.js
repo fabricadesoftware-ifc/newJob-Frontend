@@ -11,17 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(fas)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.use(Buefy, { defaultIconPack: 'fas' })
-
-// Vue.use(Buefy, {
-//   defaultIconComponent: 'vue-fontawesome',
-//   defaultIconPack: 'fas'
-// })
-
-// Vue.use(Buefy, {
-//   defaultIconPack: 'fas',
-//   defaultContainerElement: '#content'
-// })
+Vue.use(Buefy, {
+  //   defaultIconPack: 'fas',
+  defaultContainerElement: '#content'
+})
 
 Vue.config.productionTip = false
 

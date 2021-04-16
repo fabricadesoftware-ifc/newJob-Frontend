@@ -1,66 +1,63 @@
 <template>
-  <!--
-
-  -Data de anuncio
-  -Deadline
-  -Empresa
-  -Local
-  -Vaga
-  -Área de atuação
-  -Link/COntato
- -->
-  <section class="registration-form mt-2">
+  <section class="job-form mt-3">
+    <p>
+      form: { company: '', job: '', contractType: '', jogDescription: '', local:
+      '', deadline: '' }
+    </p>
     <div class="form container">
-      <b-field
-        label="Data de Anúncio"
-        :type="types.name"
-        :message="messages.name"
-      >
-        <b-input placeholder="Nome" v-model="name"></b-input>
+      <b-field label="Empresa" :label-position="labelPosition">
+        <b-input v-model="form.company"></b-input>
       </b-field>
 
-      <b-field
-        label="Data Limite para Inscrição"
-        :type="types.email"
-        :message="messages.email"
-      >
-        <b-input placeholder="Email" type="email" v-model="email"></b-input>
+      <b-field class="mb-0" label="Cargo" :label-position="labelPosition">
+        <b-input v-model="form.job" maxlength="30"></b-input>
       </b-field>
 
-      <b-field
-        label="Usuário"
-        :type="types.username"
-        :message="messages.username"
-      >
-        <b-input
-          placeholder="Usuário"
-          v-model="username"
-          maxlength="30"
-        ></b-input>
-      </b-field>
-
-      <b-field
-        label="Senha"
-        :type="types.password"
-        :message="messages.password"
-      >
-        <b-input
-          placeholder="Senha"
-          type="password"
-          v-model="password"
-          password-reveal
-        ></b-input>
-      </b-field>
-
-      <b-field label="Gênero">
-        <b-select placeholder="Selecione um gênero" v-model="gender">
-          <option value="1">Feminino</option>
-          <option value="2">Masculino</option>
-          <option value="3">Não-binário</option>
-          <option value="0">Outro</option>
+      <b-field :label-position="labelPosition">
+        <b-select v-model="form.contractType" placeholder="Tipo de contrato">
+          <option value="1">CLT</option>
+          <option value="2">PJ</option>
+          <option value="3">Estágio</option>
         </b-select>
       </b-field>
-      <b-button @click="log" type="is-black" outlined>Enviar</b-button>
+
+      <b-field label="Descrição" :label-position="labelPosition">
+        <b-input
+          v-model="form.description"
+          maxlength="200"
+          type="textarea"
+        ></b-input>
+      </b-field>
+
+      <b-field label="Localidade" :label-position="labelPosition">
+        <b-autocomplete
+          v-model="form.local"
+          rounded
+          :data="['Araquari - SC', 'Joinville - SC', 'Campinas - RS']"
+          placeholder="Escolha o local"
+          icon="magnify"
+          clearable
+          @select="option => (selected = option)"
+        >
+          <template #empty>No results found</template>
+        </b-autocomplete>
+      </b-field>
+
+      <b-field
+        label="Até quando a vagas estara disponivel para candidatura?"
+        :label-position="labelPosition"
+      >
+        <b-datepicker
+          v-model="form.deadline"
+          placeholder="Click to select..."
+          icon="calendar-today"
+          trap-focus
+        >
+        </b-datepicker>
+      </b-field>
+      <b-button @click="handleSubmitForm" type="is-primary" outlined
+        >Entrar</b-button
+      >
     </div>
   </section>
 </template>
@@ -69,51 +66,27 @@
 export default {
   data() {
     return {
-      messages: {
-        name: '',
-        email: '',
-        username: '',
-        password: ''
-      },
-      types: {
-        name: '',
-        email: '',
-        username: '',
-        password: ''
-      },
-      name: '',
-      email: '',
-      username: '',
-      password: '',
-      gender: ''
+      labelPosition: 'on-border',
+      form: {
+        company: '',
+        job: '',
+        contractType: '',
+        description: '',
+        local: '',
+        deadline: []
+      }
     }
   },
   methods: {
-    log() {
-      console.log(this.name)
-      console.log(this.email)
-      console.log(this.username)
-      console.log(this.password)
-      console.log(this.gender)
+    handleSubmitForm() {
+      console.log('oi')
+      console.log(this.form.company)
+      console.log(this.form.job)
+      console.log(this.form.contractType)
+      console.log(this.form.description)
+      console.log(this.form.local)
+      console.log(this.form.deadline)
     }
   }
 }
 </script>
-
-<style scoped>
-.login-form {
-  background-color: #e1e1e1;
-  /* background-color: #000000; */
-}
-
-/* .login-form .form {
-  width: 55%;
-  background-color: #aaaaaa;
-}
-
-@media screen and (max-width: 700px) {
-  .form {
-    width: 85%;
-  }
-} */
-</style>
