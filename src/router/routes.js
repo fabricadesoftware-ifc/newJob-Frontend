@@ -5,5 +5,15 @@ import Signup from '../views/auth/signup/routes'
 import Profile from '../views/auth/profile/routes'
 import JobRegistration from '../views/job-register/routes'
 import About from '../views/about/routes'
+import JobDescription from '../views/job-description/routes'
 
-export default [Home, About, Jobs, Login, Signup, JobRegistration, Profile]
+export default [
+  Home,
+  About,
+  Jobs,
+  Login,
+  Signup,
+  JobRegistration,
+  Profile,
+  JobDescription
+]
