@@ -34,9 +34,13 @@
           <template #empty>No results found</template>
         </b-autocomplete>
       </b-field>
-
+      <b-field>
+        <a @click="$router.push('/signup')"
+          ><small>É pessoa física? Clique aqui</small></a
+        >
+      </b-field>
       <b-button @click="handleSubmitForm" type="is-primary" outlined
-        >Entrar</b-button
+        >Cadastrar</b-button
       >
     </div>
   </section>
