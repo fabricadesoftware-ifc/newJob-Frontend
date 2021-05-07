@@ -2,12 +2,8 @@
   <section class="login-form mt-3">
     <div class="title">Login</div>
     <div class="form container">
-      <b-field
-        label="Usuário ou Email"
-        :type="types.email"
-        :message="messages.email"
-      >
-        <b-input placeholder="Usuário ou Email" v-model="form.email"></b-input>
+      <b-field label="Email" :type="types.email" :message="messages.email">
+        <b-input placeholder="Email" v-model="form.email"></b-input>
       </b-field>
 
       <b-field

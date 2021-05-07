@@ -42,6 +42,11 @@
           <option value="0">Outro</option>
         </b-select>
       </b-field>
+      <b-field>
+        <a @click="$router.push('/company-register')"
+          ><small>É empresa? Clique aqui</small></a
+        >
+      </b-field>
       <b-button @click="log" type="is-black" outlined>Enviar</b-button>
     </div>
   </section>
