@@ -1,9 +1,20 @@
 import * as types from './mutation-types'
 import { APITokenPost, APIProfileGet } from '@/services/api'
-import * as storage from '../storage'
+import * as storage from '@/views/auth/storage'
+
+//  SOMENTE DE TESTE-EXEMPLO - Eduardo
+import { jobsApi } from '@/services'
 
 export const ActionSetUser = async ({ commit }, payload) => {
   commit(types.SET_USER, payload)
+
+  //  SOMENTE DE TESTE-EXEMPLO - Eduardo
+  try {
+    const jobs = await jobsApi.getJobs()
+    return Promise.resolve(jobs)
+  } catch (error) {
+    return Promise.reject(error)
+  }
 }
 
 export const ActionSetToken = ({ commit }, payload) => {
