@@ -10,8 +10,8 @@
 </template>
 
 <script>
-import Carousel from '@/views/jobs-grid/components/Carousel'
-import CardGrid from '@/views/jobs-grid/components/CardGrid'
+import Carousel from '@/components/jobs-grid/Carousel'
+import CardGrid from '@/components/jobs-grid/CardGrid'
 export default {
   components: { Carousel, CardGrid },
   data() {

@@ -1,3 +1,3 @@
-import { store as auth } from '@/views/auth'
+import { auth } from './auth'
 
 export default { auth }
