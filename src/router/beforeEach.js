@@ -1,4 +1,4 @@
-import store from '../store'
+// import store from '../store'
 
 export default async (to, from, next) => {
   //   console.log(to)
@@ -17,11 +17,11 @@ export default async (to, from, next) => {
   //       next()
   //     }
   //   }
-  try {
-    await store.dispatch('auth/ActionCheckToken')
-    await store.dispatch('auth/ActionLoadSession')
-  } catch (e) {
-    throw new Error()
-  }
+  //   try {
+  //     await store.dispatch('auth/ActionCheckToken')
+  //     await store.dispatch('auth/ActionLoadSession')
+  //   } catch (e) {
+  //     throw new Error()
+  //   }
   next()
 }
