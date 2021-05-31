@@ -1,8 +1,6 @@
-import Home from '../views/home/routes'
-import Login from '../views/auth/login/routes'
-import Signup from '../views/auth/signup/routes'
-import Profile from '../views/auth/profile/routes'
+import auth from './auth'
 import jobRoutes from './jobs'
-import About from '../views/about/routes'
+import home from './home'
+import company from './company'
 
-export default [Home, About, Login, Signup, ...jobRoutes, Profile]
+export default [...home, ...auth, ...jobRoutes, ...company]
