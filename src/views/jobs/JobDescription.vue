@@ -17,10 +17,12 @@ O time da unidade de negócios de bovinos e equinos está buscando um Consultor 
         >
       </button></DescriptionHero
     >
-    <div class="description">
-      <p>Descrição da vaga</p>
-      <div>
-        d
+    <div class="description is-full mt-5">
+      <p class="title">Localização</p>
+      <p class="subtitle">Campo Grande - MT</p>
+      <br />
+      <div class="center">
+        <GoogleMaps />
       </div>
     </div>
   </div>
@@ -28,8 +30,9 @@ O time da unidade de negócios de bovinos e equinos está buscando um Consultor 
 
 <script>
 import DescriptionHero from '@/components/jobs-grid/DescriptionHero'
+import GoogleMaps from '@/components/google/GoogleMaps'
 export default {
-  components: { DescriptionHero }
+  components: { DescriptionHero, GoogleMaps }
 }
 </script>
 

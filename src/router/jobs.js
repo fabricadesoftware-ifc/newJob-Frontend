@@ -10,7 +10,7 @@ export default [
   },
   {
     path: '/job-description',
-    name: 'JobRegistration',
+    name: 'JobDescription',
     component: JobDescription
   },
   {
