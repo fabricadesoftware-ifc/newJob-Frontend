@@ -6,12 +6,12 @@ export const ActionSetUser = async ({ commit }, payload) => {
   commit(types.SET_USER, payload)
 
   //  SOMENTE DE TESTE-EXEMPLO - Eduardotry {
+  try {
     const jobs = await jobsApi.getJobs()
     return Promise.resolve(jobs)
   } catch (error) {
     return Promise.reject(error)
   }
-
 }
 
 export const ActionSetToken = ({ commit }, payload) => {
