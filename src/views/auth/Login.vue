@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { api } from '@/services/api'
+import api from '@/services/api'
 import { mapActions } from 'vuex'
 // import jwt_decode from 'jwt-decode'
 export default {

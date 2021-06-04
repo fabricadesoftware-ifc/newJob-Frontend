@@ -1,20 +1,17 @@
 import * as types from './mutation-types'
-import { APITokenPost, APIProfileGet } from '@/services/api'
-import * as storage from '@/views/auth/storage'
-
-//  SOMENTE DE TESTE-EXEMPLO - Eduardo
-import { jobsApi } from '@/services'
+import * as storage from '@/store/storage'
+import { jobsApi, profileApi, tokenApi } from '@/services'
 
 export const ActionSetUser = async ({ commit }, payload) => {
   commit(types.SET_USER, payload)
 
-  //  SOMENTE DE TESTE-EXEMPLO - Eduardo
-  try {
+  //  SOMENTE DE TESTE-EXEMPLO - Eduardotry {
     const jobs = await jobsApi.getJobs()
     return Promise.resolve(jobs)
   } catch (error) {
     return Promise.reject(error)
   }
+
 }
 
 export const ActionSetToken = ({ commit }, payload) => {
@@ -39,7 +36,7 @@ export const ActionCheckToken = ({ dispatch, state }) => {
 
 export const ActionLoadSession = async ({ dispatch }) => {
   try {
-    const response = await APIProfileGet(localStorage.getItem('token'))
+    const response = await profileApi.getProfile(localStorage.getItem('token'))
     console.log(response)
     dispatch('ActionSetUser', response.data)
   } catch (e) {
@@ -49,9 +46,9 @@ export const ActionLoadSession = async ({ dispatch }) => {
 }
 
 export const ActionDoLogin = async ({ dispatch }, payload) => {
-  return await APITokenPost(payload).then(response =>
-    dispatch('ActionSetToken', response.data.access)
-  )
+  return await tokenApi
+    .postToken(payload)
+    .then(response => dispatch('ActionSetToken', response.data.access))
 }
 
 export const ActionSignOut = ({ dispatch }) => {

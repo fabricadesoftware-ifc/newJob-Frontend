@@ -1,9 +1,9 @@
-import axios from 'axios'
+import api from './api'
 
 class jobsApi {
   async getJobs() {
     try {
-      const { data } = await axios.get('endereco')
+      const { data } = await api.get('endereco')
       return Promise.resolve(data)
     } catch (error) {
       return Promise.reject(error)

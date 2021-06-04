@@ -4,43 +4,45 @@ const api = axios.create({
   baseURL: 'http://localhost:8000/api/'
 })
 
-const APITokenPost = async form =>
-  await api.post('token/', {
-    email: form.email,
-    password: form.password
-  })
+export default api
 
-const APITokenRefresh = async token => {
-  await api.post('token/refresh/', {
-    refresh: token
-  })
-}
+// const APITokenPost = async form =>
+//   await api.post('token/', {
+//     email: form.email,
+//     password: form.password
+//   })
 
-const APIProfileGet = async payload =>
-  await api.get('v1/accounts/profile/', {
-    headers: {
-      Authorization: `Bearer ${payload}`
-    }
-  })
+// const APITokenRefresh = async token => {
+//   await api.post('token/refresh/', {
+//     refresh: token
+//   })
+// }
 
-const APIFilePost = async payload => {
-  await api.get('v1/files/images/', payload)
-}
+// const setBearerToken = token => {
+//   api.defaults.headers['Authorization'] = `Bearer ${token}`
+// }
 
-const APIProfilePut = async payload => {
-  await api.put('v1/accounts/profile/', payload)
-}
+// const APIProfileGet = async payload =>
+//   await api.get('v1/accounts/profile/', {
+//     headers: {
+//       Authorization: `Bearer ${payload}`
+//     }
+//   })
 
-const setBearerToken = token => {
-  api.defaults.headers['Authorization'] = `Bearer ${token}`
-}
+// const APIProfilePut = async payload => {
+//   await api.put('v1/accounts/profile/', payload)
+// }
 
-export {
-  api,
-  setBearerToken,
-  APITokenPost,
-  APIProfileGet,
-  APITokenRefresh,
-  APIFilePost,
-  APIProfilePut
-}
+// const APIFilePost = async payload => {
+//   await api.get('v1/files/images/', payload)
+// }
+
+// export {
+//   api,
+//   setBearerToken,
+//   APITokenPost,
+//   APIProfileGet,
+//   APITokenRefresh,
+//   APIFilePost,
+//   APIProfilePut
+// }

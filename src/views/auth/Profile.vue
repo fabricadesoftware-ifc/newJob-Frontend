@@ -66,7 +66,7 @@
 
 <script>
 // eslint-disable-next-line no-unused-vars
-import { APIFilePost, APIProfilePut } from '@/services/api'
+import { fileApi } from '@/services'
 
 export default {
   data() {
@@ -107,7 +107,7 @@ export default {
       console.log(this.file)
 
       if (this.file) {
-        const response = await APIFilePost(this.file, {
+        const response = await fileApi.postFile(this.file, {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         })
         console.log(response)
