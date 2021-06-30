@@ -3,8 +3,19 @@
     <div class="carousel mb-4">
       <Carousel :jobs="content" />
     </div>
-    <div class="jobs container">
-      <CardGrid :content="content" />
+    <div class="container">
+      <div class="center is-one-third columns">
+        <div>
+          <SideMenu class="column" />
+        </div>
+        <div class="column">
+          <Card v-for="(job, id) in content" :key="id" :job="job">
+            <button class="button" @click="handlePrint(job)" type="button">
+              Detalhes
+            </button>
+          </Card>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -12,8 +23,10 @@
 <script>
 import Carousel from '@/components/jobs-grid/Carousel'
 import CardGrid from '@/components/jobs-grid/CardGrid'
+import SideMenu from '@/components/jobs-grid/SideMenu'
+import Card from '@/components/jobs-grid/JobCard'
 export default {
-  components: { Carousel, CardGrid },
+  components: { Carousel, CardGrid, Card, SideMenu },
   data() {
     return {
       content: [
@@ -37,7 +50,9 @@ export default {
           local: 'Trindade do Sul - RS',
           role: 'Supervisor de Fabricação',
           description:
-            'Est dolorem et est id maxime voluptas. Totam soluta porro neque molestias atque ut id quia. Adipisci magnam qui aut perspiciatis laborum. Soluta et eos voluptatum reprehenderit et est.'
+            'Est dolorem et est id maxime voluptas. Totam soluta porro neque molestias atque ut id quia. Adipisci magnam qui aut perspiciatis laborum. Soluta et eos voluptatum reprehenderit et est.',
+          lat: -27.5243628,
+          lng: -52.9048609
         },
         {
           id: 3,
@@ -47,7 +62,9 @@ export default {
           date: '10-10-2020',
           local: 'Trindade do Sul - RS',
           role: 'Analista de Agropecuária',
-          description: 'Descrição 1 Descrição 1 Descrição 1 '
+          description: 'Descrição 1 Descrição 1 Descrição 1 ',
+          lat: -27.5243628,
+          lng: -52.9048609
         },
         {
           id: 4,
@@ -58,7 +75,9 @@ export default {
           local: 'São Paulo - SP',
           role: 'Técnico em Agropecuária',
           description:
-            'Ipsa ut ab voluptas est neque dolorum sed hic harum. Officiis delectus voluptas vero sint. Et aliquam ab ut.'
+            'Ipsa ut ab voluptas est neque dolorum sed hic harum. Officiis delectus voluptas vero sint. Et aliquam ab ut.',
+          lat: -23.6815315,
+          lng: -46.8754812
         },
         {
           id: 5,
@@ -68,9 +87,16 @@ export default {
           local: 'Araquari - SC',
           role: 'Chefe de Produção',
           description:
-            'Quo vel esse odio est expedita odit qui qui ex. Alias perspiciatis veritatis. Ad voluptatum nam soluta in ratione alias veritatis labore debitis.'
+            'Quo vel esse odio est expedita odit qui qui ex. Alias perspiciatis veritatis. Ad voluptatum nam soluta in ratione alias veritatis labore debitis.',
+          lat: -26.3766306,
+          lng: -48.7276432
         }
       ]
+    }
+  },
+  methods: {
+    handlePrint(job) {
+      console.log(job)
     }
   }
 }

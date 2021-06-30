@@ -10,5 +10,7 @@
   </div>
 </template>
 <script>
-export default {}
+export default {
+  props: { lat: Number, lng: Number }
+}
 </script>
