@@ -108,7 +108,7 @@ export default {
 
   methods: {
     handlePreVisualization(job) {
-      this.test = true
+      this.test = !this.test
       this.job = job
     },
     handlePrint(job) {
