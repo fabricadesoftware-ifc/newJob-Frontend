@@ -11,7 +11,7 @@
     </template>
     <template slot="start">
       <NavbarItem :to="'/'">Inicio</NavbarItem>
-      <NavbarItem :to="'jobs'">Vagas</NavbarItem>
+      <NavbarItem :to="'/jobs'">Vagas</NavbarItem>
     </template>
 
     <template slot="end">

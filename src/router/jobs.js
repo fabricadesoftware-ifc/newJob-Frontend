@@ -9,13 +9,17 @@ export default [
     component: JobRegistration
   },
   {
-    path: '/job-description',
+    path: '/job-description/:id',
     name: 'JobDescription',
     component: JobDescription
+    // props: ['id']
   },
   {
     path: '/jobs',
     name: 'Jobs',
     component: Jobs
+    // children: [
+    //   { path: ':id', name: 'JobDescription', component: JobDescription }
+    // ]
   }
 ]

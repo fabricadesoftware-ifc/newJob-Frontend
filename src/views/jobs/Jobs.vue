@@ -96,7 +96,10 @@ export default {
   },
   methods: {
     handlePrint(job) {
-      console.log(job)
+      this.$router.push({
+        path: `/job-description/${job.id}`,
+        params: { id: job.id }
+      })
     }
   }
 }
