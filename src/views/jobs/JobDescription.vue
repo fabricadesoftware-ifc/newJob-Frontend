@@ -1,6 +1,6 @@
 <template>
-  <div class="">
-    <DescriptionHero :msg="job.description" :title="job.role"
+  <div class="container">
+    <DescriptionHero :job="job"
       ><br /><button class="button is-black mt-2">
         <router-link class="has-text-white " to="/jobs"
           >Inscreva-se</router-link
