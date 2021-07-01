@@ -37,7 +37,9 @@ export default {
           local: 'Trindade do Sul - RS',
           role: 'Analista de Agropecuária',
           description:
-            'Quia illum ex consequuntur commodi quia exercitationem aut. In facere tempora libero quia porro. Cupiditate cum voluptatibus.'
+            'Quia illum ex consequuntur commodi quia exercitationem aut. In facere tempora libero quia porro. Cupiditate cum voluptatibus.',
+          lat: -27.5243628,
+          lng: -52.9048609
         },
         {
           id: 2,
