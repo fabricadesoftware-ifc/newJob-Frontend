@@ -2,8 +2,10 @@
   <section class="hero is-warning is-halfheight ">
     <div class="hero-body">
       <div class="container has-text-centered has-text-white">
-        <h1 class="title has-text-white">{{ title }}</h1>
-        <span>{{ msg }}</span>
+        <h1 class="title has-text-white">{{ job.role }}</h1>
+        <small>{{ job.local }}</small>
+        <br />
+        <span>{{ job.description }}</span>
         <slot></slot>
       </div>
     </div>
@@ -15,8 +17,7 @@ export default {
   name: 'DescriptionHero',
   components: {},
   props: {
-    msg: String,
-    title: String
+    job: Object
   }
 }
 </script>
