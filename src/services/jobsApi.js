@@ -1,9 +1,9 @@
-import api from './api'
+// import api from './api'
 
 class jobsApi {
-  async getJobs() {
+  async fetchJobs() {
     try {
-      const { data } = await api.get('endereco')
+      const { data } = require('./jobs.json')
       return Promise.resolve(data)
     } catch (error) {
       return Promise.reject(error)
