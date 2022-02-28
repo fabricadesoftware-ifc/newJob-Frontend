@@ -5,9 +5,10 @@
     </div>
     <div class="container">
       <div class="center is-one-third columns">
-        <div>
+        <!-- TODO: Adicionar filtros funcionais -->
+        <!-- <div>
           <SideMenu class="column" />
-        </div>
+        </div> -->
         <div class="column">
           <Card v-for="(job, id) in content" :key="id" :job="job">
             <button
@@ -31,6 +32,7 @@ import CardGrid from '@/components/jobs-grid/CardGrid'
 import SideMenu from '@/components/jobs-grid/SideMenu'
 import Card from '@/components/jobs-grid/JobCard'
 import JobModal from './JobModal.vue'
+import jobsApi from '@/services/jobsApi'
 export default {
   components: { Carousel, CardGrid, Card, SideMenu, JobModal },
   mounted() {
@@ -40,70 +42,11 @@ export default {
     return {
       job: {},
       test: true,
-      content: [
-        {
-          id: 1,
-          company: 'JBS',
-          img:
-            'https://agroemdia.com.br/wp-content/uploads/2020/04/logo-jbs-mc.jpg',
-          date: '10-10-2020',
-          local: 'Trindade do Sul - RS',
-          role: 'Analista de Agropecuária',
-          description:
-            'Quia illum ex consequuntur commodi quia exercitationem aut. In facere tempora libero quia porro. Cupiditate cum voluptatibus.'
-        },
-        {
-          id: 2,
-          company: 'Nestle',
-          img:
-            'https://www.talkwalker.com/Pictures/Brands/small/csm-talkwalker-nestle-2197e394de.jpg',
-          date: '10-10-2020',
-          local: 'Trindade do Sul - RS',
-          role: 'Supervisor de Fabricação',
-          description:
-            'Est dolorem et est id maxime voluptas. Totam soluta porro neque molestias atque ut id quia. Adipisci magnam qui aut perspiciatis laborum. Soluta et eos voluptatum reprehenderit et est.',
-          lat: -27.5243628,
-          lng: -52.9048609
-        },
-        {
-          id: 3,
-          company: 'Grupo Brasilia',
-          img:
-            'https://ncdn0.infojobs.com.br/logos/Company_Evaluation/158385.jpg',
-          date: '10-10-2020',
-          local: 'Trindade do Sul - RS',
-          role: 'Analista de Agropecuária',
-          description: 'Descrição 1 Descrição 1 Descrição 1 ',
-          lat: -27.5243628,
-          lng: -52.9048609
-        },
-        {
-          id: 4,
-          company: 'Pamplona',
-          img:
-            'https://pamplona.com.br/pages/pamplona/images/hotsite/img/logo-pamplona.png',
-          date: '10-10-2020',
-          local: 'São Paulo - SP',
-          role: 'Técnico em Agropecuária',
-          description:
-            'Ipsa ut ab voluptas est neque dolorum sed hic harum. Officiis delectus voluptas vero sint. Et aliquam ab ut.',
-          lat: -23.6815315,
-          lng: -46.8754812
-        },
-        {
-          id: 5,
-          company: 'JBS',
-          img: 'https://friboi.com.br/images/friboi.png',
-          date: '10-10-2020',
-          local: 'Araquari - SC',
-          role: 'Chefe de Produção',
-          description:
-            'Quo vel esse odio est expedita odit qui qui ex. Alias perspiciatis veritatis. Ad voluptatum nam soluta in ratione alias veritatis labore debitis.',
-          lat: -26.3766306,
-          lng: -48.7276432
-        }
-      ]
+      content: []
     }
+  },
+  async beforeCreate() {
+    this.content = await jobsApi.getJobs()
   },
 
   methods: {

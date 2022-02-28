@@ -3,8 +3,11 @@ import api from './api'
 class jobsApi {
   async getJobs() {
     try {
-      const { data } = await api.get('endereco')
-      return Promise.resolve(data)
+      const { data } = await api.get('job/')
+
+      const jobs = await [...data]
+      Promise.resolve(data)
+      return jobs
     } catch (error) {
       return Promise.reject(error)
     }

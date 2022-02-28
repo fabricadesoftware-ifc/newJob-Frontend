@@ -3,16 +3,16 @@
     <DescriptionHero :job="job"
       ><br /><button class="button is-black mt-2">
         <router-link class="has-text-white " :to="'/job-description/' + job.id"
-          >Cadastre-se</router-link
+          >Cadastre-se teste</router-link
         >
       </button></DescriptionHero
     >
     <div class="description is-full mt-5">
-      <p class="title">{{ job.local }}</p>
+      <p class="title">{{ job.street_name }}</p>
       <p class="subtitle"></p>
       <br />
       <div class="center">
-        <GoogleMaps :lat="job.lat" :lng="job.lng" />
+        <GoogleMaps :lat="job.local.longitude" :lng="job.local.latitude" />
       </div>
     </div>
   </div>
@@ -27,7 +27,12 @@ export default {
   props: { job: Object },
   data() {
     return {}
-  }
+  },
+  aftercreated() {
+    console.log('Aqui')
+    console.log(this.job)
+  },
+  methods: {}
 }
 </script>
 

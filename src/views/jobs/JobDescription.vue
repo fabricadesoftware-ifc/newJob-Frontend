@@ -3,7 +3,7 @@
     <DescriptionHero :job="job"
       ><br /><button class="button is-black mt-2">
         <router-link class="has-text-white " to="/jobs"
-          >Inscreva-se</router-link
+          >Inscreva-se ue</router-link
         >
       </button></DescriptionHero
     >
@@ -22,7 +22,7 @@
 import DescriptionHero from '@/components/jobs-grid/DescriptionHero'
 import GoogleMaps from '@/components/google/GoogleMaps'
 export default {
-  //   props: { job: Object },
+  props: { job: Object },
   components: { DescriptionHero, GoogleMaps },
   data() {
     return {

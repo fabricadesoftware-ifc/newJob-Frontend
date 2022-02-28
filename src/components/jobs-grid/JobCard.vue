@@ -9,7 +9,7 @@
     <div class="card-content column">
       <div class="media">
         <div class="media-content">
-          <p class="title mt-3 is-5">{{ job.company }}</p>
+          <p class="title mt-3 is-5">{{ job.company.name }}</p>
         </div>
       </div>
       <div class="content">
