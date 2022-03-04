@@ -1,3 +1,4 @@
 import { auth } from './auth'
+import { jobs } from './jobs'
 
-export default { auth }
+export default { auth, jobs }

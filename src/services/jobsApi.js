@@ -1,7 +1,7 @@
-import api from './api'
+// import api from './api'
 
 class jobsApi {
-  async getJobs() {
+  async fetchJobs() {
     try {
       const { data } = await api.get('job/')
 
