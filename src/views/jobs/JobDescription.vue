@@ -21,6 +21,7 @@
 <script>
 import DescriptionHero from '@/components/jobs-grid/DescriptionHero'
 import GoogleMaps from '@/components/google/GoogleMaps'
+import jobsApi from '@/services/jobsApi'
 export default {
   props: { job: Object },
   components: { DescriptionHero, GoogleMaps },
@@ -94,11 +95,15 @@ export default {
       ]
     }
   },
-  created() {
-    console.log(this.$route.params.id)
-    let index = this.content.findIndex(job => job.id == this.$route.params.id)
-    this.job = this.content[index]
+  async beforeCreate() {
+    this.job = await jobsApi.getJob(this.$route.params.id)
     console.log(this.job)
+  },
+  created() {
+    // console.log(this.$route.params.id)
+    // let index = this.content.findIndex(job => job.id == this.$route.params.id)
+    // this.job = this.content[index]
+    // console.log(this.job)
   }
 }
 </script>

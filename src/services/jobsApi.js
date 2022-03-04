@@ -12,6 +12,11 @@ class jobsApi {
       return Promise.reject(error)
     }
   }
+
+  async getJob(id) {
+    const { data } = await api.get(`job/${id}`)
+    return data
+  }
 }
 
 export default new jobsApi()

@@ -12,10 +12,10 @@
       <b-carousel-item v-for="(job, i) in jobs" :key="i">
         <section :class="`hero is-medium is-success`">
           <div class="hero-body has-text-centered">
-            <h1 class="title">{{ job.company }}</h1>
+            <h1 class="title">{{ job.company.name }} - {{}}</h1>
             <span>{{ job.description }}</span>
             <br />
-            <small> Postada: {{ job.date }}</small>
+            <small> Postada: {{ job.deadline }}</small>
           </div>
         </section>
       </b-carousel-item>
