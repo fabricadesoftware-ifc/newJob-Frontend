@@ -1,7 +1,7 @@
 <template>
   <div class="JobGrid">
     <div class="carousel mb-4">
-      <Carousel :jobs="jobs" />
+      <Carousel :jobs="content" />
     </div>
     <div class="container">
       <div class="center is-one-third columns">
@@ -10,7 +10,7 @@
           <SideMenu class="column" />
         </div> -->
         <div class="column">
-          <Card v-for="(job, id) in jobs" :key="id" :job="job">
+          <Card v-for="(job, id) in content" :key="id" :job="job">
             <button
               class="button"
               @click="handlePreVisualization(job)"
@@ -27,8 +27,6 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
-
 import Carousel from '@/components/jobs-grid/Carousel'
 import CardGrid from '@/components/jobs-grid/CardGrid'
 import SideMenu from '@/components/jobs-grid/SideMenu'
@@ -49,10 +47,10 @@ export default {
   },
   async beforeCreate() {
     this.content = await jobsApi.getJobs()
+    console.log(this.content)
   },
 
   methods: {
-    ...mapActions('jobs', ['fetchJobs']),
     handlePreVisualization(job) {
       this.test = !this.test
       this.job = job
