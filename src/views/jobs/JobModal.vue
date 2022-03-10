@@ -12,7 +12,7 @@
       <p class="subtitle"></p>
       <br />
       <div class="center">
-        <GoogleMaps :lat="job.local.longitude" :lng="job.local.latitude" />
+        <GoogleMaps :lat="job.local.latitude" :lng="job.local.longitude" />
       </div>
     </div>
   </div>
