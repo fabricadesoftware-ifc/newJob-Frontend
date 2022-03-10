@@ -1,21 +1,23 @@
-// import api from './api'
+import api from './api'
 
 class jobsApi {
-  async fetchJobs() {
+  async getJobs() {
     try {
       const { data } = await api.get('job/')
-
       const jobs = await [...data]
-      Promise.resolve(data)
-      return jobs
+      return Promise.resolve(jobs)
     } catch (error) {
       return Promise.reject(error)
     }
   }
 
   async getJob(id) {
-    const { data } = await api.get(`job/${id}`)
-    return data
+    try {
+      const { data } = await api.get(`job/${id}/`)
+      return Promise.resolve(data)
+    } catch (error) {
+      return Promise.reject(error)
+    }
   }
 }
 
