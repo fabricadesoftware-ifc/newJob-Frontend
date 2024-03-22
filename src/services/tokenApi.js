@@ -2,11 +2,11 @@ import api from './api'
 class tokenApi {
   async postToken(form) {
     try {
-      const { data } = await api.post('token/', {
-        email: form.email,
+      const response = await api.post('token/', {
+        username: form.email,
         password: form.password
       })
-      return Promise.resolve(data)
+      return Promise.resolve(response)
     } catch (error) {
       return Promise.reject(error)
     }
