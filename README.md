@@ -1,55 +1,35 @@
-<h1 align="center">
-  (Logo)
-</h1>
+# newjob-frontend
 
-<h3 align="center">
-  New Job Agribusiness
-</h3>
+This template should help get you started developing with Vue 3 in Vite.
 
-<p align="center">
-  <a href="#-sobre-o-projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>
+## Recommended IDE Setup
 
-<img alt="Layout" src="https://res.cloudinary.com/dovu0ma4y/image/upload/v1602012205/newjob/agrilogo_w81ydc.png">
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## 🎓 Sobre o projeto
+## Customize configuration
 
-- <p style="color: red;">(explicação do projeto)</p>
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## 🚜 Tecnologias
+## Project Setup
 
-Tecnologias usadas na construção do projeto.
-
-- [Vue.js](https://vuejs.org/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [EditorConfig](https://editorconfig.org/)
-
-### Requisitos
-
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
-
-**Clone o projeto e acesse a pasta**
-
-```bash
-$ git clone ssh://git@git.fabricadesoftware.ifc.edu.br:1022/newjob/newjob.git && cd newjob
+```sh
+npm install
 ```
 
-**Siga os passos abaixos**
+### Compile and Hot-Reload for Development
 
-### Web
+```sh
+npm run dev
+```
 
-```bash
-# Acesse a pasta contendo o frontend
-$ cd frontend
+### Compile and Minify for Production
 
-# Instale as depêndencias
-$ npm install
+```sh
+npm run build
+```
 
-# Inicie o projeto
-$ npm run serve
+### Lint with [ESLint](https://eslint.org/)
 
-# Pronto, o projeto já está rodando!
+```sh
+npm run lint
 ```

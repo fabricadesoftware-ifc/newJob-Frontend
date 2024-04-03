@@ -1,16 +1,15 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import beforeEach from './beforeEach'
-import routes from './routes'
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from '../views/HomeView.vue'
 
-Vue.use(VueRouter)
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView
+    },
+  ]
 })
-
-router.beforeEach(beforeEach)
 
 export default router
