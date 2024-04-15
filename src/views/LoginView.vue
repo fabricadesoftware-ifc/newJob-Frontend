@@ -1,8 +1,16 @@
 <script setup>
+import {ImageForm, LoginForm} from '@/components/';
 </script>
 
 <template>
-    <p>Login</p>
+    <div class="container">
+    <ImageForm/>
+    <LoginForm/>
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+    .container{
+        display: flex;
+    }
+</style>
