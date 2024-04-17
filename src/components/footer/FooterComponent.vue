@@ -52,11 +52,12 @@ import {
     padding-bottom: 3%;
 }
 .logo{
-    width: 14%;
+    width: 11.5%;
 }
 .text{
-    font-size: 0.95em;
+    font-size: 1.1em;
     color: #A0A0A0;
+    letter-spacing: 0.09em;
 }
 .icons{
     display: flex;
