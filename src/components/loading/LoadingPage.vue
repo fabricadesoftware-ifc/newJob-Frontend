@@ -17,15 +17,15 @@
 }
 
 .container-loading img {
-    max-width: 50%;
-    max-height: 50%;
+    max-width: 45%;
+    max-height: 45%;
 }
 
 .border {
-    width: 50%;
+    width: 45%;
     height: auto;
-    border: 4px solid #C9CBBD;
-    margin-top: 4.5em; 
+    border: 5px solid #C9CBBD;
+    margin-top: 4em; 
     border-radius: 5px;
     overflow: hidden;
 }
