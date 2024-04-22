@@ -4,7 +4,7 @@ import {ImageForm, LoginForm} from '@/components/';
 
 <template>
     <div class="container">
-    <ImageForm/>
+    <ImageForm side="left" image="https://i.ibb.co/ZVnJqr3/image.png"/>
     <LoginForm/>
     </div>
 </template>
