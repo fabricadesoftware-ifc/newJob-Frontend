@@ -1,11 +1,11 @@
 <script setup>
-import {ImageForm, LoginForm} from '@/components/';
+import {ImageForm, SignUpForm} from '@/components/index';
 </script>
 
 <template>
     <div class="container">
-    <ImageForm side="left" image="https://i.ibb.co/ZVnJqr3/image.png"/>
-    <LoginForm/>
+    <SignUpForm/>
+    <ImageForm side="right" image="https://i.ibb.co/ygh8VM8/image.png"/>
     </div>
 </template>
 

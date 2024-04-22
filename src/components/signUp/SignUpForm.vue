@@ -1,38 +1,42 @@
 <script setup>
 import {
-  CheckCircle,
-  EyeOffOutline,
-  EyeOutline
+    CheckCircle
 } from '../icons';
-
-import { ref } from 'vue';
-
-const showPassword = ref(false);
 </script>
 
 <template>
-  <form class="container">
-    <h1>Login</h1>
-    <label>
-      <p>Email</p>
-      <div class="input-container">
-        <input type="email">
-        <CheckCircle />
-      </div>
-    </label>
-    <label>
-      <p>Senha</p>
-      <div class="input-container">
-        <input type="password">
-        <EyeOffOutline v-if="showPassword" @click="showPassword = !showPassword" />
-        <EyeOutline v-if="!showPassword" @click="showPassword = !showPassword" />
-      </div>
-    </label>
-    <button>Login</button>
-    <p>Ainda não possui conta?
-      <router-link to="/signUp" class="link-text">Crie uma</router-link>
-    </p>
-  </form>
+    <form class="container">
+        <h1>Cadastro</h1>
+        <label>
+            <p>Nome</p>
+            <div class="input-container">
+                <input type="text">
+            </div>
+        </label>
+        <label>
+            <p>Email</p>
+            <div class="input-container">
+                <input type="email">
+                <CheckCircle />
+            </div>
+        </label>
+        <label>
+            <p>Senha</p>
+            <div class="input-container">
+                <input type="password">
+            </div>
+        </label>
+        <label>
+            <p>Confirme senha</p>
+            <div class="input-container">
+                <input type="password">
+            </div>
+        </label>
+        <button>Criar conta</button>
+        <p>Já possui conta?
+            <router-link to="/login" class="link-text">Faça login</router-link>
+        </p>
+    </form>
 </template>
 
 <style scoped>
