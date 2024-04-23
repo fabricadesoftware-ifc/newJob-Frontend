@@ -1,5 +1,6 @@
 <template>
-  <div class="container-header" style="padding-top: 40px">
+    <div class="container-wrapper">
+  <div class="container-header" >
     <div class="container-logo">
       <img src="https://i.ibb.co/6g5QTs3/logo-newjob-png.png" alt="" class="logo" />
     </div>
@@ -11,6 +12,7 @@
       <p class="padding-fix">Login</p>
       <p class="register">Get started</p>
     </div>
+    </div>
   </div>
 </template>
 
@@ -21,7 +23,11 @@
   background-color: transparent;
   padding: 2.5em 1em;
 }
-
+.container-wrapper{
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
 .flex {
   display: flex;
   gap: 0.5em;
