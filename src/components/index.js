@@ -2,7 +2,7 @@ import ImageForm from "./ImageForm.vue";
 import LoginForm from "./login/LoginForm.vue";
 import SignUpForm from "./signUp/SignUpForm.vue";
 import HeaderComponent from "./header/HeaderComponent.vue";
-import PageIntroduction from "./pageIntroduction/PageIntroduction.vue";
+import PageIntroduction from "./homePage/PageIntroduction.vue";
 
 export {
     ImageForm,
