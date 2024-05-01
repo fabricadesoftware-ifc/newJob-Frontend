@@ -1,10 +1,8 @@
 <script setup>
+import { HeaderComponent, PageIntroduction } from '@/components/index.js'
 </script>
 
 <template>
-  <main>
-    <p>
-      HomePage
-    </p>
-  </main>
+  <HeaderComponent />
+  <PageIntroduction/>
 </template>

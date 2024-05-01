@@ -5,6 +5,7 @@ import Facebook from 'vue-material-design-icons/Facebook.vue';
 import Twitter from 'vue-material-design-icons/Twitter.vue';
 import Instagram from 'vue-material-design-icons/Instagram.vue';
 import Linkedin from 'vue-material-design-icons/Linkedin.vue';
+import ArrowTopRight from 'vue-material-design-icons/ArrowTopRight.vue';
 
 export {
     CheckCircle,
@@ -14,4 +15,5 @@ export {
     Twitter,
     Instagram,
     Linkedin,
+    ArrowTopRight,
 }
