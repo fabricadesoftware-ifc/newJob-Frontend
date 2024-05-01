@@ -14,7 +14,7 @@ import { ArrowTopRight } from '../icons';
             </button>
         </div>
         <div class="content-container">
-            <h1>Vagas agrícolas para diversas habilidades.</h1>
+            <h1>VAGAS AGRÍCOLAS PARA DIVERAS HABILIDADES.</h1>
             <p>New Job Agri Business é um software inovador projetado para revolucionar o setor de recrutamento
                 agrícola. Nosso objetivo é criar uma ponte entre profissionais talentosos e empresas agrícolas em busca
                 de mão de obra qualificada.</p>
