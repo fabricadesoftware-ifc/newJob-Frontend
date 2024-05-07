@@ -19,11 +19,21 @@ import { ArrowTopRight } from '../icons';
                 <span class="bot-border"></span>
             </div>
         </div>
+        <p class="description-text">
+            Estamos buscando um Analista de Infraestrutura de TI Pleno para se juntar à nossa equipe de tecnologia. O
+            candidato será responsável por manter e otimizar nossa infraestrutura de TI, garantindo a eficiência
+            dos sistemas.</p>
     </div>
 
 </template>
 
 <style scoped>
+.description-text {
+    font-size: 1.5rem;
+    max-width: 100%;
+    margin: 3rem 4rem;
+}
+
 .top-border {
     width: 2rem;
     height: 2rem;
@@ -82,7 +92,7 @@ import { ArrowTopRight } from '../icons';
 
 p {
     max-width: 30%;
-    color: #FFFFFF99;
+    color: #ffffffc9;
     font-size: .9rem;
 }
 
