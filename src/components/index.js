@@ -4,9 +4,10 @@ import SignUpForm from "./signUp/SignUpForm.vue";
 import HeaderComponent from "./header/HeaderComponent.vue";
 import PageIntroduction from "./homePage/PageIntroduction.vue";
 import MainContent from "./homePage/MainContent.vue";
-import TextSection from './homePage/mainContentComponents/TextSection.vue'
+import TextSection from './homePage/mainContentComponents/TextSection.vue';
 import FooterComponent from "./footer/FooterComponent.vue";
-import AboutIntroduction from './about/AboutIntroduction.vue'
+import AboutIntroduction from './about/AboutIntroduction.vue';
+import AboutContent from "./about/AboutContent.vue";
 
 export {
     ImageForm,
@@ -17,5 +18,6 @@ export {
     MainContent,
     TextSection,
     FooterComponent,
-    AboutIntroduction
+    AboutIntroduction,
+    AboutContent
 }

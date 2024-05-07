@@ -1,8 +1,10 @@
 <script setup>
-import { AboutIntroduction, HeaderComponent } from '@/components';
+import { AboutIntroduction, HeaderComponent, AboutContent, FooterComponent } from '@/components';
 </script>
 
 <template>
-    <HeaderComponent/>
-    <AboutIntroduction/>
+    <HeaderComponent />
+    <AboutIntroduction />
+    <AboutContent />
+    <FooterComponent />
 </template>
