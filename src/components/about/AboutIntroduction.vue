@@ -29,9 +29,10 @@ import { ArrowTopRight } from '../icons';
 
 <style scoped>
 .description-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     max-width: 100%;
     margin: 3rem 4rem;
+    font-weight: 300;
 }
 
 .top-border {
@@ -65,7 +66,7 @@ import { ArrowTopRight } from '../icons';
     justify-content: center;
     align-items: center;
     right: 0;
-    bottom: 13%;
+    bottom: 7%;
     background: linear-gradient(#1d4734, #235540);
     padding: 2rem 3rem;
     width: 10%;
