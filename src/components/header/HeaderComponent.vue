@@ -27,6 +27,7 @@
   position: absolute;
   width: 100%;
   top: 0px;
+  z-index: 1;
 }
 .flex {
   display: flex;
