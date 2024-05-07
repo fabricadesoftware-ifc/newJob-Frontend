@@ -67,7 +67,7 @@ import { Plus } from '../../icons/index.js';
     gap: 0;
 }
 
-.info p{
+.info p {
     margin-top: 0;
 }
 
