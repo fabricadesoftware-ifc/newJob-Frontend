@@ -35,10 +35,7 @@ import {
 
 <style scoped>
 .container-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0; 
-    width: 100%; 
+    max-width: 100%; 
     background: linear-gradient(45deg,#1E4835 25%, #2a694c 55%, #1E4835 80%);
     color: white;
     padding: 4%;
