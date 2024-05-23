@@ -18,8 +18,8 @@
 .container-card {
   background: radial-gradient(circle, rgba(42,105,76,1) 15%, rgba(30,72,53,1) 95%);
   border-radius: 1em;
-  width: 20em;
-  height: 20em;
+  width: 23em;
+  height: 21em;
   position: relative;
   margin-top: 100px;
 }
@@ -38,12 +38,12 @@
 .btn {
   border: none;
   background-color: #E09B6B;
-  padding: 0.5em;
+  padding: 0.7em;
   font-weight: bold;
   cursor: pointer;
   width: 15em;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 17px;
 }
 .box-info{
   display: flex;
@@ -57,5 +57,11 @@
 }
 .pt-4{
   padding-top: 2.5em;
+}
+h3{
+  font-size: 1.3em;
+}
+p{
+  font-size: 1.2em;
 }
 </style>
