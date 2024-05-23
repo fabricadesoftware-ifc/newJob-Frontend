@@ -7,6 +7,9 @@ import Instagram from 'vue-material-design-icons/Instagram.vue';
 import Linkedin from 'vue-material-design-icons/Linkedin.vue';
 import ArrowTopRight from 'vue-material-design-icons/ArrowTopRight.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
+import ArrowRightThinCircleOutline from 'vue-material-design-icons/ArrowRightThinCircleOutline.vue';
+import ArrowLeftThinCircleOutline from 'vue-material-design-icons/ArrowLeftThinCircleOutline.vue';
+
 
 export {
     CheckCircle,
@@ -18,4 +21,6 @@ export {
     Linkedin,
     ArrowTopRight,
     Plus,
+    ArrowRightThinCircleOutline,
+    ArrowLeftThinCircleOutline
 }
