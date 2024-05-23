@@ -1,10 +1,10 @@
 <script setup>
+import { HeaderComponent, PageIntroduction, MainContent, FooterComponent } from '@/components/index.js'
 </script>
 
 <template>
-  <main>
-    <p>
-      HomePage
-    </p>
-  </main>
+  <HeaderComponent />
+  <PageIntroduction />
+  <MainContent />
+  <FooterComponent />
 </template>
