@@ -1,15 +1,12 @@
 <script setup>
-// import CardJobs from '@/components/jobPage/SecondComponents/CardJobs.vue';
-// import { IntroductionJobs } from '@/components';
-import { MainContentJobs } from "@/components";
-
+import { IntroductionJobs, MainContentJobs, FooterComponent } from "@/components";
 </script>
 
 <template>
   <div>
-    <!-- <IntroductionJobs/> -->
-    <!-- <CardJobs/> -->
+    <IntroductionJobs/>
     <MainContentJobs/>
+    <FooterComponent/>  
   </div>
 </template>
 
