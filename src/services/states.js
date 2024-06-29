@@ -8,6 +8,14 @@ class StateService{
         const response = await api.delete(`state/${id}`)
         return response.data
     }
+    async createService(serviceData){
+        const response = await api.post(`state/`, serviceData)
+        return response.data
+    }
+    async updateService(id, serviceData){
+        const response = await api.put(`state/${id}`, serviceData)
+        return response.data
+    }
 }
 
 export default new StateService()
