@@ -4,6 +4,18 @@ class LocalService{
         const response = await api.get('local/')
         return response.data
     }
+    async deleteLocation(id){
+        const response = await api.delete(`local/${id}`)
+        return response.data
+    }
+    async createLocation(locationData){
+        const response = await api.post(`local/`, locationData)
+        return response.data
+    }
+    async updateLocation(locationData){
+        const response = await api.post(`local/`, locationData)
+        return response.data
+    }
 }
 
 export default new LocalService()
