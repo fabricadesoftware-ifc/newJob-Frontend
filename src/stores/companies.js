@@ -1,4 +1,4 @@
-import { defineStore } from "pinia/dist/pinia";
+import { defineStore } from "pinia";
 import { computed, reactive } from "vue";
 import CompanyService from '@/services/companies'
 
@@ -9,8 +9,10 @@ export const useCompaniesStore = defineStore('company', () => {
 
     const companies = computed(() => state.companies)
 
+    // const jobs = computed(()=> state.jobs)
+
     const getAllCompanies = async () => {
-        const data = CompanyService.getAllCompanies()
+        const data = await CompanyService.getAllCompanies()
         state.companies = data
     }
 
