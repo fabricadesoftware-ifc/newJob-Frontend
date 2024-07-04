@@ -1,4 +1,4 @@
-import { defineStore } from "pinia/dist/pinia";
+import { defineStore } from "pinia";
 import { computed, reactive } from "vue";
 import LocalService from '@/services/locations'
 
