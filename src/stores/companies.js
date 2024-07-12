@@ -10,7 +10,7 @@ export const useCompaniesStore = defineStore('company', () => {
     const companies = computed(() => state.companies)
 
     const getAllCompanies = async () => {
-        const data = CompanyService.getAllCompanies()
+        const data = await CompanyService.getAllCompanies()
         state.companies = data
     }
 
