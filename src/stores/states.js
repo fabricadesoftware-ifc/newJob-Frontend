@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 import { computed, reactive } from "vue";
-import StateService from '@/services/states'
+import StateState from '@/services/states'
 
 export const useStateStore = defineStore('state', () => {
     const state = reactive({
@@ -10,9 +10,18 @@ export const useStateStore = defineStore('state', () => {
     const states = computed(() => state.states)
 
     const getAllStates = async () => {
-        const data = await StateService.getAllServices()
+        const data = await StateState.getAllStates()
         state.states = data
     }
 
-    return {states, getAllStates}
+    const createState = async (stateData) => {
+        const data = await StateState.createState(stateData)
+        state.states.push(data)
+    }
+
+    const deleteState = async (id) => {
+        const data = await StateService.deleteState(id)
+        state.states = state.states.filter(state => state.id !== id);
+    }
+    return {states, getAllStates, deleteState, createState}
 })

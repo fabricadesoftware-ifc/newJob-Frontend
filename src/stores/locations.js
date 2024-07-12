@@ -14,5 +14,14 @@ export const useLocalStore = defineStore('local', () => {
         state.locations = data
     }
     
-    return {locations, getAllLocations}
+    const createLocation = async (locationData) => {
+        const data = await LocalService.createLocation(locationData)
+        state.locations.push(data)
+    }
+
+    const deleteLocation = async (id) => {
+        const data = await LocalService.deleteLocation(id)
+        state.locations = state.locations.filter(location => location.id !== id);
+    }
+    return {locations, getAllLocations, createLocation, deleteLocation}
 })
