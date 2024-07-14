@@ -1,10 +1,10 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useJobStore, useCompaniesStore, useLocalStore } from '@/stores/index'
+import { ref, onMounted } from 'vue';
+import { useJobStore, useCompaniesStore, useLocalStore } from '@/stores/index';
 
-const jobStore = useJobStore()
-const companiesStore = useCompaniesStore()
-const localStore = useLocalStore()
+const jobStore = useJobStore();
+const companiesStore = useCompaniesStore();
+const localStore = useLocalStore();
 
 const jobData = ref({
   title: '',
@@ -12,42 +12,60 @@ const jobData = ref({
   local: null,
   company: null,
   deadline: ''
-})
+});
+
+const editingJobId = ref(null); // Id do job que está sendo editado
 
 const fetchJobs = async () => {
-  await jobStore.getAllJobs()
-}
+  await jobStore.getAllJobs();
+};
 
 const fetchLocal = async () => {
-  await localStore.getAllLocations()
-}
+  await localStore.getAllLocations();
+};
 
 const fetchCompanies = async () => {
-  await companiesStore.getAllCompanies()
-}
+  await companiesStore.getAllCompanies();
+};
 
 const removeJob = async (id) => {
-  await jobStore.deleteJob(id)
-}
+  await jobStore.deleteJob(id);
+};
 
-const addJob = async () => {
-  console.log(jobData.value.local)
-  console.log(jobData.value.company)
-  await jobStore.createJob(jobData.value)
+const addOrUpdateJob = async () => {
+  try {
+    if (editingJobId.value) {
+      await jobStore.updateJob(editingJobId.value, jobData.value);
+    } else {
+      await jobStore.createJob(jobData.value);
+    }
+    resetForm();
+  } catch (error) {
+    console.error("Failed to update or add job:", error);
+  }
+};
+
+const editJob = (job) => {
+  editingJobId.value = job.id;
+  jobData.value = { ...job };
+};
+
+const resetForm = () => {
+  editingJobId.value = null;
   jobData.value = {
     title: '',
     description: '',
     local: null,
     company: null,
     deadline: ''
-  }
-}
+  };
+};
 
 onMounted(async () => {
-  await fetchJobs()
-  await fetchCompanies()
-  await fetchLocal()
-})
+  await fetchJobs();
+  await fetchCompanies();
+  await fetchLocal();
+});
 </script>
 
 <template>
@@ -56,28 +74,24 @@ onMounted(async () => {
     <ul class="job-list">
       <li v-for="job in jobStore.jobs" :key="job.id" class="job-item">
         {{ job.title }}
+        <button @click="editJob(job)" class="edit-button">Edit</button>
         <button @click="removeJob(job.id)" class="delete-button">Delete</button>
       </li>
     </ul>
 
-    <form @submit.prevent="addJob" class="job-form">
+    <form @submit.prevent="addOrUpdateJob" class="job-form">
       <div class="form-group">
         <label for="title">Title</label>
         <input v-model="jobData.title" id="title" type="text" required class="form-control" />
       </div>
       <div class="form-group">
         <label for="description">Description</label>
-        <textarea
-          v-model="jobData.description"
-          id="description"
-          required
-          class="form-control"
-        ></textarea>
+        <textarea v-model="jobData.description" id="description" required class="form-control"></textarea>
       </div>
       <div class="form-group">
         <label for="local">Local</label>
         <select v-model="jobData.local" id="local" required class="form-control">
-          <option v-for="local in localStore.locations" :key="local.id" :value="local.id" >
+          <option v-for="local in localStore.locations" :key="local.id" :value="local.id">
             {{ local.city }}
           </option>
         </select>
@@ -94,7 +108,9 @@ onMounted(async () => {
         <label for="deadline">Deadline</label>
         <input v-model="jobData.deadline" id="deadline" type="date" required class="form-control" />
       </div>
-      <button type="submit" class="submit-button">Add Job</button>
+      <button type="submit" class="submit-button">
+        {{ editingJobId ? 'Update Job' : 'Add Job' }}
+      </button>
     </form>
   </div>
 </template>
@@ -140,17 +156,27 @@ onMounted(async () => {
   margin-bottom: 10px;
 }
 
-.delete-button {
+.delete-button,
+.edit-button {
   background-color: #dc3545;
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 10px;
+}
+
+.edit-button {
+  background-color: #28a745;
 }
 
 .delete-button:hover {
   background-color: #c82333;
+}
+
+.edit-button:hover {
+  background-color: #218838;
 }
 
 .job-form {
