@@ -13,7 +13,7 @@ class StateService{
         return response.data
     }
     async updateState(id, stateData){
-        const response = await api.put(`state/${id}`, stateData)
+        const response = await api.put(`state/${id}/`, stateData)
         return response.data
     }
 }

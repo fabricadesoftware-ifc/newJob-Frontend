@@ -14,7 +14,7 @@ class JobService {
         return response.data
     }
     async updateJob(id, jobData){
-        const response = await api.put(`job/${id}`, jobData)
+        const response = await api.put(`job/${id}/`, jobData)
         return response.data
     }
 }

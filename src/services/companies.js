@@ -13,7 +13,7 @@ class CompanyService {
         return response.data
     }
     async updateCompany(id, companyData) {
-            const response = await api.put(`companies/${id}`, companyData);
+            const response = await api.put(`companies/${id}/`, companyData);
             return response.data;
     }
 

@@ -12,8 +12,8 @@ class LocalService{
         const response = await api.post(`local/`, locationData)
         return response.data
     }
-    async updateLocation(locationData){
-        const response = await api.post(`local/`, locationData)
+    async updateLocation(id, locationData){
+        const response = await api.post(`local/${id}/`, locationData)
         return response.data
     }
 }
