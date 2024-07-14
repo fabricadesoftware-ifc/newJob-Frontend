@@ -1,5 +1,5 @@
 import { api } from '@/plugins/axios';
-class StateState{
+class StateService{
     async getAllStates(){
         const response = await api.get('state/')
         return response.data
@@ -18,4 +18,4 @@ class StateState{
     }
 }
 
-export default new StateState()
+export default new StateService()
