@@ -24,5 +24,15 @@ export const useJobStore = defineStore('job', () => {
         state.jobs = state.jobs.filter(job => job.id !== id);
     };
 
-    return {jobs, getAllJobs, createJob, deleteJob}
+    const updateJob = async (id, jobData) => {
+
+            const updatedJob = await JobService.updateJob(id, jobData);
+            const index = state.jobs.findIndex(job => job.id === id);
+            if (index !== -1) {
+                state.jobs[index] = updatedJob;
+            }
+
+    };
+
+    return {jobs, getAllJobs, createJob, deleteJob, updateJob}
 })

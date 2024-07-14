@@ -14,5 +14,23 @@ export const useLocalStore = defineStore('local', () => {
         state.locations = data
     }
     
-    return {locations, getAllLocations}
+    const createLocation = async (locationData) => {
+        const data = await LocalService.createLocation(locationData)
+        state.locations.push(data)
+    }
+
+    const deleteLocation = async (id) => {
+         await LocalService.deleteLocation(id)
+        state.locations = state.locations.filter(location => location.id !== id);
+    }
+
+    const updateLocation = async (id, locationData) => {
+            const updatedLocation = await LocalService.updateLocation(id, locationData);
+            const index = state.locations.findIndex(location => location.id === id);
+            if (index !== -1) {
+                state.locations[index] = updatedLocation;
+            }
+   
+    };
+    return {locations, getAllLocations, createLocation, deleteLocation, updateLocation}
 })
