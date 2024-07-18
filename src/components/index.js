@@ -10,6 +10,7 @@ import MainContentJobs from "./jobPage/MainContentJobs.vue";
 import FooterComponent from "./footer/FooterComponent.vue";
 import AboutIntroduction from './about/AboutIntroduction.vue';
 import AboutContent from "./about/AboutContent.vue";
+import MapGoogle from './google/MapGoogle.vue'
 
 export {
     ImageForm,
@@ -23,5 +24,6 @@ export {
     HeaderComponent,
     PageIntroduction,
     MainContent,
-    TextSection
+    TextSection,
+    MapGoogle
 }
