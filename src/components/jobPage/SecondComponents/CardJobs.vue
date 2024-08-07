@@ -1,7 +1,7 @@
 <template>
   <div class="container-card">
     <div class="logo-container">
-      <img src="https://i.ibb.co/frvBp3K/Ellipse-6.png" alt="" class="logo">
+      <img src="https://i.ibb.co/R62SDHv/card-job-circulo.png" alt="" class="logo">
     </div>
     <div class="box-info">
       <h3>BioAgric</h3>
@@ -18,8 +18,8 @@
 .container-card {
   background: radial-gradient(circle, rgba(42,105,76,1) 15%, rgba(30,72,53,1) 95%);
   border-radius: 1em;
-  width: 23em;
-  height: 21em;
+  width: 25em;
+  height: 22em;
   position: relative;
   margin-top: 100px;
 }
