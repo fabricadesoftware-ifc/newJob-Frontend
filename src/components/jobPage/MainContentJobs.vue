@@ -31,6 +31,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
   display: flex;
   gap: 1em;
   padding-left: 8.5em;
+  padding-bottom: 4em;
 }
 
 .title-job > h2 {
