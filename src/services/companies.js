@@ -1,19 +1,19 @@
-import { api } from '@/plugins/axios';
+import axios from "axios";
 class CompanyService {
     async getAllCompanies() {
-        const response = await api.get('companies/')
+        const response = await axios.get('companies/')
         return response.data
     }
     async deleteCompany(id) {
-        const response = await api.delete(`companies/${id}`)
+        const response = await axios.delete(`companies/${id}`)
         return response.data
     }
     async createCompany(companyData){
-        const response = await api.post('companies/', companyData);
+        const response = await axios.post('companies/', companyData);
         return response.data
     }
     async updateCompany(id, companyData) {
-            const response = await api.put(`companies/${id}/`, companyData);
+            const response = await axios.put(`companies/${id}/`, companyData);
             return response.data;
     }
 
