@@ -21,7 +21,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
     </div>
     <div class="carrosel">
     <div class="box-img">
-      <img src="https://i.ibb.co/K690q8v/img-carrosel-jobs.png" alt="" class="img">
+      <img src="https://i.ibb.co/vH30fjP/img-carrosel-job-4x.png" alt="" class="img">
     </div>
     <div class="buttons">
       <ArrowLeftThinCircleOutline class="arrow"/>

@@ -7,7 +7,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
 <template>
   <div class="container">
     <div class="title-job">
-      <img src="https://i.ibb.co/mbNR5y4/Group-1171274710.png" alt="" class="img-title" />
+      <img src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png" alt="" class="img-title" />
       <h2>Vagas</h2>
     </div>
     <div class="grid-container">
@@ -31,6 +31,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
   display: flex;
   gap: 1em;
   padding-left: 8.5em;
+  padding-bottom: 4em;
 }
 
 .title-job > h2 {
@@ -45,7 +46,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
 }
 
 .img-title {
-  width: 80px;
+  width: 90px;
 }
 
 .grid-container {
