@@ -1,19 +1,19 @@
-import { api } from '@/plugins/axios';
+import axios from "axios";
 class StateService{
-    async getAllServices(){
-        const response = await api.get('state/')
+    async getAllStates(){
+        const response = await axios.get('state/')
         return response.data
     }
-    async deleteService(id){
-        const response = await api.delete(`state/${id}`)
+    async deleteState(id){
+        const response = await axios.delete(`state/${id}`)
         return response.data
     }
-    async createService(serviceData){
-        const response = await api.post(`state/`, serviceData)
+    async createState(stateData){
+        const response = await axios.post(`state/`, stateData)
         return response.data
     }
-    async updateService(id, serviceData){
-        const response = await api.put(`state/${id}`, serviceData)
+    async updateState(id, stateData){
+        const response = await axios.put(`state/${id}/`, stateData)
         return response.data
     }
 }
