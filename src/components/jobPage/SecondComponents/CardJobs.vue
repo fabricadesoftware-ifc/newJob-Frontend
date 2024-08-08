@@ -1,10 +1,10 @@
 <template>
   <div class="container-card">
     <div class="logo-container">
-      <img src="https://i.ibb.co/frvBp3K/Ellipse-6.png" alt="" class="logo">
+      <img src="https://i.ibb.co/R62SDHv/card-job-circulo.png" alt="" class="logo">
     </div>
     <div class="box-info">
-      <h3>BioAgric</h3>
+      <h3 class="title-card-info">BioAgric</h3>
       <h3 class="pt">Analista de infraestrutura</h3>
       <p>Curitiba, Paraná</p>
       <div class="pt-4">
@@ -18,42 +18,46 @@
 .container-card {
   background: radial-gradient(circle, rgba(42,105,76,1) 15%, rgba(30,72,53,1) 95%);
   border-radius: 1em;
-  width: 23em;
-  height: 21em;
+  width: 30em;
+  height: 28em;
   position: relative;
   margin-top: 100px;
 }
 
 .logo-container {
   position: absolute;
-  top: -75px;  
+  top: -85px;  
   left: 50%;
   transform: translateX(-50%);
 }
 
 .logo {
-  width: 150px;
+  width: 190px;
 }
 
 .btn {
   border: none;
   background-color: #E09B6B;
-  padding: 0.7em;
+  padding: 0.8em;
   font-weight: bold;
   cursor: pointer;
   width: 15em;
   border-radius: 30px;
-  font-size: 17px;
+  font-size: 18.5px;
 }
 .box-info{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 5.6em;
+  padding-top: 9em;
+}
+.title-card-info{
+  font-size: 32px;
 }
 .pt{
   padding-top: 1.5em;
+  font-size: 24px;
 }
 .pt-4{
   padding-top: 2.5em;
