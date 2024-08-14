@@ -1,73 +1,79 @@
 <template>
-    <div class="container-wrapper">
-  <div class="container-header" >
-    <div class="container-logo">
-      <img src="https://i.ibb.co/6g5QTs3/logo-newjob-png.png" alt="" class="logo" />
+  <div class="container-wrapper">
+    <div>
+      <img src="https://i.ibb.co/y0NZsrZ/logo-new-job.png" alt="" class="logo" />
     </div>
-    <div class="flex box-mid">
-      <p class="border">Início</p>
-      <p class="padding-fix">Vagas</p>
+    <div class="links-container">
+      <router-link to="/">Início</router-link>
+      <router-link to="/jobs">Vagas</router-link>
+      <router-link to="...">Empresa</router-link>
     </div>
-    <div class="flex box-mid">
-      <p class="padding-fix">Login</p>
-      <p class="register">Get started</p>
-    </div>
+    <div class="user-links links-container">
+      <router-link to="/login">Login</router-link>
+      <router-link class="register" to="/signUp">Cadastre-se</router-link>
     </div>
   </div>
 </template>
 
+
 <style scoped>
-.container-header {
-  display: flex;
-  justify-content: space-around;
-  background-color: transparent;
-  padding: 2.5em 1em;
+.router-link-active {
+  border-radius: 2rem;
+  border: 1px solid black;
+  padding: .2rem 1rem;
 }
-.container-wrapper{
+
+.container-wrapper {
   position: absolute;
   width: 100%;
+  max-width: 100vw;
   top: 0px;
   z-index: 1;
-}
-.flex {
   display: flex;
-  gap: 0.5em;
-}
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 2.5em 0;
 
-.container-logo {
-  width: auto;
-}
+  & .user-links {
+    padding: .2rem .2rem;
 
-.logo {
-  width: 10.5em;
-}
+    & a:first-child {
+      margin: 0 1rem;
+    }
+  }
 
-.box-mid {
-  background-color: white;
-  border-radius: 5em;
-  padding: 0.5em 1em 0.5em 1em;
-}
+  & .logo {
+    width: 10.5em;
+  }
 
-.box-mid > p {
-  color: black;
-  font-size: 15px;
-  cursor: pointer;
-}
+  & .logo,
+  .links-container {
+    margin: 0 3rem;
+  }
 
-.border {
-  border: solid 1.5px black;
-  border-radius: 5em;
-  padding: 0.3em 1em 0.3em 1em;
-}
 
-.padding-fix {
-  padding: 0.3em 0.7em 0.3em 0.7em;
-}
+  & .links-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5em;
+    color: #000000;
+    padding: .5rem .4em;
+  }
 
-.register {
-  background-color: #1d4734;
-  color: white !important;
-  padding: 0.3em 0.7em 0.3em 0.7em;
-  border-radius: 5em;
+  & .links-container>a {
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 0 .4rem;
+  }
+
+
+  & .register {
+    background-color: #1d4734;
+    color: white !important;
+    padding: 0.5em 0.9em;
+    border-radius: 5em;
+  }
 }
 </style>
