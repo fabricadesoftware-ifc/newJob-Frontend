@@ -11,6 +11,7 @@ import FooterComponent from "./footer/FooterComponent.vue";
 import AboutIntroduction from './about/AboutIntroduction.vue';
 import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from './google/MapGoogle.vue'
+import LoadingPage from "./loading/LoadingPage.vue";
 
 export {
     ImageForm,
@@ -25,5 +26,6 @@ export {
     PageIntroduction,
     MainContent,
     TextSection,
-    MapGoogle
+    MapGoogle,
+    LoadingPage
 }
