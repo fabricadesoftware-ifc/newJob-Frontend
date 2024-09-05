@@ -1,5 +1,5 @@
 <script setup>
-defineProps(["company", "title", "local"]);
+defineProps(["company", "title", "local", "id", "getJob"]);
 </script>
 <template>
   <div class="container-card">
@@ -11,7 +11,7 @@ defineProps(["company", "title", "local"]);
       <h3 class="pt">{{ title }}</h3>
       <p>{{ local.state.name }}, {{ local.city }}</p>
       <div class="pt-4">
-        <button class="btn">Saiba mais</button>
+        <routerLink to="/about" class="btn" @click="getJob(id)">Saiba mais</routerLink>
       </div>
     </div>
   </div>
@@ -41,12 +41,12 @@ defineProps(["company", "title", "local"]);
 .btn {
   border: none;
   background-color: #e09b6b;
-  padding: 0.8em;
+  padding: 0.8em 6rem;
   font-weight: bold;
   cursor: pointer;
-  width: 15em;
   border-radius: 30px;
   font-size: 18.5px;
+  color: #000000;
 }
 
 .box-info {

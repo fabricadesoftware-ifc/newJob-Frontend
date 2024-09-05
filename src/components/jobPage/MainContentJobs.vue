@@ -3,11 +3,14 @@ import { onMounted } from "vue";
 import CardJobs from "./SecondComponents/CardJobs.vue";
 import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from "../icons";
 import { useJobStore } from "@/stores";
-
 const jobStore = useJobStore();
 
 async function getJobs() {
   await jobStore.getAllJobs();
+}
+
+async function getJob(id) {
+  await jobStore.getJob(id);
 }
 
 onMounted(async () => {
@@ -18,16 +21,12 @@ onMounted(async () => {
 <template>
   <div class="container">
     <div class="title-job">
-      <img
-        src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png"
-        alt=""
-        class="img-title"
-      />
+      <img src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png" alt="" class="img-title" />
       <h2>Vagas</h2>
     </div>
     <div class="grid-container">
       <div class="container-card" v-for="job in jobStore.jobs" :key="job">
-        <CardJobs :company="job.company.name" :title="job.title" :local="job.local" />
+        <CardJobs :company="job.company.name" :title="job.title" :local="job.local" :id="job.id" :getJob="getJob" />
       </div>
     </div>
     <div class="buttons">
@@ -49,11 +48,11 @@ onMounted(async () => {
   padding-bottom: 4em;
 }
 
-.title-job > h2 {
+.title-job>h2 {
   font-size: 34px;
 }
 
-.title-job > h2 {
+.title-job>h2 {
   font-weight: normal;
   display: flex;
   justify-content: center;
