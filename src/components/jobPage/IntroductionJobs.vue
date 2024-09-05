@@ -1,11 +1,9 @@
 <script setup>
-import HeaderComponent from '../header/HeaderComponent.vue'
 import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icons';
 </script>
 
 <template>
   <div class="container">
-    <HeaderComponent />
     <div class="box-text">
       <div class="text">
         <h1>Vagas para</h1>
