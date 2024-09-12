@@ -19,4 +19,12 @@ export default class AuthService {
             throw error;
         }
     }
+    async postUserToken(token) {
+        const response = await axios.get('/usuarios/me', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        return response.data;
+      }
 }

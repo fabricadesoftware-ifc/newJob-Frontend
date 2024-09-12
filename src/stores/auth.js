@@ -1,12 +1,20 @@
 import { defineStore } from 'pinia'
-import { computed, reactive } from 'vue'
+import { AuthService } from '@/services/auth';
+
+import { ref } from 'vue';
+
+const authService = new AuthService();
 
 export const useAuthStore = defineStore('auth', () => {
-    const state = reactive({
-        user: [],
-        isLogged: false
-    })
-    const user = computed(() => state.user)
-
-    return {user}
-})
+    const user = ref({});
+  
+    async function setToken() {
+      user.value = await authService.postUserToken();
+    };
+  
+    function unsetToken() {
+      user.value = {};
+    };
+  
+    return { user, setToken, unsetToken };
+  });
