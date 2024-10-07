@@ -1,38 +1,76 @@
 <script setup>
-import {
-    CheckCircle
-} from '../icons';
+import { ref } from 'vue';
+import { CheckCircle } from '../icons';
+import { useAuthStore } from '@/stores/auth'; 
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
+
+const username = ref('');
+const email = ref('');
+const password = ref('');
+const confirmPassword = ref('');
+const message = ref('');
+
+const authStore = useAuthStore();
+
+const registerUser = async () => {
+    if (password.value !== confirmPassword.value) {
+        message.value = "As senhas não correspondem!";
+        return;
+    }
+
+    try {
+        const userData = {
+            username: username.value, 
+            email: email.value,
+            password: password.value,
+        };
+
+        const response = await authStore.register(userData); 
+        router.push("/login")
+        message.value = response.message || "Usuário registrado com sucesso!"; 
+
+    } catch (error) {
+        if (error.response && error.response.data) {
+            message.value = "Erro ao registrar o usuário: " + error.response.data.message;
+        } else {
+            message.value = "Erro desconhecido ao registrar o usuário.";
+        }
+    }
+};
 </script>
 
 <template>
-    <form class="container">
+    <form class="container" @submit.prevent="registerUser"> 
         <h1>Cadastro</h1>
         <label>
             <p>Nome</p>
             <div class="input-container">
-                <input type="text">
+                <input type="text" v-model="username" required>
             </div>
         </label>
         <label>
             <p>Email</p>
             <div class="input-container">
-                <input type="email">
+                <input type="email" v-model="email" required>
                 <CheckCircle />
             </div>
         </label>
         <label>
             <p>Senha</p>
             <div class="input-container">
-                <input type="password">
+                <input type="password" v-model="password" required>
             </div>
         </label>
         <label>
             <p>Confirme senha</p>
             <div class="input-container">
-                <input type="password">
+                <input type="password" v-model="confirmPassword" required>
             </div>
         </label>
-        <button>Criar conta</button>
+        <button type="submit">Criar conta</button>
+        <p v-if="message">{{ message }}</p> <!-- Exibe a mensagem -->
         <p>Já possui conta?
             <router-link to="/login" class="link-text">Faça login</router-link>
         </p>
