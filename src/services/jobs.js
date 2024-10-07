@@ -2,7 +2,7 @@ import axios from "axios";
 
 class JobService {
     async getAllJobs(){
-        const response = await axios.get('job/')
+        const response = await axios.get('job')
         return response.data
     }
     async deleteJob(id){
@@ -10,11 +10,11 @@ class JobService {
         return response.data
     }
     async createJob(jobData){
-        const response = await axios.post(`job/`, jobData)
+        const response = await axios.post(`job`, jobData)
         return response.data
     }
     async updateJob(id, jobData){
-        const response = await axios.put(`job/${id}/`, jobData)
+        const response = await axios.put(`job/${id}`, jobData)
         return response.data
     }
 }
