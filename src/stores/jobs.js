@@ -11,8 +11,8 @@ export const useJobStore = defineStore('job', () => {
     const jobs = computed(() => state.value.jobs)
     const currentJob = computed(() => state.value.currentJob)
 
-    const getAllJobs = async () => {
-        const data = await JobService.getAllJobs()
+    const getAllJobs = async (page) => {
+        const data = await JobService.getAllJobs(page)
         state.value.jobs = data
     }
 

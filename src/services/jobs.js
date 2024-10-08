@@ -1,8 +1,8 @@
 import axios from "axios";
 
 class JobService {
-    async getAllJobs() {
-        const response = await axios.get('job/')
+    async getAllJobs(page) {
+        const response = await axios.get(page)
         return response.data
     }
     async getJob(id) {

@@ -3,14 +3,11 @@ import { onMounted } from "vue";
 import CardJobs from "./SecondComponents/CardJobs.vue";
 import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from "../icons";
 import { useJobStore } from "@/stores";
-import { ref } from "vue";
+
 const jobStore = useJobStore();
 
-const firstSliceNum = ref(0)
-const secSliceNum = ref(4)
-
 async function getJobs() {
-  await jobStore.getAllJobs();
+  await jobStore.getAllJobs(`job/`);
 }
 
 async function getJob(id) {
@@ -21,32 +18,41 @@ onMounted(async () => {
   await getJobs();
 });
 
-function nextJobs() {
-  firstSliceNum.value += 4;
-  secSliceNum.value += 4;
-}
-
-function previousJobs() {
-  firstSliceNum.value -= 4;
-  secSliceNum.value -= 4;
+async function changeJobs(page) {
+  await jobStore.getAllJobs(page);
 }
 </script>
 
 <template>
   <div class="container">
     <div class="title-job">
-      <img src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png" alt="" class="img-title" />
+      <img
+        src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png"
+        alt=""
+        class="img-title"
+      />
       <h2>Vagas</h2>
     </div>
     <div class="grid-container">
-      <div class="container-card" v-for="job in jobStore.jobs.slice(firstSliceNum, secSliceNum)" :key="job">
-        <CardJobs :company="job.company.name" :title="job.title" :local="job.local" :id="job.id" :getJob="getJob" />
+      <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
+        <CardJobs
+          :company="job.company.name"
+          :title="job.title"
+          :local="job.local"
+          :id="job.id"
+          :getJob="getJob"
+        />
       </div>
     </div>
     <div class="buttons">
-      <ArrowLeftThinCircleOutline @click="previousJobs()" :class="firstSliceNum == 0 ? `disable arrow` : `arrow`" />
-      <ArrowRightThinCircleOutline @click="nextJobs()"
-        :class="secSliceNum >= jobStore.jobs.length ? `disable arrow` : `arrow`" />
+      <ArrowLeftThinCircleOutline
+        @click="changeJobs(jobStore.jobs.previous)"
+        :class="jobStore.jobs.previous ? `arrow` : `disable arrow`"
+      />
+      <ArrowRightThinCircleOutline
+        @click="changeJobs(jobStore.jobs.next)"
+        :class="jobStore.jobs.next ? `arrow` : `disable arrow`"
+      />
     </div>
   </div>
 </template>
@@ -63,11 +69,11 @@ function previousJobs() {
   padding-bottom: 4em;
 }
 
-.title-job>h2 {
+.title-job > h2 {
   font-size: 34px;
 }
 
-.title-job>h2 {
+.title-job > h2 {
   font-weight: normal;
   display: flex;
   justify-content: center;
@@ -100,7 +106,7 @@ function previousJobs() {
 
 .disable {
   pointer-events: none;
-  filter: opacity(.5);
+  filter: opacity(0.5);
 }
 
 .arrow {
