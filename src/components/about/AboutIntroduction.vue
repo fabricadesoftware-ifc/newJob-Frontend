@@ -1,22 +1,19 @@
 <script setup>
 import { useJobStore } from "@/stores";
 const job = useJobStore();
-
-console.log(job)
 </script>
 
 <template>
   <div class="container">
     <div class="content-container">
       <h1>{{ job.currentJob.title }}</h1>
-      <p class="main-description">{{ job.currentJob.description }}</p>
       <p>Data limite: {{ job.currentJob.deadline }}</p>
       <p>
         Cidade: {{ job.currentJob.local.city }}, {{ job.currentJob.local.state.initials }}
       </p>
       <div class="logo-container">
         <span class="top-border"></span>
-        <img src="https://i.ibb.co/9GMPt74/image-removebg-preview.png" alt="" />
+        <img :src="job.currentJob.image_job? job.currentJob.image_job.file: `https://i.ibb.co/9GMPt74/image-removebg-preview.png`" alt="" />
         <span class="bot-border"></span>
       </div>
     </div>
@@ -67,17 +64,17 @@ console.log(job)
   right: 0;
   bottom: 7%;
   background: linear-gradient(#1d4734, #235540);
-  padding: 2rem 3rem;
+  padding: 1rem 1rem 1rem 2rem;
   width: 10%;
   border-radius: 1rem 0 0 1rem;
 }
 
 .logo-container img {
-  width: 90%;
-}
-
-.main-description {
-  margin: 1rem 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: #fff 4px solid;
+  object-fit: cover;
 }
 
 .content-container {
@@ -105,6 +102,7 @@ h1 {
   font-size: 5rem;
   font-weight: 600;
   text-transform: uppercase;
+  margin: 3vh 0;
 }
 
 .image-btn span {
