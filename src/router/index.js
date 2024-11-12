@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useLoadingStore } from '@/stores/loading';
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignUpView.vue'
@@ -36,18 +35,5 @@ const router = createRouter({
     },
   ]
 })
-
-router.beforeEach((to, from, next) => {
-  const loadingStore = useLoadingStore();
-  loadingStore.startLoading();
-  next();
-});
-
-router.afterEach(() => {
-  const loadingStore = useLoadingStore();
-  setTimeout(() => {
-    loadingStore.stopLoading();
-  }, 500); 
-});
 
 export default router
