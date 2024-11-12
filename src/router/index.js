@@ -4,6 +4,7 @@ import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignUpView.vue'
 import JobsView from '@/views/JobsView.vue'
 import AboutView from '@/views/AboutView.vue'
+import SingUpCompanyView from '@/views/SingUpCompanyView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       name: 'about',
       component: AboutView
     },
+    {
+      path: '/singup-company',
+      name: 'singup-company',
+      component: SingUpCompanyView
+    }
   ]
 })
 

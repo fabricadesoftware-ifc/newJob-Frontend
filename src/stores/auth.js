@@ -1,61 +1,91 @@
 import { defineStore } from 'pinia';
 import AuthService from '@/services/auth';
-import { ref } from 'vue';
-import { useLoadingStore } from './loading';
-
+import { reactive, computed } from 'vue';
+import { useLoadingStore } from '@/stores/loading';
 
 const authService = new AuthService();
 
 export const useAuthStore = defineStore('auth', () => {
-    const user = ref({});
-    const token = ref(null);
-    const loadingStore = useLoadingStore() 
-  
-    async function setToken() {
-        loadingStore.startLoading()
-        user.value = await authService.postUserToken(token.value);
-        loadingStore.stopLoading()
-    };
-  
-    function unsetToken() {
-        loadingStore.startLoading()
-        user.value = {};
-        loadingStore.stopLoading()
-    };
+  const state = reactive({
+    token: localStorage.getItem('authToken') || null,
+  });
 
-    async function login(credentials) {
-        try {
-            loadingStore.startLoading()
-            const response = await authService.LoginUser(credentials);
-            token.value = response.access;  
-            localStorage.setItem('authToken', response.access); 
-            loadingStore.stopLoading()
-            return response;
+  const loadingStore = useLoadingStore();
 
-        } catch (error) {
-            console.error("Login error:", error);
-            throw error;
-        }
-    }
-  
-    function logout() {
-        loadingStore.startLoading()
-        token.value = null;
-        localStorage.removeItem('authToken');
-        loadingStore.stopLoading()
-    }
+  const isLogged = computed(() => !!state.token);
 
-    async function register(userData) {
-        try {
-            loadingStore.startLoading()  
-            const response = await authService.RegisterUser(userData);
-            loadingStore.stopLoading()
-            return response; 
-        } catch (error) {
-            console.error("Registration error:", error);
-            throw error; 
-        }
+  function setToken(newToken) {
+    state.token = newToken;
+    localStorage.setItem('authToken', newToken);
+  }
+
+  async function LoginUser(credentials) {
+    loadingStore.startLoading();
+    try {
+      const response = await authService.LoginUser(credentials);
+      setToken(response.access);
+      return response;
+    } catch (error) {
+      console.error('Erro no login:', error);
+      throw error;
+    } finally {
+      loadingStore.stopLoading();
     }
-  
-    return { user, setToken, unsetToken, login, logout, register };
+  }
+
+  function LogoutUser() {
+    state.token = null;
+    isLogged.value = false;
+    localStorage.removeItem('authToken');
+  }
+
+  async function RegisterUser(userData) {
+    loadingStore.startLoading();
+    try {
+      const response = await authService.RegisterUser(userData);
+      return response;
+    } catch (error) {
+      console.error('Erro no registro:', error);
+      throw error;
+    } finally {
+      loadingStore.stopLoading();
+    }
+  }
+
+  async function ForgotPasswordUser(email) {
+    loadingStore.startLoading();
+    try {
+      const response = await authService.ForgotPasswordUser(email);
+      return response;
+    } catch (error) {
+      console.error('Erro ao solicitar recuperação de senha:', error);
+      throw error;
+    } finally {
+      loadingStore.stopLoading();
+    }
+  }
+
+  async function ResetPasswordUser(reset_code, new_passoword) {
+    loadingStore.startLoading();
+    try {
+      const response = await authService.ResetPasswordUser(reset_code, new_passoword); 
+      return response;
+    } catch (error) {
+      console.error('Erro ao resetar a senha:', error);
+      throw error;
+    } finally {
+      loadingStore.stopLoading();
+    }
+  }
+
+  return { 
+    state, 
+    setToken, 
+    LoginUser, 
+    LogoutUser, 
+    RegisterUser, 
+    ForgotPasswordUser, 
+    ResetPasswordUser, 
+    isLogged 
+  };
 });
