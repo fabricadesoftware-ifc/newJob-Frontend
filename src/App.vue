@@ -9,6 +9,6 @@ const loadingStore = useLoadingStore();
 <template>
   <div id="app">
     <LoadingPage v-if="loadingStore.isLoading" />
-    <RouterView v-else />
+    <RouterView />
   </div>
 </template>
