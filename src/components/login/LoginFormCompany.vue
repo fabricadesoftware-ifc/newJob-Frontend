@@ -6,25 +6,16 @@ import {
 } from '../icons';
 
 import { ref } from 'vue';
-import { useAuthStore } from '@/stores/auth';
-import { useRouter } from 'vue-router';
+
 
 const showPassword = ref(false);
 const email = ref('');
 const password = ref('');
 const errorMessage = ref(null);
 
-const authStore = useAuthStore();
-const router = useRouter();
-
 const handleLogin = async () => {
-  try {
-    const credentials = { value: email.value, password: password.value };
-    await authStore.LoginUser     (credentials);
-    router.push('/');
-  } catch (error) {
-    errorMessage.value = "Credenciais inválidas. Tente novamente.";
-  }
+
+    console.log("Login")
 };
 </script>
 

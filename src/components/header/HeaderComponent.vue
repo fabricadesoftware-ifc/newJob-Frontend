@@ -9,14 +9,41 @@
       <router-link to="...">Empresa</router-link>
     </div>
     <div class="user-links links-container">
-      <router-link to="/login">Login</router-link>
-      <router-link class="register" to="/signUp">Cadastre-se</router-link>
+      <template v-if="!isLogged">
+        <router-link to="/login">Login</router-link>
+        <router-link class="register" to="/signUp">Cadastre-se</router-link>
+      </template>
+      <template v-else>
+        <button @click="handleLogout" class="logout-button">Logout</button>
+      </template>
     </div>
   </div>
 </template>
 
+<script setup>    
+import { useAuthStore } from '@/stores/auth';
+import { computed } from 'vue';
+
+const authStore = useAuthStore();
+
+const isLogged = computed(() => authStore.isLogged);
+
+const handleLogout = () => {
+  authStore.LogoutUser();
+};
+</script>
+
 
 <style scoped>
+.logout-button {
+  background-color: #1d4734;
+  color: white;
+  padding: 0.5em 0.9em;
+  border-radius: 5em;
+  border: none;
+  cursor: pointer;
+}
+
 .router-link-active {
   border-radius: 2rem;
   border: 1px solid black;

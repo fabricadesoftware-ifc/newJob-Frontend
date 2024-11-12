@@ -4,7 +4,6 @@ const props = defineProps({
     image: String
 })
 
-const teste = 'left' 
 </script>
 
 <template>

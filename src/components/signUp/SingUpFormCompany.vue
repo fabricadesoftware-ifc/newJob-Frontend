@@ -1,55 +1,37 @@
 <script setup>
 import { ref } from 'vue';
 import { CheckCircle } from '../icons';
-import { useAuthStore } from '@/stores/auth'; 
-import { useRouter } from 'vue-router';
 
-const router = useRouter()
-
-const username = ref('');
+const name = ref('');
+const fantasyName = ref('');
 const email = ref('');
-const password = ref('');
-const confirmPassword = ref('');
-const message = ref('');
+const phone = ref('');
+const address = ref('');
+const city = ref('');
 
-const authStore = useAuthStore();
-
-const registerUser = async () => {
-    if (password.value !== confirmPassword.value) {
-        message.value = "As senhas não correspondem!";
-        return;
-    }
-
-    try {
-        const userData = {
-            username: username.value, 
-            email: email.value,
-            password: password.value,
-        };
-
-        const response = await authStore.RegisterUser(userData); 
-        router.push("/login")
-        message.value = response.message || "Usuário registrado com sucesso!"; 
-
-    } catch (error) {
-        if (error.response && error.response.data) {
-            message.value = "Erro ao registrar o usuário: " + error.response.data.message;
-        } else {
-            message.value = "Erro desconhecido ao registrar o usuário.";
-        }
-    }
+const registerCompany = async () => {
+    console.log("Registering company");
 };
 </script>
 
 <template>
-    <form class="container" @submit.prevent="registerUser"> 
-        <h1>Cadastro</h1>
+    <form class="container" @submit.prevent="registerCompany"> 
+        <h1>Cadastro de Empresa</h1>
+        
         <label>
             <p>Nome</p>
             <div class="input-container">
-                <input type="text" v-model="username" required>
+                <input type="text" v-model="name" required>
             </div>
         </label>
+
+        <label>
+            <p>Nome Fantasia</p>
+            <div class="input-container">
+                <input type="text" v-model="fantasyName" required>
+            </div>
+        </label>
+
         <label>
             <p>Email</p>
             <div class="input-container">
@@ -57,23 +39,29 @@ const registerUser = async () => {
                 <CheckCircle />
             </div>
         </label>
+
         <label>
-            <p>Senha</p>
+            <p>Telefone</p>
             <div class="input-container">
-                <input type="password" v-model="password" required>
+                <input type="tel" v-model="phone" required>
             </div>
         </label>
+
         <label>
-            <p>Confirme senha</p>
+            <p>Endereço</p>
             <div class="input-container">
-                <input type="password" v-model="confirmPassword" required>
+                <input type="text" v-model="address" required>
             </div>
         </label>
-        <button type="submit">Criar conta</button>
-        <p v-if="message">{{ message }}</p> <!-- Exibe a mensagem -->
-        <p>Já possui conta?
-            <router-link to="/login" class="link-text">Faça login</router-link>
-        </p>
+
+        <label>
+            <p>Cidade</p>
+            <div class="input-container">
+                <input type="text" v-model="city" required>
+            </div>
+        </label>
+
+        <button type="submit">Cadastrar Empresa</button>
     </form>
 </template>
 
