@@ -12,7 +12,7 @@ import AboutIntroduction from './about/AboutIntroduction.vue';
 import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from './google/MapGoogle.vue'
 import LoadingPage from "./loading/LoadingPage.vue";
-import SingUpCompanyView from "@/views/SingUpCompanyView.vue";
+import SingUpFormCompany from "./signUp/SingUpFormCompany.vue";
 
 export {
     ImageForm,
@@ -29,5 +29,5 @@ export {
     TextSection,
     MapGoogle,
     LoadingPage,
-    SingUpCompanyView
+    SingUpFormCompany
 }
