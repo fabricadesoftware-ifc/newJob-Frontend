@@ -1,10 +1,10 @@
 <script setup>
-import {ImageForm, SingUpCompanyView} from '@/components/index';
+import {ImageForm, SingUpFormCompany} from '@/components/';
 </script>
 
 <template>
     <div class="container">
-    <SingUpCompanyView/>
+    <SingUpFormCompany/>
     <ImageForm side="right" image="https://i.ibb.co/ygh8VM8/image.png"/>
     </div>
 </template>
