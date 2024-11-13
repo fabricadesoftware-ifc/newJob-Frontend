@@ -62,6 +62,10 @@ const registerCompany = async () => {
         </label>
 
         <button type="submit">Cadastrar Empresa</button>
+        <p>Já possui conta?
+            <router-link to="/login" class="link-text">Faça login</router-link>
+        </p>
+
     </form>
 </template>
 
