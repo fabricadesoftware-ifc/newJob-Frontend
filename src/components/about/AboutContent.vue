@@ -1,6 +1,20 @@
 <script setup>
 import { useJobStore } from "@/stores";
+import { ref } from "vue";
 const job = useJobStore();
+const benefits = ref([]);
+
+for (const benefit of job.currentJob.benefits) {
+  benefits.value.push(benefit.name);
+}
+const educationLevels = [
+  "Ensino Fundamental",
+  "Ensino Médio",
+  "Ensino Superior",  
+  "Pós-Graduação",
+  "Mestrado",
+  "Doutorado"
+]
 </script>
 
 <template>
@@ -11,21 +25,17 @@ const job = useJobStore();
     </span>
     <ul>
       <li>Cargo: {{ job.currentJob.title }}</li>
-      <li>Benefícios: {{ job.currentJob.benefits }};</li>
-      <li>Vaga para deficientes: Sim</li>
-      <li>Salário: A Combinar</li>
+      <li>Benefícios: {{ benefits.join(` + `).toString() }};</li>
+      <li v-if="job.currentJob.isPcd">Vaga para deficientes: Sim</li>
+      <li>Salário: R${{ job.currentJob.wage }}</li>
     </ul>
     <span class="title">
       <img src="https://i.ibb.co/1Z5CPWL/about-icon.png" alt="" />
       <p>Requisitos</p>
     </span>
     <ul>
-      <li>Cargo: Analista de infraestrutura</li>
-      <li>
-        Benefícios: Plano de Saúde + Ticket Alimentação + PPR + Alimentação na empresa;
-      </li>
-      <li>Vaga para deficientes: Sim</li>
-      <li>Salário: A Combinar</li>
+      <li>Formação: {{ educationLevels[job.currentJob.educatiol_Level - 1] }}</li>
+      <li v-if="job.currentJob.isTravel">Disponibilidade para viajar.</li>
     </ul>
     <button>CANDIDATAR-SE À VAGA</button>
   </div>
