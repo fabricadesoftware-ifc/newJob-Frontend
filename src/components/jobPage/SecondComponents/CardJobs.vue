@@ -4,15 +4,20 @@ defineProps(["image", "company", "title", "local", "id"]);
 <template>
   <div class="container-card">
     <div class="logo-container">
-    {{console.log(image)}}
-      <img :src="image? image.file: `https://i.ibb.co/9GMPt74/image-removebg-preview.png`" alt="" class="logo"/>
+      <img
+        :src="image ? image.file : `https://i.ibb.co/9GMPt74/image-removebg-preview.png`"
+        alt=""
+        class="logo"
+      />
     </div>
     <div class="box-info">
       <h3 class="title-card-info">{{ company }}</h3>
       <h3 class="pt">{{ title }}</h3>
       <p>{{ local.state.name }}, {{ local.city }}</p>
       <div class="pt-4">
-        <routerLink :to="'/about/'+id" class="btn" @click="getJob(id)">Saiba mais</routerLink>
+        <routerLink :to="'/about/' + id" class="btn" @click="getJob(id)"
+          >Saiba mais</routerLink
+        >
       </div>
     </div>
   </div>
