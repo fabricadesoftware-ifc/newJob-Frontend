@@ -1,17 +1,18 @@
 <script setup>
-defineProps(["company", "title", "local", "id", "getJob"]);
+defineProps(["image", "company", "title", "local", "id"]);
 </script>
 <template>
   <div class="container-card">
     <div class="logo-container">
-      <img src="https://i.ibb.co/R62SDHv/card-job-circulo.png" alt="" class="logo" />
+    {{console.log(image)}}
+      <img :src="image? image.file: `https://i.ibb.co/9GMPt74/image-removebg-preview.png`" alt="" class="logo"/>
     </div>
     <div class="box-info">
       <h3 class="title-card-info">{{ company }}</h3>
       <h3 class="pt">{{ title }}</h3>
       <p>{{ local.state.name }}, {{ local.city }}</p>
       <div class="pt-4">
-        <routerLink to="/about" class="btn" @click="getJob(id)">Saiba mais</routerLink>
+        <routerLink :to="'/about/'+id" class="btn" @click="getJob(id)">Saiba mais</routerLink>
       </div>
     </div>
   </div>
@@ -36,6 +37,9 @@ defineProps(["company", "title", "local", "id", "getJob"]);
 
 .logo {
   width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .btn {

@@ -9,11 +9,6 @@ const jobStore = useJobStore();
 async function getJobs() {
   await jobStore.getAllJobs(`job/`);
 }
-
-async function getJob(id) {
-  await jobStore.getJob(id);
-}
-
 onMounted(async () => {
   await getJobs();
 });
@@ -36,11 +31,11 @@ async function changeJobs(page) {
     <div class="grid-container">
       <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
         <CardJobs
+          :image="job.image_job"
           :company="job.company.name"
           :title="job.title"
           :local="job.local"
           :id="job.id"
-          :getJob="getJob"
         />
       </div>
     </div>
