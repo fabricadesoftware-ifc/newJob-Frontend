@@ -6,29 +6,53 @@ import {
 } from '../icons';
 
 import { ref } from 'vue';
+import { useAuthStore } from '@/stores/auth';
+import { useRouter } from 'vue-router';
 
 const showPassword = ref(false);
+const email = ref('');
+const password = ref('');
+const errorMessage = ref(null);
+
+const authStore = useAuthStore();
+const router = useRouter();
+
+const handleLogin = async () => {
+  try {
+    const credentials = { value: email.value, password: password.value };
+    await authStore.login(credentials);
+    router.push('/');
+  } catch (error) {
+    errorMessage.value = "Credenciais inválidas. Tente novamente.";
+  }
+};
 </script>
 
 <template>
-  <form class="container">
+  <form class="container" @submit.prevent="handleLogin">
     <h1>Login</h1>
+
     <label>
       <p>Email</p>
       <div class="input-container">
-        <input type="email">
+        <input type="email" v-model="email" required>
         <CheckCircle />
       </div>
     </label>
+
     <label>
       <p>Senha</p>
       <div class="input-container">
-        <input type="password">
+        <input :type="showPassword ? 'text' : 'password'" v-model="password" required>
         <EyeOffOutline v-if="showPassword" @click="showPassword = !showPassword" />
         <EyeOutline v-if="!showPassword" @click="showPassword = !showPassword" />
       </div>
     </label>
-    <button>Login</button>
+
+    <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+
+    <button type="submit">Login</button>
+
     <p>Ainda não possui conta?
       <router-link to="/signUp" class="link-text">Crie uma</router-link>
     </p>
@@ -93,5 +117,10 @@ label {
 .input-container:focus-within {
     border: 1px solid #E09B6B;
     transition: all .2s ease-in-out;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
 }
 </style>
