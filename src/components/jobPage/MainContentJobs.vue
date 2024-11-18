@@ -1,23 +1,53 @@
 <script setup>
-import CardJobs from './SecondComponents/CardJobs.vue';
-import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icons';
+import { onMounted } from "vue";
+import CardJobs from "./SecondComponents/CardJobs.vue";
+import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from "../icons";
+import { useJobStore } from "@/stores";
 
+const jobStore = useJobStore();
+
+async function getJobs() {
+  await jobStore.getAllJobs(`job/`);
+}
+onMounted(async () => {
+  await getJobs();
+});
+
+async function changeJobs(page) {
+  await jobStore.getAllJobs(page);
+}
 </script>
 
 <template>
   <div class="container">
     <div class="title-job">
-      <img src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png" alt="" class="img-title" />
+      <img
+        src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png"
+        alt=""
+        class="img-title"
+      />
       <h2>Vagas</h2>
     </div>
     <div class="grid-container">
-      <div class="container-card" v-for="index in 4" :key="index">
-        <CardJobs />
+      <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
+        <CardJobs
+          :image="job.image_job"
+          :company="job.company.name"
+          :title="job.title"
+          :local="job.local"
+          :id="job.id"
+        />
       </div>
     </div>
-      <div class="buttons">
-      <ArrowLeftThinCircleOutline class="arrow"/>
-      <ArrowRightThinCircleOutline class="arrow"/>
+    <div class="buttons">
+      <ArrowLeftThinCircleOutline
+        @click="changeJobs(jobStore.jobs.previous)"
+        :class="jobStore.jobs.previous ? `arrow` : `disable arrow`"
+      />
+      <ArrowRightThinCircleOutline
+        @click="changeJobs(jobStore.jobs.next)"
+        :class="jobStore.jobs.next ? `arrow` : `disable arrow`"
+      />
     </div>
   </div>
 </template>
@@ -51,22 +81,29 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(2, 1fr);    
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2em;
   justify-items: center;
-  align-items: center;                             
+  align-items: center;
 }
-.buttons{
+
+.buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto; 
-  width: 50px; 
+  margin: auto;
+  width: 50px;
   scale: 2;
   color: white;
   padding: 5em 0px 0px 0px;
 }
+
+.disable {
+  pointer-events: none;
+  filter: opacity(0.5);
+}
+
 .arrow {
   cursor: pointer;
   transition: transform 0.3s;
@@ -75,5 +112,4 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
 .arrow:hover {
   transform: scale(1.2);
 }
-
 </style>

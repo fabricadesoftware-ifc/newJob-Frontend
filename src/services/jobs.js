@@ -5,7 +5,11 @@ class JobService {
         const response = await axios.get('job')
         return response.data
     }
-    async deleteJob(id){
+    async getJob(id) {
+        const response = await axios.get(`job/${id}`)
+        return response.data
+    }
+    async deleteJob(id) {
         const response = await axios.delete(`job/${id}`)
         return response.data
     }
