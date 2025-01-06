@@ -5,6 +5,7 @@ import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignUpView.vue'
 import JobsView from '@/views/JobsView.vue'
 import AboutView from '@/views/AboutView.vue'
+import TesteView from '@/views/TesteView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +29,11 @@ const router = createRouter({
       path: '/jobs',
       name: 'jobs',
       component: JobsView
+    },
+    {
+      path: '/teste',
+      name: 'teste',
+      component: TesteView
     },
     {
       path: '/about/:id',

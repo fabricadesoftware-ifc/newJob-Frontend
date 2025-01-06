@@ -6,6 +6,7 @@ import Twitter from 'vue-material-design-icons/Twitter.vue';
 import Instagram from 'vue-material-design-icons/Instagram.vue';
 import Linkedin from 'vue-material-design-icons/Linkedin.vue';
 import ArrowTopRight from 'vue-material-design-icons/ArrowTopRight.vue';
+import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
 import ArrowRightThinCircleOutline from 'vue-material-design-icons/ArrowRightThinCircleOutline.vue';
 import ArrowLeftThinCircleOutline from 'vue-material-design-icons/ArrowLeftThinCircleOutline.vue';
@@ -22,5 +23,6 @@ export {
     ArrowTopRight,
     Plus,
     ArrowRightThinCircleOutline,
-    ArrowLeftThinCircleOutline
+    ArrowLeftThinCircleOutline,
+    ArrowRight,
 }

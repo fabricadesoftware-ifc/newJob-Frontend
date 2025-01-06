@@ -1,5 +1,6 @@
 <script setup>
-defineProps(["image", "company", "title", "local", "id"]);
+defineProps(['image', 'company', 'title', 'local', 'id'])
+import { ArrowRight } from '../../icons/index.js'
 </script>
 <template>
   <div class="container-card">
@@ -10,7 +11,7 @@ defineProps(["image", "company", "title", "local", "id"]);
         class="logo"
       />
     </div>
-    <div class="box-info">
+    <!-- <div class="box-info">
       <h3 class="title-card-info">{{ company }}</h3>
       <h3 class="pt">{{ title }}</h3>
       <p>{{ local.state.name }}, {{ local.city }}</p>
@@ -19,6 +20,17 @@ defineProps(["image", "company", "title", "local", "id"]);
           >Saiba mais</routerLink
         >
       </div>
+    </div> -->
+    <div class="box-info">
+      <p class="title-card">BioAgric</p>
+      <span>
+        <p class="title-card">Analista de Infraestrutura</p>
+        <p class="place">Curitiba, Paraná</p>
+      </span>
+      <routerLink :to="'/about/' + id" class="btn" @click="getJob(id)">
+        <p>Saiba mais</p>
+        <ArrowRight size="30"/>
+      </routerLink>
     </div>
   </div>
 </template>
@@ -26,36 +38,51 @@ defineProps(["image", "company", "title", "local", "id"]);
 <style scoped>
 .container-card {
   background: radial-gradient(circle, rgba(42, 105, 76, 1) 15%, rgba(30, 72, 53, 1) 95%);
-  border-radius: 1em;
-  width: 30em;
-  height: 28em;
+  border-radius: 3em;
+  width: 19vw;
+  height: 40vh;
   position: relative;
-  margin-top: 100px;
+  margin-top: 6vw;
 }
 
 .logo-container {
   position: absolute;
-  top: -85px;
+  bottom: 75%;
   left: 50%;
   transform: translateX(-50%);
-}
 
-.logo {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
+  & .logo {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 }
 
 .btn {
   border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   background-color: #e09b6b;
-  padding: 0.8em 6rem;
+  padding: 0.6em;
+  width: 70%;
   font-weight: bold;
   cursor: pointer;
   border-radius: 30px;
-  font-size: 18.5px;
+  font-size: 1.2em;
   color: #000000;
+
+  & p {
+    color: #1E1E1E;
+    font-size: 1em;
+  }
+
+  & span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .box-info {
@@ -64,23 +91,26 @@ defineProps(["image", "company", "title", "local", "id"]);
   justify-content: center;
   flex-direction: column;
   padding-top: 9em;
-}
+  gap: 1vw;
+  position: relative;
+  bottom: 10%;
+  
 
-.title-card-info {
-  font-size: 32px;
-}
+  & .title-card {
+    font-size: 1.5em;
+    font-weight: 500;
+  }
 
-.pt {
-  padding-top: 1.5em;
-  font-size: 24px;
-}
+  & .place {
+    font-weight: 100;
+  }
 
-.pt-4 {
-  padding-top: 2.5em;
-}
-
-h3 {
-  font-size: 1.3em;
+  & span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 p {
