@@ -6,7 +6,7 @@
     <div class="links-container">
       <router-link to="/">Início</router-link>
       <router-link to="/jobs">Vagas</router-link>
-      <router-link to="...">Empresa</router-link>
+      <router-link to="/profile">Perfil</router-link>
     </div>
     <div class="user-links links-container">
       <router-link to="/login">Login</router-link>

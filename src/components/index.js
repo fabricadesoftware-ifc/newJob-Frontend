@@ -10,8 +10,9 @@ import MainContentJobs from "./jobPage/MainContentJobs.vue";
 import FooterComponent from "./footer/FooterComponent.vue";
 import AboutIntroduction from './about/AboutIntroduction.vue';
 import AboutContent from "./about/AboutContent.vue";
-import MapGoogle from './google/MapGoogle.vue'
+import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
+import ProfileComponent from "./profile/ProfileComponent.vue"
 
 export {
     ImageForm,
@@ -27,5 +28,6 @@ export {
     MainContent,
     TextSection,
     MapGoogle,
-    LoadingPage
+    LoadingPage,
+    ProfileComponent,
 }
