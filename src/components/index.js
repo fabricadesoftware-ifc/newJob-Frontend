@@ -13,7 +13,8 @@ import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from './google/MapGoogle.vue'
 import LoadingPage from "./loading/LoadingPage.vue";
 import CardJobs from "./jobPage/SecondComponents/CardJobs.vue";
-import ModalAddJob from './registerJob/ModalAddJob.vue';
+import ModalAddJob1 from './registerJob/ModalAddJob1.vue';
+import ModalAddJob2 from './registerJob/ModalAddJob2.vue';
 
 export {
     ImageForm,
@@ -31,5 +32,6 @@ export {
     MapGoogle,
     LoadingPage,
     CardJobs,
-    ModalAddJob,
+    ModalAddJob1,
+    ModalAddJob2
 }

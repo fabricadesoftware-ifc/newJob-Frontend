@@ -33,40 +33,40 @@ const createJob = async () => {
       <h2>Criar Vaga</h2>
       <form class="form" @submit.prevent="createJob">
         <div class="row-form">
-          <label for="title">Cargo</label>
-          <input type="text" id="title" v-model="jobData.title" placeholder="Nome do cargo" />
+          <label for="maxCandidates">Quantidade máxima</label>
+          <input
+            type="number"
+            id="maxCandidates"
+            v-model="jobData.maxCandidates"
+            placeholder="Quantidade máxima de candidatos para a vaga"
+          />
         </div>
         <div class="row-form">
-          <label for="benefits">Benefícios</label>
-          <input type="text" id="benefits" v-model="jobData.benefits" placeholder="Escolha o benefício" />
+          <label for="deadline">Data limite</label>
+          <input type="date" id="deadline" v-model="jobData.deadline" />
         </div>
         <div class="row-form">
-          <label for="wage">Salário</label>
-          <input type="text" id="wage" v-model="jobData.wage" placeholder="Valor do salário" />
-        </div>
-        <div class="row-form">
-          <label for="educationLevel">Nível educação</label>
-          <select name="select" id="educationLevel" v-model="jobData.educationLevel">
-            <option value="" disabled>Selecione o nível de educação</option>
+          <label for="category">Ramo</label>
+          <select name="category" id="category" v-model="jobData.category">
+            <option value="" disabled>Selecione o ramo da vaga</option>
             <option value="valor2">Valor 2</option>
             <option value="valor3">Valor 3</option>
           </select>
         </div>
-        <div class="toggle-container">
-          <label>Vaga para pessoas com deficiência</label>
-          <div class="toggle">
-            <input type="checkbox" id="a" />
-            <label for="a"></label>
-          </div>
+        <div class="row-form">
+          <label for="description">Descrição</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            placeholder="Descreva sobre a vaga"
+          ></textarea>
         </div>
-        <div class="toggle-container">
-          <label>Disponibilidade para viajar</label>
-          <div class="toggle">
-            <input type="checkbox" id="b" />
-            <label for="b"></label>
-          </div>
+        <div class="buttons">
+          <button class="bt-back" type="submit">Voltar</button>
+          <button class="bt-send" type="submit">Publicar</button>
         </div>
-        <button class="bt-send" type="submit">Próximo</button>
       </form>
     </div>
   </div>
@@ -89,7 +89,7 @@ const createJob = async () => {
   background-color: #1d4734;
   position: relative;
   width: 30vw;
-  height: 82vh;
+  height: 80vh;
   border-radius: 30px;
   padding: 1.5vw;
 }
@@ -116,8 +116,15 @@ label {
   gap: 0.4vh;
   margin: 1vh 0;
 
+  & textarea {
+    width: 93.5%;
+    height: 15vh;
+    resize: none;
+  }
+
   & input,
-  select {
+  select,
+  textarea {
     padding: 2vh 0.9vw;
     font-size: 1.1em;
     background-color: transparent;
@@ -204,13 +211,27 @@ label {
   background: #bcbdbc;
 }
 
-.bt-send {
+.buttons {
   display: flex;
-  justify-self: end;
+  justify-content: space-between;
+}
+
+.bt-send {
   background-color: #e09b6b;
   border: none;
   padding: 1.9vh 1.5vw;
   border-radius: 10px;
   font-size: 1.3em;
+  margin-top: 3.5vh;
+}
+
+.bt-back {
+  background-color: transparent;
+  border: solid 1px #e09b6b;
+  color: #e09b6b;
+  padding: 1.9vh 2vw;
+  border-radius: 10px;
+  font-size: 1.3em;
+  margin-top: 3.5vh;
 }
 </style>

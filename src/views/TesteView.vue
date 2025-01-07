@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, reactive, ref } from 'vue';
 import { Plus, ArrowRight } from '../components/icons'
-import { HeaderComponent, FooterComponent, CardJobs, ModalAddJob } from '@/components/index'
+import { HeaderComponent, FooterComponent, CardJobs, ModalAddJob1, ModalAddJob2 } from '@/components/index'
 
 const showModal = ref(false);
 </script>
@@ -32,7 +32,7 @@ const showModal = ref(false);
         <button class="bt-vaga" @click="showModal = !showModal">Cadastrar vaga</button>
       </div>
     </div>
-    <ModalAddJob v-if="showModal" @close="showModal = !showModal"/>
+    <ModalAddJob2 v-if="showModal" @close="showModal = !showModal"/>
   </main>
   <FooterComponent />
 </template>
