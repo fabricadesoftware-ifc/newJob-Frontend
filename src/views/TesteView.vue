@@ -1,15 +1,17 @@
 <script setup>
+import { onMounted, reactive, ref } from 'vue';
 import { Plus, ArrowRight } from '../components/icons'
 import { HeaderComponent, FooterComponent, CardJobs, ModalAddJob } from '@/components/index'
+
+const showModal = ref(false);
 </script>
 <template>
   <HeaderComponent />
   <main>
-    <ModalAddJob />
     <div class="container">
       <div class="title">
         <h1>Vagas</h1>
-        <button class="bt-add-vaga">
+        <button class="bt-add-vaga" @click="showModal = !showModal">
           <Plus class="icon-bt" />
           <p class="text-bt">Criar vaga</p>
         </button>
@@ -27,9 +29,10 @@ import { HeaderComponent, FooterComponent, CardJobs, ModalAddJob } from '@/compo
       <div class="empty">
         <h2>Você ainda não publicou nenhuma vaga...</h2>
         <img class="vaquinha-img" src="https://i.ibb.co/HrdxBSF/vaca.png" alt="" />
-        <button class="bt-vaga">Cadastrar vaga</button>
+        <button class="bt-vaga" @click="showModal = !showModal">Cadastrar vaga</button>
       </div>
     </div>
+    <ModalAddJob v-if="showModal" @close="showModal = !showModal"/>
   </main>
   <FooterComponent />
 </template>

@@ -10,6 +10,7 @@ import ArrowRight from 'vue-material-design-icons/ArrowRight.vue';
 import Plus from 'vue-material-design-icons/Plus.vue';
 import ArrowRightThinCircleOutline from 'vue-material-design-icons/ArrowRightThinCircleOutline.vue';
 import ArrowLeftThinCircleOutline from 'vue-material-design-icons/ArrowLeftThinCircleOutline.vue';
+import Close from 'vue-material-design-icons/Close.vue'
 
 
 export {
@@ -25,4 +26,5 @@ export {
     ArrowRightThinCircleOutline,
     ArrowLeftThinCircleOutline,
     ArrowRight,
+    Close,
 }
