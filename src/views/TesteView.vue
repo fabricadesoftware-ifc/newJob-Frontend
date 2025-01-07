@@ -1,10 +1,11 @@
 <script setup>
 import { Plus, ArrowRight } from '../components/icons'
-import { HeaderComponent, FooterComponent, CardJobs } from '@/components/index'
+import { HeaderComponent, FooterComponent, CardJobs, ModalAddJob } from '@/components/index'
 </script>
 <template>
   <HeaderComponent />
   <main>
+    <ModalAddJob />
     <div class="container">
       <div class="title">
         <h1>Vagas</h1>
@@ -14,14 +15,19 @@ import { HeaderComponent, FooterComponent, CardJobs } from '@/components/index'
         </button>
       </div>
       <div class="cards">
+        <!-- <CardJobs />
         <CardJobs />
         <CardJobs />
         <CardJobs />
         <CardJobs />
         <CardJobs />
         <CardJobs />
-        <CardJobs />
-        <CardJobs />
+        <CardJobs /> -->
+      </div>
+      <div class="empty">
+        <h2>Você ainda não publicou nenhuma vaga...</h2>
+        <img class="vaquinha-img" src="https://i.ibb.co/HrdxBSF/vaca.png" alt="" />
+        <button class="bt-vaga">Cadastrar vaga</button>
       </div>
     </div>
   </main>
@@ -57,11 +63,11 @@ h1 {
   justify-content: center;
   border-radius: 50px;
   border: none;
-  transition: width 0.5s;
+  transition: width 0.3s;
 
   & .text-bt {
     display: none;
-    color: #1E1E1E;
+    color: #1e1e1e;
     font-weight: bold;
     font-size: 1.2em;
   }
@@ -137,5 +143,33 @@ h1 {
       font-size: 1.3em;
     }
   }
+}
+
+/* vaquinha */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+}
+
+.bt-vaga {
+  background-color: #e09b6b;
+  border: none;
+  width: 11vw;
+  border-radius: 30px;
+  padding: 0.5vw;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.vaquinha-img {
+  width: 16vw;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.1vw;
 }
 </style>

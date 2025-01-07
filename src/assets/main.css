@@ -4,7 +4,12 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 p,
@@ -14,13 +19,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: #FFFFFF;
-
+  color: #ffffff;
 }
 
 body {
   margin: 0;
-  background-color: #050505;
+  background-color: #1e1e1e;
   min-height: 100vh;
   max-width: 100vw;
 }
