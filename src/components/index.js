@@ -12,7 +12,8 @@ import AboutIntroduction from './about/AboutIntroduction.vue';
 import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
-import ProfileComponent from "./profile/ProfileComponent.vue"
+import UserProfileComponent from "./profile/UserProfileComponent.vue"
+import CompanyProfileComponent from "./profile/CompanyProfileComponent.vue";
 
 export {
     ImageForm,
@@ -29,5 +30,6 @@ export {
     TextSection,
     MapGoogle,
     LoadingPage,
-    ProfileComponent,
+    UserProfileComponent,
+    CompanyProfileComponent
 }

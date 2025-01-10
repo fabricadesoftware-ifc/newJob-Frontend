@@ -5,7 +5,8 @@ import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignUpView.vue'
 import JobsView from '@/views/JobsView.vue'
 import AboutView from '@/views/AboutView.vue'
-import ProfileView from '@/views/ProfileView.vue';
+import UserView from '@/views/UserView.vue';
+import CompanyView from '@/views/CompanyView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,9 +37,14 @@ const router = createRouter({
       component: AboutView
     },
     {
-      path: '/profile',
+      path: '/Profile',
       name: 'profile',
-      component: ProfileView
+      component: UserView
+    },
+    {
+      path: '/Company',
+      name: 'company',
+      component: CompanyView
     },
   ]
 })
