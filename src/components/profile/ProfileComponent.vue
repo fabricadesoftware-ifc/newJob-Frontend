@@ -1,13 +1,18 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const fileName = ref();
+
+function changeFileName(file) {
+  fileName.value = file.srcElement.files[0].name;
+}
+</script>
 
 <template>
   <div class="container">
     <h1>Perfil</h1>
     <div class="profile-image">
-      <img
-        src=""
-        alt=""
-      />
+      <img src="" alt="" />
       <button>Alterar</button>
     </div>
     <div class="info-container">
@@ -16,8 +21,12 @@
         <input type="text" />
       </div>
       <div class="info">
-        <p>Sobrenome</p>
-        <input type="text" />
+        <p>Anexar currículo</p>
+        <label for="image_uploads"
+          ><p>Selecione arquivo</p>
+          <p class="file-name">{{ fileName }}</p></label
+        >
+        <input type="file" id="image_uploads" accept=".pdf" @change="changeFileName" />
       </div>
       <div class="info">
         <p>Email</p>
@@ -75,7 +84,7 @@
   flex-direction: column;
   gap: 4vh;
 
-  & h1{
+  & h1 {
     font-weight: 400;
   }
 
@@ -147,7 +156,8 @@
   }
   & input,
   select,
-  textarea {
+  textarea,
+  label {
     background-color: #242424;
     border: 1px solid #505050;
     border-radius: 6px;
@@ -171,6 +181,31 @@
     resize: none;
     height: 20vh;
     min-width: 200px;
+  }
+
+  & label {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+
+    & p {
+      border: 1px solid #505050;
+      border-radius: 4px;
+      padding: 0.5vh 0.5vw;
+      cursor: pointer;
+    }
+    & .file-name {
+      border: none;
+      max-width: 11vw;
+      max-height: 1rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  & input[type="file"] {
+    display: none;
   }
 }
 </style>
