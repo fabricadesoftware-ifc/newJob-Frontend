@@ -1,26 +1,33 @@
 <template>
   <div class="container-wrapper">
-    <div>
+    <div class="logo-container">
       <img src="https://i.ibb.co/y0NZsrZ/logo-new-job.png" alt="" class="logo" />
     </div>
     <div class="links-container">
-      <router-link to="/">Início</router-link>
-      <router-link to="/jobs">Vagas</router-link>
-      <router-link to="/profile">Perfil</router-link>
+      <div class="links">
+        <router-link to="/">Início</router-link>
+        <router-link to="/jobs">Vagas</router-link>
+        <router-link to="/profile">Perfil</router-link>
+      </div>
     </div>
-    <div class="user-links links-container">
-      <router-link to="/login">Login</router-link>
-      <router-link class="register" to="/signUp">Cadastre-se</router-link>
+    <div class="links-container">
+      <div class="links">
+        <router-link to="/login">Login</router-link>
+        <router-link class="register" to="/signUp">Cadastre-se</router-link>
+      </div>
     </div>
   </div>
 </template>
 
-
 <style scoped>
+.logo-container {
+  width: 33.3%;
+  margin-left: 1vw;
+}
+
 .router-link-active {
-  border-radius: 2rem;
+  border-radius: 14px;
   border: 1px solid black;
-  padding: .2rem 1rem;
 }
 
 .container-wrapper {
@@ -32,48 +39,49 @@
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  padding: 2.5em 0;
-
-  & .user-links {
-    padding: .2rem .2rem;
-
-    & a:first-child {
-      margin: 0 1rem;
-    }
-  }
+  padding: 2.5vh 0;
 
   & .logo {
-    width: 10.5em;
+    width: 10vw;
+    min-width: 100px;
   }
-
-  & .logo,
-  .links-container {
-    margin: 0 3rem;
-  }
-
 
   & .links-container {
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .links-container:last-of-type {
+    justify-content: right;
+    margin-right: 1vw;
+  }
+
+  & .links {
     display: flex;
     align-items: center;
     background-color: white;
     border-radius: 5em;
     color: #000000;
-    padding: .5rem .4em;
+    padding: 0 0.5vw;
+    height: 6vh;
+    width: fit-content;
+    min-height: 30px;
   }
 
-  & .links-container>a {
+  & .links-container a {
     color: black;
     font-size: 15px;
     cursor: pointer;
-    margin: 0 .4rem;
+    padding: 0.3vh 1vw;
   }
-
 
   & .register {
     background-color: #1d4734;
     color: white !important;
-    padding: 0.5em 0.9em;
-    border-radius: 5em;
+    padding: 0.3vh 1vw;
+    border-radius: 13px;
   }
 }
 </style>
