@@ -6,6 +6,7 @@ import SignUpView from '../views/SignUpView.vue'
 import JobsView from '@/views/JobsView.vue'
 import AboutView from '@/views/AboutView.vue'
 import ProfileView from '@/views/ProfileView.vue';
+import CandidatesView from '@/views/CandidatesView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,11 @@ const router = createRouter({
       path: '/profile',
       name: 'profile',
       component: ProfileView
+    },
+    {
+      path: '/candidates',
+      name: 'candidates',
+      component: CandidatesView
     },
   ]
 })
