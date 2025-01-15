@@ -32,9 +32,8 @@ async function changeJobs(page) {
       <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
         <CardJobs
           :image="job.image_job"
-          :company="job.company.name"
+          :company="job.company"
           :title="job.title"
-          :local="job.local"
           :id="job.id"
         />
       </div>
@@ -82,7 +81,6 @@ async function changeJobs(page) {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 2em;
   justify-items: center;
   align-items: center;

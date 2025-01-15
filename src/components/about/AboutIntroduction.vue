@@ -9,11 +9,19 @@ const job = useJobStore();
       <h1>{{ job.currentJob.title }}</h1>
       <p>Data limite: {{ job.currentJob.deadline }}</p>
       <p>
-        Cidade: {{ job.currentJob.local.city }}, {{ job.currentJob.local.state.initials }}
+        Cidade: {{ job.currentJob.company.local.city }},
+        {{ job.currentJob.company.local.state.initials }}
       </p>
       <div class="logo-container">
         <span class="top-border"></span>
-        <img :src="job.currentJob.image_job? job.currentJob.image_job.file: `https://i.ibb.co/9GMPt74/image-removebg-preview.png`" alt="" />
+        <img
+          :src="
+            job.currentJob.image_job
+              ? job.currentJob.image_job.file
+              : `https://i.ibb.co/9GMPt74/image-removebg-preview.png`
+          "
+          alt=""
+        />
         <span class="bot-border"></span>
       </div>
     </div>
@@ -24,6 +32,11 @@ const job = useJobStore();
 </template>
 
 <style scoped>
+.description {
+  max-height: 37vh;
+  margin-bottom: 2vh;
+}
+
 .description-text {
   font-size: 1.4rem;
   max-width: 100%;

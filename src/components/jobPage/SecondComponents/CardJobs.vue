@@ -1,5 +1,18 @@
 <script setup>
-defineProps(["image", "company", "title", "local", "id"]);
+import { onMounted, ref } from "vue";
+defineProps(["image", "company", "title", "id"]);
+
+import { useStateStore } from "@/stores";
+
+const stateStore = useStateStore();
+
+async function getStates() {
+  await stateStore.getAllStates();
+}
+
+onMounted(async () => {
+  await getStates();
+});
 </script>
 <template>
   <div class="container-card">
@@ -11,13 +24,11 @@ defineProps(["image", "company", "title", "local", "id"]);
       />
     </div>
     <div class="box-info">
-      <h3 class="title-card-info">{{ company }}</h3>
+      <h3 class="title-card-info">{{ company.name }}</h3>
       <h3 class="pt">{{ title }}</h3>
-      <p>{{ local.state.name }}, {{ local.city }}</p>
+      <p>{{ company.local.city }}, {{ company.local.state.name }}</p>
       <div class="pt-4">
-        <routerLink :to="'/about/' + id" class="btn" @click="getJob(id)"
-          >Saiba mais</routerLink
-        >
+        <routerLink :to="'/about/' + id" class="btn">Saiba mais</routerLink>
       </div>
     </div>
   </div>

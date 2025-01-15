@@ -3,18 +3,16 @@ import { useJobStore } from "@/stores";
 import { ref } from "vue";
 const job = useJobStore();
 const benefits = ref([]);
-
-for (const benefit of job.currentJob.benefits) {
-  benefits.value.push(benefit.name);
-}
 const educationLevels = [
   "Ensino Fundamental",
   "Ensino Médio",
-  "Ensino Superior",  
+  "Ensino Superior",
   "Pós-Graduação",
   "Mestrado",
-  "Doutorado"
-]
+  "Doutorado",
+];
+
+console.log(job.currentJob);
 </script>
 
 <template>
@@ -34,7 +32,7 @@ const educationLevels = [
       <p>Requisitos</p>
     </span>
     <ul>
-      <li>Formação: {{ educationLevels[job.currentJob.educatiol_Level - 1] }}</li>
+      <li>Formação: {{ educationLevels[job.currentJob.education_level - 1] }}</li>
       <li v-if="job.currentJob.isTravel">Disponibilidade para viajar.</li>
     </ul>
     <button>CANDIDATAR-SE À VAGA</button>
