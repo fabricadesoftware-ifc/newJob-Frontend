@@ -11,6 +11,8 @@ import GitHub from 'vue-material-design-icons/GitHub.vue';
 import ArrowRightThinCircleOutline from 'vue-material-design-icons/ArrowRightThinCircleOutline.vue';
 import ArrowLeftThinCircleOutline from 'vue-material-design-icons/ArrowLeftThinCircleOutline.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
+import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
+
 
 
 export {
@@ -26,5 +28,6 @@ export {
     GitHub,
     ArrowRightThinCircleOutline,
     ArrowLeftThinCircleOutline,
-    Magnify
+    Magnify,
+    HeartOutline,
 }
