@@ -13,6 +13,7 @@ import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
+import UserProfileComponent from "./profiles/UserProfileComponent.vue";
 
 export {
     ImageForm,
@@ -30,4 +31,5 @@ export {
     MapGoogle,
     LoadingPage,
     ProfileComponent,
+    UserProfileComponent,
 }
