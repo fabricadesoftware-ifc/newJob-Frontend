@@ -1,35 +1,27 @@
 <script setup>
-import { onMounted } from "vue";
-import CardJobs from "./SecondComponents/CardJobs.vue";
-import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from "../icons";
-import { useJobStore } from "@/stores";
+import { onMounted } from 'vue'
+import { CardJobs } from '@/components'
+import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icons'
+import { useJobStore } from '@/stores'
 
-const jobStore = useJobStore();
+const jobStore = useJobStore()
 
 async function getJobs() {
-  await jobStore.getAllJobs(`job/`);
+  await jobStore.getAllJobs(`job/`)
 }
 onMounted(async () => {
-  await getJobs();
-});
+  await getJobs()
+})
 
 async function changeJobs(page) {
-  await jobStore.getAllJobs(page);
+  await jobStore.getAllJobs(page)
 }
 </script>
-
 <template>
   <div class="container">
-    <div class="title-job">
-      <img
-        src="https://i.ibb.co/PYsGjMJ/circulo-titulo-job.png"
-        alt=""
-        class="img-title"
-      />
-      <h2>Vagas</h2>
-    </div>
+    <h1>VAGAS</h1>
     <div class="grid-container">
-      <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
+      <!-- <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
         <CardJobs
           :image="job.image_job"
           :company="job.company.name"
@@ -37,9 +29,17 @@ async function changeJobs(page) {
           :local="job.local"
           :id="job.id"
         />
-      </div>
+      </div> -->
+      <CardJobs />
+      <CardJobs />
+      <CardJobs />
+      <CardJobs />
+      <CardJobs />
+      <CardJobs />
+      <CardJobs />
+      <CardJobs />
     </div>
-    <div class="buttons">
+    <!-- <div class="buttons">
       <ArrowLeftThinCircleOutline
         @click="changeJobs(jobStore.jobs.previous)"
         :class="jobStore.jobs.previous ? `arrow` : `disable arrow`"
@@ -48,7 +48,7 @@ async function changeJobs(page) {
         @click="changeJobs(jobStore.jobs.next)"
         :class="jobStore.jobs.next ? `arrow` : `disable arrow`"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -64,15 +64,9 @@ async function changeJobs(page) {
   padding-bottom: 4em;
 }
 
-.title-job > h2 {
-  font-size: 34px;
-}
-
-.title-job > h2 {
-  font-weight: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1 {
+  font-size: 50px;
+  font-weight: 600;
 }
 
 .img-title {
@@ -80,9 +74,10 @@ async function changeJobs(page) {
 }
 
 .grid-container {
+  margin: 3vw 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
   gap: 2em;
   justify-items: center;
   align-items: center;

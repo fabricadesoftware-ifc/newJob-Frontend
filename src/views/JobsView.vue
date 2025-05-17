@@ -5,7 +5,7 @@ import { IntroductionJobs, MainContentJobs, FooterComponent, HeaderComponent } f
 <template>
   <div>
     <HeaderComponent />
-    <IntroductionJobs/>
+    <!-- <IntroductionJobs/> -->
     <MainContentJobs/>
     <FooterComponent/>  
   </div>

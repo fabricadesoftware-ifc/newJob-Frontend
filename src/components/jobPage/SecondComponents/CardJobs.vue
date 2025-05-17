@@ -1,16 +1,9 @@
 <script setup>
-defineProps(["image", "company", "title", "local", "id"]);
+defineProps(['image', 'company', 'title', 'local', 'id'])
 </script>
 <template>
   <div class="container-card">
-    <div class="logo-container">
-      <img
-        :src="image ? image.file : `https://i.ibb.co/9GMPt74/image-removebg-preview.png`"
-        alt=""
-        class="logo"
-      />
-    </div>
-    <div class="box-info">
+    <!-- <div class="box-info">
       <h3 class="title-card-info">{{ company }}</h3>
       <h3 class="pt">{{ title }}</h3>
       <p>{{ local.state.name }}, {{ local.city }}</p>
@@ -19,35 +12,116 @@ defineProps(["image", "company", "title", "local", "id"]);
           >Saiba mais</routerLink
         >
       </div>
+    </div> -->
+    <div class="top">
+      <div class="company">
+        <img src="https://i.ibb.co/fdxgSVGQ/Ellipse-7-1.png" alt="" />
+        <p>Gribusiness</p>
+      </div>
+      <div class="type-contract">Estágio</div>
+    </div>
+    <h2>Analista de Infraestrutura</h2>
+    <div class="skills-container">
+      <div class="skills">Proatividade</div>
+      <div class="skills">PHP</div>
+      <div class="skills">Proatividade</div>
+    </div>
+    <div class="bottom">
+      <div>
+        <p class="salary">R$ 3000</p>
+        <p>Araquari, SC - Brasil</p>
+      </div>
+      <button class="button-bt">Detalhes</button>
     </div>
   </div>
 </template>
-
 <style scoped>
 .container-card {
-  background: radial-gradient(circle, rgba(42, 105, 76, 1) 15%, rgba(30, 72, 53, 1) 95%);
-  border-radius: 1em;
-  width: 30em;
-  height: 28em;
-  position: relative;
-  margin-top: 100px;
+  background-color: #1a1b1d;
+  border: 1px solid var(--cinza-escuro);
+  padding: 20px;
+  border-radius: 15px;
+  width: 20em;
+  height: 18em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.logo-container {
-  position: absolute;
-  top: -85px;
-  left: 50%;
-  transform: translateX(-50%);
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .company {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & img {
+      width: 3em;
+    }
+
+    & p {
+      font-size: 16px;
+    }
+  }
+
+  & .type-contract {
+    background-color: #cc9f7f;
+    display: flex;
+    align-items: center;
+    padding: 3px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
-.logo {
-  width: 190px;
-  height: 190px;
-  border-radius: 50%;
-  object-fit: cover;
+h2 {
+  font-weight: 600;
+  font-size: 30px;
 }
 
-.btn {
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+
+  & .skills {
+    border: 1px solid var(--cinza-escuro);
+    color: var(--cinza-claro);
+    padding: 10px 12px;
+    border-radius: 15px;
+  }
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & p {
+    color: var(--cinza-claro);
+    font-size: 16px;
+  }
+
+  & .salary {
+    font-size: 18px;
+    color: var(--branco);
+  }
+
+  & .button-bt {
+    background-color: var(--verde-claro);
+    color: var(--branco);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+/* .btn {
   border: none;
   background-color: #e09b6b;
   padding: 0.8em 6rem;
@@ -56,28 +130,28 @@ defineProps(["image", "company", "title", "local", "id"]);
   border-radius: 30px;
   font-size: 18.5px;
   color: #000000;
-}
+} */
 
-.box-info {
+/* .box-info {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   padding-top: 9em;
-}
+} */
 
-.title-card-info {
+/* .title-card-info {
   font-size: 32px;
-}
+} */
 
-.pt {
+/* .pt {
   padding-top: 1.5em;
   font-size: 24px;
 }
 
 .pt-4 {
   padding-top: 2.5em;
-}
+} */
 
 h3 {
   font-size: 1.3em;
