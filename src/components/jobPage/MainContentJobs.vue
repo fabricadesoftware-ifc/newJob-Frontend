@@ -19,6 +19,11 @@ async function changeJobs(page) {
 <template>
   <div class="container">
     <h1>VAGAS</h1>
+    <div class="mini-company-cards-container">
+      <div v-for="n in 13" :key="n">
+        <MiniCompanyCard />
+      </div>
+    </div>
     <div class="grid-container">
       <!-- <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
         <CardJobs
@@ -29,14 +34,9 @@ async function changeJobs(page) {
           :id="job.id"
         />
       </div> -->
-      <CardJobs />
-      <CardJobs />
-      <CardJobs />
-      <CardJobs />
-      <CardJobs />
-      <CardJobs />
-      <CardJobs />
-      <CardJobs />
+      <div v-for="n in 8" :key="n">
+        <CardJobs />
+      </div>
     </div>
     <div class="buttons">
       <i class="mdi mdi-arrow-left-thin-circle-outline"
@@ -66,6 +66,12 @@ async function changeJobs(page) {
 h1 {
   font-size: 50px;
   font-weight: 600;
+}
+
+.mini-company-cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2vw 0;
 }
 
 .img-title {
