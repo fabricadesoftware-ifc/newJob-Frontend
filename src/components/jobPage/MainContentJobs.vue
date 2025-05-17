@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from 'vue'
-import { CardJobs, MiniCompanyCard } from '@/components'
+import { CardJobs, MiniCompanyCard,FilterJobs } from '@/components'
 import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icons'
 import { useJobStore } from '@/stores'
 
@@ -20,6 +20,7 @@ async function changeJobs(page) {
 <template>
   <div class="container">
     <h1>VAGAS</h1>
+    <FilterJobs />
     <div class="mini-company-cards-container">
       <div v-for="n in 13" :key="n">
         <MiniCompanyCard />

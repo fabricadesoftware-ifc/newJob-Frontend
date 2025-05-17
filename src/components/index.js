@@ -14,7 +14,8 @@ import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
 import CardJobs from "./jobPage/SecondComponents/CardJobs.vue";
-import MiniCompanyCard from "./jobPage/MiniCompanyCard.vue";
+import MiniCompanyCard from "./jobPage/SecondComponents/MiniCompanyCard.vue";
+import FilterJobs from "./jobPage/SecondComponents/FilterJobs.vue";
 
 export {
     ImageForm,
@@ -34,4 +35,5 @@ export {
     ProfileComponent,
     CardJobs,
     MiniCompanyCard,
+    FilterJobs,
 }
