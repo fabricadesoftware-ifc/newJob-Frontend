@@ -18,5 +18,12 @@
 
 .container:hover {
   background-color: #282828;
+  transition: 200ms linear;
+  cursor: pointer;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
 }
 </style>

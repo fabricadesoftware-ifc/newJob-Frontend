@@ -66,6 +66,7 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
   height: 2vw;
   border-radius: 10px;
   font-size: 16px;
+  cursor: pointer;
 
   & span {
     display: flex;
@@ -89,7 +90,7 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
 }
 
 p {
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
 }
 </style>
