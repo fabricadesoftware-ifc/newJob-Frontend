@@ -29,7 +29,7 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
   border: 1px solid var(--cinza-escuro);
   color: var(--cinza-escuro);
   display: flex;
-  padding: 5px 10px;
+  padding: .3vw .6vw;
   border-radius: 10px;
   gap: 10px;
   width: 23vw;
@@ -62,11 +62,11 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
   justify-content: center;
   color: var(--branco);
   background-color: transparent;
-  padding: 8px;
+  padding: .4vw;
   height: 2vw;
   border-radius: 10px;
-  font-size: 16px;
   cursor: pointer;
+  font-size: .9vw;
 
   & span {
     display: flex;
@@ -85,12 +85,12 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
 }
 
 .filter-button-favorite {
-  padding: 0 20px;
+  padding: 0 1.3vw;
   border: 1px solid var(--cinza-escuro);
 }
 
 p {
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: 500;
 }
 </style>

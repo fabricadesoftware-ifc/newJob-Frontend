@@ -1,7 +1,11 @@
 :root {
   --branco: #e6e8ee;
+
+  --preto-claro: #242424;
+  
   --cinza-claro: #a0a0a0;
   --cinza: #716f6f;
   --cinza-escuro: #505050;
+
   --verde-claro: #255a42;
 }

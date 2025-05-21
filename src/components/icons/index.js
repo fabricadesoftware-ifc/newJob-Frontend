@@ -13,6 +13,7 @@ import ArrowLeftThinCircleOutline from 'vue-material-design-icons/ArrowLeftThinC
 import Magnify from 'vue-material-design-icons/Magnify.vue'
 import FilterVariant from 'vue-material-design-icons/FilterVariant.vue'
 import FilterVariantRemove from 'vue-material-design-icons/FilterVariantRemove.vue'
+import ChevronDown from 'vue-material-design-icons/ChevronDown.vue'
 
 export {
     CheckCircle,
@@ -30,4 +31,5 @@ export {
     Magnify,
     FilterVariant,
     FilterVariantRemove,
+    ChevronDown
 }
