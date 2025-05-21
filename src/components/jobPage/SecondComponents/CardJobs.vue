@@ -41,8 +41,8 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
   border: 1px solid var(--cinza-escuro);
   padding: 20px;
   border-radius: 15px;
-  width: 20em;
-  height: 18em;
+  width: 18em;
+  height: 15em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -63,7 +63,7 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
     }
 
     & p {
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 
@@ -74,24 +74,26 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
     padding: 3px 15px;
     border-radius: 10px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
+    color: var(--preto-claro);
   }
 }
 
 h2 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 .skills-container {
   display: flex;
-  justify-content: space-between;
+  gap: 0.5vw;
 
   & .skills {
     border: 1px solid var(--cinza-escuro);
     color: var(--cinza-claro);
-    padding: 10px 12px;
-    border-radius: 15px;
+    font-size: 13px;
+    padding: 8px 10px;
+    border-radius: 12px;
   }
 }
 
@@ -116,7 +118,7 @@ h2 {
     border: none;
     padding: 8px 20px;
     border-radius: 13px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
   }
 }

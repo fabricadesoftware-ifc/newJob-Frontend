@@ -2,7 +2,6 @@
 import { onMounted } from "vue";
 import { useJobStore } from "@/stores";
 import { CardJobs, MiniCompanyCard,FilterJobs } from '@/components'
-import { useJobStore } from '@/stores'
 
 const jobStore = useJobStore()
 
@@ -36,8 +35,16 @@ async function changeJobs(page) {
           :id="job.id"
         />
       </div> -->
-      <div v-for="n in 8" :key="n">
-        <CardJobs />
+      <div class="cards-for" v-for="n in 8" :key="n">
+        <h2>Analista de Infraestrutura</h2>
+        <div class="cards">
+          <ChevronDown size="60px" style="transform: rotate(90deg)" />
+          <CardJobs />
+          <CardJobs />
+          <CardJobs />
+          <CardJobs />
+          <ChevronDown size="60px" style="transform: rotate(270deg)" />
+        </div>
       </div>
     </div>
     <div class="buttons">
@@ -66,7 +73,7 @@ async function changeJobs(page) {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 3em;
   font-weight: 600;
 }
 
@@ -83,11 +90,28 @@ h1 {
 .grid-container {
   margin: 3vw 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   /* grid-template-rows: repeat(2, 1fr); */
   gap: 2em;
   justify-items: center;
   align-items: center;
+
+  & .cards-for {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    & h2 {
+      font-size: 1.8em;
+      font-weight: 600;
+    }
+
+    & .cards {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      color: var(--branco);
+    }
+  }
 }
 
 .buttons {
