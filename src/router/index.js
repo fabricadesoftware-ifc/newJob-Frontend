@@ -1,11 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useLoadingStore } from '@/stores/loading';
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/LoginView.vue'
-import SignUpView from '../views/SignUpView.vue'
-import JobsView from '@/views/JobsView.vue'
-import AboutView from '@/views/AboutView.vue'
-import ProfileView from '@/views/ProfileView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,32 +7,37 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/login',
       name: 'login',
-      component: LoginView
+      component: () => import('../views/LoginView.vue'),
     },
     {
       path: '/signUp',
       name: 'signUp',
-      component: SignUpView
+      component: () => import('../views/SignUpView.vue'),
     },
     {
       path: '/jobs',
       name: 'jobs',
-      component: JobsView
+      component: () => import('../views/JobsView.vue'),
     },
     {
       path: '/about/:id',
       name: 'about',
-      component: AboutView
+      component: () => import('../views/AboutView.vue'),
     },
     {
       path: '/profile',
       name: 'profile',
-      component: ProfileView
+      component: () => import('../views/ProfileView.vue'),
+    },
+    {
+      path: '/candidates',
+      name: 'candidates',
+      component: () => import('../views/CandidatesView.vue'),
     },
   ]
 })
