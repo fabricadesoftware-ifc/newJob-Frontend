@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { GitHub, Instagram, Linkedin } from "../icons";
+import { Github, Instagram, Linkedin } from "../icons";
 </script>
 
 <template>
@@ -19,8 +19,8 @@ import { GitHub, Instagram, Linkedin } from "../icons";
     <div class="border"></div>
     <div class="footer-bot">
       <div class="icons">
-        <a href="https://github.com/fabricadesoftware-ifc" target="_blank">
-          <GitHub class="icon" />
+        <a href="https://Github.com/fabricadesoftware-ifc" target="_blank">
+          <Github class="icon" />
         </a>
         <a href="https://www.instagram.com/fabricadesoftware.ifc/" target="_blank">
           <Instagram class="icon" />
