@@ -13,6 +13,8 @@ import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
+import FilterCandidatesComponent from './candidates/FilterCandidatesComponent.vue'
+import MainCandidatesComponent from './candidates/MainCandidatesComponent.vue'
 
 export {
     ImageForm,
@@ -30,4 +32,6 @@ export {
     MapGoogle,
     LoadingPage,
     ProfileComponent,
+    FilterCandidatesComponent,
+    MainCandidatesComponent,
 }
