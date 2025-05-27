@@ -4,6 +4,10 @@ class CompanyService {
         const response = await axios.get('companies')
         return response.data
     }
+    async getCompany(id) {
+        const response = await axios.get(`companies/${id}`)
+        return response.data
+    }
     async deleteCompany(id) {
         const response = await axios.delete(`companies/${id}`)
         return response.data

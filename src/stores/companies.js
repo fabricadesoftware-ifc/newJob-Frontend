@@ -1,27 +1,34 @@
-import { defineStore } from 'pinia'
-import { computed, reactive } from 'vue'
-import CompanyService from '@/services/companies'
+import { defineStore } from 'pinia';
+import { computed } from 'vue';
+import { useStorage } from "@vueuse/core";
+import CompanyService from '@/services/companies';
 
 export const useCompaniesStore = defineStore('company', () => {
-  const state = reactive({
-    companies: []
+  const state = useStorage("companies", {
+    companies: [],
+    currentCompany: []
   })
-
-  const companies = computed(() => state.companies)
+  const companies = computed(() => state.value.companies)
+  const currentCompany = computed(() => state.value.currentCompany)
 
   const getAllCompanies = async () => {
     const data = await CompanyService.getAllCompanies()
-    state.companies = data
+    state.value.companies = data
+  }
+
+  const getCompany = async (id) => {
+    const data = await CompanyService.getCompany(id)
+    state.value.currentCompany = data
   }
 
   const createCompany = async (companyData) => {
     const data = await CompanyService.createCompany(companyData)
-    state.companies.push(data)
+    state.value.companies.push(data)
   }
 
   const deleteCompany = async (id) => {
     await CompanyService.deleteCompany(id)
-    state.companies = state.companies.filter((company) => company.id !== id)
+    state.value.companies = state.companies.filter((company) => company.id !== id)
   }
 
   const updateCompany = async (id, companyData) => {
@@ -31,5 +38,5 @@ export const useCompaniesStore = defineStore('company', () => {
       state.companies[index] = updatedCompany
     }
   }
-  return { companies, getAllCompanies, createCompany, deleteCompany, updateCompany }
+  return { companies, currentCompany, getAllCompanies,getCompany, createCompany, deleteCompany, updateCompany }
 })
