@@ -13,7 +13,7 @@ onMounted(() => {
 
 <template>
 <HeaderComponent/>
-<ContentComponent/>
+<CompanyComponent/>
 <FooterComponent/>
 </template>
 
