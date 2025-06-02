@@ -20,17 +20,7 @@ async function changeJobs(page) {
   <div class="container">
     <h1>VAGAS</h1>
     <FilterJobs />
-
-    <div class="filter-dropdown-in">
-      <div class="tilte-container">
-        <div class="title">
-          <FilterVariant />
-          <h2>Filtro</h2>
-        </div>
-        <Close />
-      </div>
-    </div>
-
+    <FIlterJobsDropdownComponent />
     <div class="mini-company-cards-container">
       <div v-for="n in 13" :key="n">
         <MiniCompanyCard />
@@ -72,32 +62,6 @@ async function changeJobs(page) {
 </template>
 
 <style scoped>
-.filter-dropdown-in {
-  border: 1px solid var(--cinza-escuro);
-  border-radius: 10px;
-  color: var(--branco);
-
-  & .tilte-container {
-    display: flex;
-    justify-content: center;
-
-    & span {
-      display: flex;
-      align-items: center;
-    }
-
-    & .title {
-      display: flex;
-      gap: 5px;
-
-      & h2 {
-        font-size: 18px;
-        font-weight: 500;
-      }
-    }
-  }
-}
-
 .container {
   padding: 8em;
 }
