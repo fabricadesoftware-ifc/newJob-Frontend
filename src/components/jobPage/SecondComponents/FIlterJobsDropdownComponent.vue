@@ -13,7 +13,18 @@ import { FilterVariant, Close } from '../../icons'
     <div class="hr"></div>
     <div class="select-container">
       <div class="title-select">
-        <p>Expiradas</p>
+        <p>Tipo de contrato</p>
+        <p style="color: var(--laranja)">Descartar</p>
+      </div>
+      <select name="expired" id="expired">
+        <option value="teste">Teste</option>
+        <option value="teste">Teste</option>
+        <option value="teste">Teste</option>
+      </select>
+    </div>
+    <div class="select-container">
+      <div class="title-select">
+        <p>Localização</p>
         <p style="color: var(--laranja)">Descartar</p>
       </div>
       <select name="expired" id="expired">
@@ -23,17 +34,7 @@ import { FilterVariant, Close } from '../../icons'
     </div>
     <div class="select-container">
       <div class="title-select">
-        <p>Mais antigas</p>
-        <p style="color: var(--laranja)">Descartar</p>
-      </div>
-      <select name="expired" id="expired">
-        <option value="teste">Teste</option>
-        <option value="teste">Teste</option>
-      </select>
-    </div>
-    <div class="select-container">
-      <div class="title-select">
-        <p>A - Z</p>
+        <p>Requisitos</p>
         <p style="color: var(--laranja)">Descartar</p>
       </div>
       <select name="expired" id="expired">
@@ -55,7 +56,7 @@ import { FilterVariant, Close } from '../../icons'
   border: 1px solid var(--cinza-escuro);
   border-radius: 10px;
   color: var(--branco);
-  width: 16vw;
+  width: 300px;
   background-color: var(--preto);
   padding: 15px;
   padding-top: 12px;
@@ -92,13 +93,13 @@ import { FilterVariant, Close } from '../../icons'
 
 .select-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   gap: 7px;
 
   & .title-select {
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 14px;
   }
 
   & select {
@@ -109,7 +110,17 @@ import { FilterVariant, Close } from '../../icons'
     background-color: transparent;
     color: var(--cinza-claro);
     font-size: 14px;
+
+    & option {
+      background-color: var(--preto);
+  
+    }
+
+    & option:hover {
+      background-color: #393939;
+    }
   }
+
 }
 
 .button-container {
@@ -121,6 +132,7 @@ import { FilterVariant, Close } from '../../icons'
     padding: 7px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
   }
 
   & .button-secondary {
