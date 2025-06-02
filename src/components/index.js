@@ -16,6 +16,7 @@ import ProfileComponent from "./profile/ProfileComponent.vue"
 import CardJobs from "./jobPage/SecondComponents/CardJobs.vue";
 import MiniCompanyCard from "./jobPage/SecondComponents/MiniCompanyCard.vue";
 import FilterJobs from "./jobPage/SecondComponents/FilterJobs.vue";
+import FIlterJobsDropdownComponent from "./jobPage/SecondComponents/FIlterJobsDropdownComponent.vue"
 
 export {
     ImageForm,
@@ -36,4 +37,5 @@ export {
     CardJobs,
     MiniCompanyCard,
     FilterJobs,
+    FIlterJobsDropdownComponent
 }
