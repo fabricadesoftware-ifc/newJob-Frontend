@@ -14,6 +14,7 @@ import Magnify from 'vue-material-design-icons/Magnify.vue'
 import FilterVariant from 'vue-material-design-icons/FilterVariant.vue'
 import FilterVariantRemove from 'vue-material-design-icons/FilterVariantRemove.vue'
 import ChevronDown from 'vue-material-design-icons/ChevronDown.vue'
+import ChevronUp from 'vue-material-design-icons/ChevronUp.vue'
 import Close from 'vue-material-design-icons/Close.vue'
 
 export {
@@ -33,5 +34,6 @@ export {
     FilterVariant,
     FilterVariantRemove,
     ChevronDown,
+    ChevronUp,
     Close
 }
