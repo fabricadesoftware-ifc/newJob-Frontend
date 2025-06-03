@@ -1,5 +1,7 @@
 <script setup>
-import { FilterVariant, Close } from '../../icons'
+import { FilterVariant, Close, ChevronDown, ChevronUp } from '../../icons'
+
+const lista = ["PJ", "Estágio", "CLT"]
 </script>
 <template>
   <div class="filter-jobs-container">
@@ -22,7 +24,22 @@ import { FilterVariant, Close } from '../../icons'
         <option value="teste">Teste</option>
       </select>
     </div>
-    <div class="select-container">
+    <div class="select">
+      <div id="category-select">
+        <label for="options-view-button">Categoria</label>
+        <input type="checkbox" id="options-view-button" />
+      </div>
+
+      <div id="select-button">
+        <div id="selected-value">Todos</div>
+      </div>
+
+      <div id="chevrons">
+        <ChevronDown />
+        <ChevronUp />
+      </div>
+    </div>
+    <!-- <div class="select-container">
       <div class="title-select">
         <p>Localização</p>
         <p style="color: var(--laranja)">Descartar</p>
@@ -46,7 +63,7 @@ import { FilterVariant, Close } from '../../icons'
     <div class="button-container">
       <button class="button-secondary">Descartar</button>
       <button class="button-default">Aplicar</button>
-    </div>
+    </div> -->
   </div>
 </template>
 <style scoped>
@@ -93,7 +110,7 @@ import { FilterVariant, Close } from '../../icons'
 
 .select-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 7px;
 
   & .title-select {
@@ -113,21 +130,20 @@ import { FilterVariant, Close } from '../../icons'
 
     & option {
       background-color: var(--preto);
-  
     }
 
     & option:hover {
       background-color: #393939;
     }
   }
-
 }
 
 .button-container {
   display: flex;
   justify-content: space-between;
 
-  & .button-secondary, .button-default {
+  & .button-secondary,
+  .button-default {
     width: 90px;
     padding: 7px;
     border-radius: 5px;
@@ -141,8 +157,8 @@ import { FilterVariant, Close } from '../../icons'
     color: var(--laranja);
   }
 
-   & .button-default {
+  & .button-default {
     background-color: var(--laranja);
-   }
+  }
 }
 </style>
