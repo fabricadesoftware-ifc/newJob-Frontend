@@ -18,6 +18,7 @@ import MiniCompanyCard from "./jobPage/SecondComponents/MiniCompanyCard.vue";
 import FilterJobs from "./jobPage/SecondComponents/FilterJobs.vue";
 import FIlterJobsDropdownComponent from "./jobPage/SecondComponents/FIlterJobsDropdownComponent.vue"
 import SelectComponent from "./jobPage/SecondComponents/SelectComponent.vue"
+import SelectBoxComponent from "./jobPage/SecondComponents/SelectBoxComponent.vue"
 
 export {
     ImageForm,
@@ -40,4 +41,5 @@ export {
     FilterJobs,
     FIlterJobsDropdownComponent,
     SelectComponent,
+    SelectBoxComponent
 }

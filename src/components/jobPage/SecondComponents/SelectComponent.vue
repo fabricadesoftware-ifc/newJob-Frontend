@@ -9,7 +9,7 @@ const showIcon = ref(false)
   <div class="select-container">
     <div class="title-container">
       <p>Tipo de contrato</p>
-      <p style="color: var(--laranja)">Descartar</p>
+      <p style="color: var(--laranja); cursor: pointer;">Descartar</p>
     </div>
     <div class="select" @click="showIcon = !showIcon">
       <div class="selected-value">Todos</div>
