@@ -3,47 +3,60 @@ import { Heart } from '../icons'
 </script>
 <template>
   <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Nome</th>
-          <th>E-mail</th>
-          <th></th>
-          <th>Requisitos</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
-          <td>Natasha Russo dos Santos</td>
-          <td>natasha@gmail.com</td>
-          <td>Currículo</td>
-          <td><div class="requirements-flag">Todos</div></td>
-          <td><Heart class="heart-icon" /></td>
-        </tr>
-        <tr>
-          <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
-          <td>Natasha Russo dos Santos</td>
-          <td>natasha@gmail.com</td>
-          <td>Currículo</td>
-          <td><div class="requirements-flag">Todos</div></td>
-          <td><Heart class="heart-icon" /></td>
-        </tr>
-        <tr>
-          <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
-          <td>Natasha Russo dos Santos</td>
-          <td>natasha@gmail.com</td>
-          <td>Currículo</td>
-          <td><div class="requirements-flag">Todos</div></td>
-          <td><Heart class="heart-icon" /></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="button-container">
-      <button class="button-secondary">Descartar</button>
-      <button class="button-default">Aplicar</button>
+    <div class="center">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th></th>
+            <th>Requisitos</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
+            <td>Natasha Russo dos Santos</td>
+            <td>natasha@gmail.com</td>
+            <td>Currículo</td>
+            <td><div class="requirements-flag">Todos</div></td>
+            <td><Heart class="heart-icon" size="20" /></td>
+          </tr>
+          <tr>
+            <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
+            <td>Natasha Russo dos Santos</td>
+            <td>natasha@gmail.com</td>
+            <td>Currículo</td>
+            <td><div class="requirements-flag">Todos</div></td>
+            <td><Heart class="heart-icon" size="20" /></td>
+          </tr>
+          <tr>
+            <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
+            <td>Natasha Russo dos Santos</td>
+            <td>natasha@gmail.com</td>
+            <td>Currículo</td>
+            <td><div class="requirements-flag">Todos</div></td>
+            <td><Heart class="heart-icon" size="20" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button class="button-secondary">Voltar</button>
+        <button class="button-default">Aplicar</button>
+      </div>
+    </div>
+    <div class="card">
+      <img
+        src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt=""
+      />
+      <div>
+        <p class="card-title">Natasha Russo dos Santos</p>
+        <p class="card-curse">Bacharelado em Sistemas de Informação</p>
+      </div>
+      <button class="button-default" style="width: 100%;">Ver perfil</button>
     </div>
   </div>
 </template>
@@ -51,15 +64,20 @@ import { Heart } from '../icons'
 .container {
   padding: 8em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  gap: 2vw;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 table {
   border-collapse: collapse;
   color: #a0a0a0;
-  width: 60%;
+  width: 100%;
 }
 
 th,
@@ -71,8 +89,13 @@ td {
 }
 
 tbody tr {
-  height: 70px !important;
+  height: 55px !important;
   border-radius: 20px !important;
+
+  & span {
+    display: flex;
+    align-items: center;
+  }
 
   td:first-child {
     border-radius: 10px 0 0 10px;
@@ -113,8 +136,8 @@ td img {
   background-color: #5a9166;
   color: #dfffe9;
   border-radius: 18px;
-  height: 30px;
-  width: 100px;
+  height: 25px;
+  width: 80px;
 }
 
 .heart-icon {
@@ -125,26 +148,53 @@ td img {
 
 .button-container {
   display: flex;
-  justify-content: space-between;
-  width: 40%;
+  gap: 15px;
+  align-self: end;
+}
 
-  & .button-secondary,
-  .button-default {
-    width: 90px;
-    padding: 7px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+.button-secondary,
+.button-default {
+  width: 90px;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 1px solid #e09b6b;
+  color: #e09b6b;
+}
+
+.button-default {
+  background-color: #e09b6b;
+}
+
+/* card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  width: 200px;
+
+  & img {
+    border-radius: 15px;
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
   }
 
-  & .button-secondary {
-    background-color: transparent;
-    border: 1px solid #e09b6b;
-    color: #e09b6b;
+  & .card-title {
+    font-size: 14px;
+    font-weight: 500;
   }
 
-  & .button-default {
-    background-color: #e09b6b;
+  & .card-curse {
+    font-size: 12px;
+    font-weight: 300;
+    color: #a0a0a0;
   }
 }
 </style>
