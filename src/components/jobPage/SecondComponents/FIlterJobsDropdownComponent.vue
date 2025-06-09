@@ -1,6 +1,6 @@
 <script setup>
 import { FilterVariant, Close } from '../../icons'
-import { SelectComponent } from '@/components'
+import { SelectComponent, SelectBoxComponent } from '@/components'
 </script>
 <template>
   <div class="filter-jobs-container">
@@ -11,7 +11,15 @@ import { SelectComponent } from '@/components'
       </div>
       <Close size="22px" />
     </div>
+    <div class="hr"></div>
     <SelectComponent />
+    <SelectComponent />
+    <SelectBoxComponent />
+    <div class="hr"></div>
+    <div class="button-container">
+      <button class="button-secondary">Descartar</button>
+      <button class="button-default">Aplicar</button>
+    </div>
   </div>
 </template>
 <style scoped>
