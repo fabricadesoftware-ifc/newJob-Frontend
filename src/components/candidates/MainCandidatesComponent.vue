@@ -41,17 +41,25 @@ import { Heart } from '../icons'
         </tr>
       </tbody>
     </table>
+    <div class="button-container">
+      <button class="button-secondary">Descartar</button>
+      <button class="button-default">Aplicar</button>
+    </div>
   </div>
 </template>
 <style scoped>
 .container {
   padding: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
   border-collapse: collapse;
   color: #a0a0a0;
-  width: 70%;
+  width: 60%;
 }
 
 th,
@@ -59,6 +67,7 @@ td {
   color: #a0a0a0;
   text-align: left;
   padding: 0 1vw;
+  font-size: 15px;
 }
 
 tbody tr {
@@ -76,7 +85,10 @@ tbody tr {
 
 tbody tr:hover {
   background-color: #282828;
-  color: #e6e8ee;
+
+  & td {
+    color: #e6e8ee;
+  }
 }
 
 tbody tr:first-child {
@@ -90,7 +102,7 @@ th {
 }
 
 td img {
-  width: 45px;
+  width: 35px;
   border-radius: 30px;
 }
 
@@ -107,5 +119,32 @@ td img {
 
 .heart-icon {
   color: #e6e8ee;
+}
+
+/* botões de navegação container */
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+
+  & .button-secondary,
+  .button-default {
+    width: 90px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  & .button-secondary {
+    background-color: transparent;
+    border: 1px solid #e09b6b;
+    color: #e09b6b;
+  }
+
+  & .button-default {
+    background-color: #e09b6b;
+  }
 }
 </style>
