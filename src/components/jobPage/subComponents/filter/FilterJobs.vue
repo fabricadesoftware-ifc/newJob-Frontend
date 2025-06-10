@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from 'vue'
 import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
+import { FilterJobsDropdownComponent } from '@/components';
+
+const showFilter = ref(false)
 </script>
 <template>
   <div class="container-top">
@@ -7,7 +11,7 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
       <Magnify />
       <input type="text" />
     </div>
-    <button class="filter-button-activated">
+    <button class="filter-button-activated" @click="showFilter = !showFilter">
       <FilterVariant />
     </button>
     <button class="filter-button-default">
@@ -16,6 +20,7 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
     <button class="filter-button-favorite">Favoritos</button>
     <p>- 527 vagas encontradas</p>
   </div>
+  <FilterJobsDropdownComponent v-if="showFilter" @close="showFilter = !showFilter" />
 </template>
 <style scoped>
 .container-top {
@@ -73,6 +78,10 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
     align-items: center;
     justify-content: center;
   }
+}
+
+.filter-button-default:hover, .filter-button-favorite:hover {
+  background-color: #282828;
 }
 
 .filter-button-default {

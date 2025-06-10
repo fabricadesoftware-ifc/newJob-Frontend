@@ -1,5 +1,5 @@
 <script setup>
-import { ChevronDown, ChevronUp, Close } from '../../icons'
+import { ChevronDown, ChevronUp, Close } from '../../../icons'
 const lista = ['PJ', 'Estágio', 'CLT']
 </script>
 <template>

@@ -19,8 +19,7 @@ async function changeJobs(page) {
 <template>
   <div class="container">
     <h1>VAGAS</h1>
-    <FilterJobs />
-    <FIlterJobsDropdownComponent />
+    <FilterJobs @click="showFilter = !showFilter" />
     <div class="mini-company-cards-container">
       <div v-for="n in 13" :key="n">
         <MiniCompanyCard />
