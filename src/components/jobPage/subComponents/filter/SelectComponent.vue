@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { ChevronDown, ChevronUp } from '../../icons'
+import { ChevronDown, ChevronUp } from '../../../icons'
 const lista = ['PJ', 'Estágio', 'CLT']
 
 const showIcon = ref(false)

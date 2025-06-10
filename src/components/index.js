@@ -13,12 +13,12 @@ import AboutContent from "./about/AboutContent.vue";
 import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
-import CardJobs from "./jobPage/SecondComponents/CardJobs.vue";
-import MiniCompanyCard from "./jobPage/SecondComponents/MiniCompanyCard.vue";
-import FilterJobs from "./jobPage/SecondComponents/FilterJobs.vue";
-import FIlterJobsDropdownComponent from "./jobPage/SecondComponents/FIlterJobsDropdownComponent.vue"
-import SelectComponent from "./jobPage/SecondComponents/SelectComponent.vue"
-import SelectBoxComponent from "./jobPage/SecondComponents/SelectBoxComponent.vue"
+import CardJobs from "./jobPage/subComponents/CardJobs.vue";
+import MiniCompanyCard from "./jobPage/subComponents/MiniCompanyCard.vue";
+import FilterJobs from "./jobPage/subComponents/filter/FilterJobs.vue";
+import FilterJobsDropdownComponent from "./jobPage/subComponents/filter/FilterJobsDropdownComponent.vue"
+import SelectComponent from "./jobPage/subComponents/filter/SelectComponent.vue"
+import SelectBoxComponent from "./jobPage/subComponents/filter/SelectBoxComponent.vue"
 
 export {
     ImageForm,
@@ -39,7 +39,7 @@ export {
     CardJobs,
     MiniCompanyCard,
     FilterJobs,
-    FIlterJobsDropdownComponent,
+    FilterJobsDropdownComponent,
     SelectComponent,
     SelectBoxComponent
 }

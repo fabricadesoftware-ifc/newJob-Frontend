@@ -1,6 +1,9 @@
 <script setup>
-import { FilterVariant, Close } from '../../icons'
+import { defineEmits } from 'vue';
+import { FilterVariant, Close } from '../../../icons'
 import { SelectComponent, SelectBoxComponent } from '@/components'
+
+const emit = defineEmits(['close']);
 </script>
 <template>
   <div class="filter-jobs-container">
@@ -9,7 +12,7 @@ import { SelectComponent, SelectBoxComponent } from '@/components'
         <FilterVariant size="20px" />
         <h2>Filtro</h2>
       </div>
-      <Close size="22px" />
+      <Close @click="$emit('close')" size="22px" />
     </div>
     <div class="hr"></div>
     <SelectComponent />
@@ -17,13 +20,17 @@ import { SelectComponent, SelectBoxComponent } from '@/components'
     <SelectBoxComponent />
     <div class="hr"></div>
     <div class="button-container">
-      <button class="button-secondary">Descartar</button>
-      <button class="button-default">Aplicar</button>
+      <button class="button-secondary" @click="$emit('close')">Descartar</button>
+      <button class="button-default" @click="$emit('close')">Aplicar</button>
     </div>
   </div>
 </template>
 <style scoped>
 .filter-jobs-container {
+  position: absolute;
+  z-index: 4;
+  top: 32%;
+  left: 16%;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--cinza-escuro);
