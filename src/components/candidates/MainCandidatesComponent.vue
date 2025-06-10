@@ -3,6 +3,7 @@ import { Heart } from '../icons'
 </script>
 <template>
   <div class="container">
+    <h1>CANDIDATOS</h1>
     <div class="center">
       <table>
         <thead>
@@ -16,23 +17,7 @@ import { Heart } from '../icons'
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
-            <td>Natasha Russo dos Santos</td>
-            <td>natasha@gmail.com</td>
-            <td>Currículo</td>
-            <td><div class="requirements-flag">Todos</div></td>
-            <td><Heart class="heart-icon" size="20" /></td>
-          </tr>
-          <tr>
-            <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
-            <td>Natasha Russo dos Santos</td>
-            <td>natasha@gmail.com</td>
-            <td>Currículo</td>
-            <td><div class="requirements-flag">Todos</div></td>
-            <td><Heart class="heart-icon" size="20" /></td>
-          </tr>
-          <tr>
+          <tr v-for="i in 10">
             <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
             <td>Natasha Russo dos Santos</td>
             <td>natasha@gmail.com</td>
@@ -56,28 +41,38 @@ import { Heart } from '../icons'
         <p class="card-title">Natasha Russo dos Santos</p>
         <p class="card-curse">Bacharelado em Sistemas de Informação</p>
       </div>
-      <button class="button-default" style="width: 100%;">Ver perfil</button>
+      <button class="button-default" style="width: 100%; border-radius: 10px;">Ver perfil</button>
     </div>
   </div>
 </template>
 <style scoped>
 .container {
-  padding: 8em;
-  display: flex;
+  padding: 8em 0;
+  display: grid;
+  grid-template-areas: 
+  'title title'
+  'a card';
   justify-content: center;
   gap: 2vw;
 }
 
 .center {
+  grid-area: a;
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
+h1 {
+  grid-area: title;
+  font-size: 3em;
+  font-weight: 600;
+}
+
 table {
   border-collapse: collapse;
   color: #a0a0a0;
-  width: 100%;
+  width: 55vw;
 }
 
 th,
@@ -178,6 +173,7 @@ td img {
   align-items: center;
   gap: 7px;
   width: 200px;
+  grid-area: card;
 
   & img {
     border-radius: 15px;
