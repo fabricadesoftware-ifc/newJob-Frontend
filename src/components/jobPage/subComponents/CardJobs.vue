@@ -40,12 +40,15 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
   background-color: #1a1b1d;
   border: 1px solid var(--cinza-escuro);
   padding: 20px;
+  padding: 1.2vw;
   border-radius: 15px;
-  width: 18em;
-  height: 15em;
+  width: 20vw;
+  height: 32vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* height: 15em; */
+  /* width: 18em; */
 }
 
 .top {
@@ -104,7 +107,7 @@ h2 {
 
   & p {
     color: var(--cinza-claro);
-    font-size: 16px;
+    font-size: 1.1vw;
   }
 
   & .salary {
