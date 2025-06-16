@@ -11,6 +11,7 @@ import Github from 'vue-material-design-icons/Github.vue';
 import ArrowRightThinCircleOutline from 'vue-material-design-icons/ArrowRightThinCircleOutline.vue';
 import ArrowLeftThinCircleOutline from 'vue-material-design-icons/ArrowLeftThinCircleOutline.vue';
 import Heart from 'vue-material-design-icons/Heart.vue';
+import OpenInNew from 'vue-material-design-icons/OpenInNew.vue'
 
 
 export {
@@ -27,4 +28,5 @@ export {
     ArrowRightThinCircleOutline,
     ArrowLeftThinCircleOutline,
     Heart,
+    OpenInNew,
 }

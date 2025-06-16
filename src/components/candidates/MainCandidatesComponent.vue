@@ -1,5 +1,5 @@
 <script setup>
-import { Heart } from '../icons'
+import { Heart, OpenInNew } from '../icons'
 </script>
 <template>
   <div class="container">
@@ -8,7 +8,6 @@ import { Heart } from '../icons'
       <table>
         <thead>
           <tr>
-            <th></th>
             <th>Nome</th>
             <th>E-mail</th>
             <th></th>
@@ -17,11 +16,21 @@ import { Heart } from '../icons'
           </tr>
         </thead>
         <tbody>
+          <tr style="height: 18px !important"></tr>
           <tr v-for="i in 10">
-            <td class="user-title"><img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" /></td>
-            <td>Natasha Russo dos Santos</td>
+            <td>
+              <div class="user-name">
+                <img src="https://i.ibb.co/WWRsZdjx/image-1.png" alt="" />
+                Natasha Russo dos Santos
+              </div>
+            </td>
             <td>natasha@gmail.com</td>
-            <td>Currículo</td>
+            <td>
+              <div class="current-link">
+                <p>Currículo</p>
+                <OpenInNew size="16" />
+              </div>
+            </td>
             <td><div class="requirements-flag">Todos</div></td>
             <td><Heart class="heart-icon" size="20" /></td>
           </tr>
@@ -41,7 +50,7 @@ import { Heart } from '../icons'
         <p class="card-title">Natasha Russo dos Santos</p>
         <p class="card-curse">Bacharelado em Sistemas de Informação</p>
       </div>
-      <button class="button-default" style="width: 100%; border-radius: 10px;">Ver perfil</button>
+      <button class="button-default" style="width: 100%; border-radius: 10px">Ver perfil</button>
     </div>
   </div>
 </template>
@@ -49,9 +58,9 @@ import { Heart } from '../icons'
 .container {
   padding: 8em 0;
   display: grid;
-  grid-template-areas: 
-  'title title'
-  'a card';
+  grid-template-areas:
+    'title title'
+    'a card';
   justify-content: center;
   gap: 2vw;
 }
@@ -75,6 +84,82 @@ table {
   width: 55vw;
 }
 
+tbody {
+  & tr {
+    height: 55px !important;
+    border-radius: 20px !important;
+
+    & span {
+      display: flex;
+      align-items: center;
+    }
+
+    td:first-child {
+      border-radius: 5px 0 0 5px;
+    }
+
+    td:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+
+    & td {
+      & .user-name {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+
+        & img {
+          object-fit: cover;
+          width: 35px;
+          height: 35px;
+          border-radius: 30px;
+        }
+      }
+
+      & .requirements-flag {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5a9166;
+        color: #dfffe9;
+        border-radius: 18px;
+        height: 25px;
+        width: 80px;
+      }
+
+      &.heart-icon {
+        color: #a0a0a0;
+      }
+    }
+
+    & .current-link {
+      display: flex;
+      gap: 7px;
+
+      & p {
+        color: #a0a0a0;
+      }
+    }
+  }
+
+  & tr:hover {
+    background-color: #282828;
+
+    & td,
+    p {
+      color: #e6e8ee;
+    }
+
+    & p {
+      text-decoration: underline;
+    }
+  }
+
+  & tr:first-child {
+    height: 60px;
+  }
+}
+
 th,
 td {
   color: #a0a0a0;
@@ -83,60 +168,10 @@ td {
   font-size: 15px;
 }
 
-tbody tr {
-  height: 55px !important;
-  border-radius: 20px !important;
-
-  & span {
-    display: flex;
-    align-items: center;
-  }
-
-  td:first-child {
-    border-radius: 10px 0 0 10px;
-  }
-
-  td:last-child {
-    border-radius: 0 10px 10px 0;
-  }
-}
-
-tbody tr:hover {
-  background-color: #282828;
-
-  & td {
-    color: #e6e8ee;
-  }
-}
-
-tbody tr:first-child {
-  height: 60px;
-}
-
 th {
-  border-bottom: 1px solid #505050;
+  border-bottom: 1px solid #5050504f;
   height: 35px;
   font-weight: 400;
-}
-
-td img {
-  width: 35px;
-  border-radius: 30px;
-}
-
-.requirements-flag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #5a9166;
-  color: #dfffe9;
-  border-radius: 18px;
-  height: 25px;
-  width: 80px;
-}
-
-.heart-icon {
-  color: #e6e8ee;
 }
 
 /* botões de navegação container */
@@ -173,7 +208,10 @@ td img {
   align-items: center;
   gap: 7px;
   width: 200px;
+  height: 270px;
   grid-area: card;
+  padding: 15px;
+  border-radius: 16px;
 
   & img {
     border-radius: 15px;
@@ -192,5 +230,9 @@ td img {
     font-weight: 300;
     color: #a0a0a0;
   }
+}
+
+.card:hover {
+  background-color: #1e1e1e;
 }
 </style>
