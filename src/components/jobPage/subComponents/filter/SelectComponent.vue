@@ -1,25 +1,27 @@
 <script setup>
 import { ref } from 'vue'
 import { ChevronDown, ChevronUp } from '../../../icons'
-const lista = ['PJ', 'Estágio', 'CLT']
 
-const showIcon = ref(false)
+const showModal = ref(false)
+const props = defineProps(['text', 'array'])
+
+const selectedOption = ref(0)
 </script>
 <template>
   <div class="select-container">
     <div class="title-container">
-      <p>Tipo de contrato</p>
-      <p style="color: var(--laranja); cursor: pointer;">Descartar</p>
+      <p>{{ text }}</p>
+      <p style="color: var(--laranja); cursor: pointer" @click="selectedOption = 0">Descartar</p>
     </div>
-    <div class="select" @click="showIcon = !showIcon">
-      <div class="selected-value">Todos</div>
+    <div class="select" @click="showModal = !showModal">
+      <div class="selected-value">{{!selectedOption? 'Todos': array[selectedOption]}}</div>
       <div class="chevrons">
-        <ChevronDown size="20" v-if="!showIcon" />
-        <ChevronUp size="20" v-if="showIcon" />
+        <ChevronDown size="20" v-if="!showModal" />
+        <ChevronUp size="20" v-if="showModal" />
       </div>
     </div>
-    <div class="options-container" v-if="showIcon">
-      <div class="option" v-for="opcao in lista">
+    <div class="options-container" v-if="showModal">
+      <div class="option" v-for="(opcao, index) in array" :key="index" @click="selectedOption = index, showModal = false">
         {{ opcao }}
       </div>
     </div>

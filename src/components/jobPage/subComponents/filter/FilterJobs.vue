@@ -4,6 +4,8 @@ import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
 import { FilterJobsDropdownComponent } from '@/components';
 
 const showFilter = ref(false)
+
+
 </script>
 <template>
   <div class="container-top">
