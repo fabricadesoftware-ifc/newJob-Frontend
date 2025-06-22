@@ -1,9 +1,14 @@
 <script setup>
-import { defineEmits } from 'vue';
 import { FilterVariant, Close } from '../../../icons'
 import { SelectComponent, SelectBoxComponent } from '@/components'
 
-const emit = defineEmits(['close']);
+const emit = defineEmits(['close'])
+
+const contractOptions = ['Todos', 'PJ', 'Estágio', 'CLT']
+
+// function defineContract(i){
+
+// }
 </script>
 <template>
   <div class="filter-jobs-container">
@@ -15,7 +20,7 @@ const emit = defineEmits(['close']);
       <Close @click="$emit('close')" size="22px" />
     </div>
     <div class="hr"></div>
-    <SelectComponent />
+    <SelectComponent text="Tipo de contrato" :array="contractOptions" />
     <SelectComponent />
     <SelectBoxComponent />
     <div class="hr"></div>
