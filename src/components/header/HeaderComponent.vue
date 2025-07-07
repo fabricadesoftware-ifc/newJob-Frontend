@@ -78,13 +78,14 @@ const temeColor = ref(true)
     align-items: center;
     width: fit-content;
     min-height: 30px;
+    color: var(--branco-escuro);
 
     & .router-link-active {
-      color: #e6e8ee;
+      color: var(--branco);
     }
 
     & a:hover {
-      background-color: #242424;
+      background-color: var(--preto-claro);
     }
   }
 }
@@ -92,7 +93,7 @@ const temeColor = ref(true)
 a,
 .teme-icon {
   border-radius: 7px;
-  color: #b7b7b7;
+  color: var(--branco-claro);
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
@@ -101,7 +102,7 @@ a,
 
 a:hover,
 .teme-icon:hover {
-  background-color: #242424;
+  background-color: var(--preto-claro);
 }
 
 .teme-icon {
@@ -128,12 +129,12 @@ a:hover,
 }
 
 input {
-  color: #e6e8ee;
+  color: var(--branco);
 }
 
 span,
 input::placeholder {
-  color: #b7b7b7;
+  color: var(--branco-escuro);
 }
 
 .user-image {

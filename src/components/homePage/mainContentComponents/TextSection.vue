@@ -54,7 +54,7 @@ import { Plus } from '../../icons/index.js';
 <style scoped>
 .number {
     display: flex;
-    color: #fff;
+    color: var(--branco);
     gap: .1rem;
     font-weight: 500;
     font-size: 2.8rem;
@@ -72,7 +72,7 @@ import { Plus } from '../../icons/index.js';
 }
 
 .icon {
-    color: #E09B6B;
+    color: var(--laranja);
 }
 
 .info-container {
@@ -88,7 +88,7 @@ import { Plus } from '../../icons/index.js';
 }
 
 h1 {
-    background: -webkit-linear-gradient(left, #c9c9c9 0%, #fff 50%, #ffffff4b 100%);
+    background: -webkit-linear-gradient(left, #c9c9c9 0%, var(--branco) 50%, var(--branco) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
@@ -105,7 +105,7 @@ img {
 }
 
 button {
-    background-color: #E09B6B;
+    background-color: var(--laranja);
     padding: .6rem 2em;
     font-weight: 600;
     border: none;
@@ -134,7 +134,7 @@ h2 {
 }
 
 p {
-    color: #A0A0A0;
+    color: var(--cinza-claro);
     font-size: .8rem;
     width: 80%;
     margin-top: 1rem;

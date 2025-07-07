@@ -43,8 +43,8 @@ const educationLevels = [
 
 <style scoped>
 button {
-  background-color: #e09b6b;
-  color: #000;
+  background-color: var(--laranja);
+  color: var(--preto-escuro);
   font-weight: 600;
   width: 20%;
   padding: 1.3rem;
@@ -54,7 +54,7 @@ button {
 }
 
 ul {
-  color: #fff;
+  color: var(--branco);
   list-style-type: none;
   display: flex;
   flex-direction: column;

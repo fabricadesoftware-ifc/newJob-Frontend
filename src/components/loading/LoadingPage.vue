@@ -7,7 +7,7 @@
 
 <style scoped>
 .container-loading {
-    background-color: #22513C;
+    background-color: var(--verde);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -24,7 +24,7 @@
 .border {
     width: 45%;
     height: auto;
-    border: 5px solid #C9CBBD;
+    border: 5px solid var(--cinza-claro);
     margin-top: 4em; 
     border-radius: 5px;
     overflow: hidden;

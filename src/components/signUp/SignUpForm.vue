@@ -79,7 +79,7 @@ const registerUser = async () => {
 
 <style scoped>
 .link-text {
-    color: #E09B6B;
+    color: var(--laranja);
     cursor: pointer;
 }
 
@@ -99,11 +99,11 @@ h1 {
 button {
     margin-top: 5%;
     width: 50%;
-    background-color: #E09B6B;
+    background-color: var(--laranja);
     border-radius: 3rem;
     padding: 2% 0;
     font-size: 1rem;
-    color: #000000;
+    color: var(--preto-escuro);
     font-weight: 600;
 }
 
@@ -111,7 +111,7 @@ input {
     width: 90%;
     margin-bottom: .3rem;
     font-size: 1rem;
-    color: #716F6F;
+    color: var(--cinza);
     background-color: transparent;
     outline: none;
     border: none;
@@ -122,8 +122,8 @@ label {
 }
 
 .input-container {
-    color: #716F6F;
-    border: 1px solid #716F6F;
+    color: var(--cinza);
+    border: 1px solid var(--cinza);
     border-radius: .6rem;
     padding: 1rem .5rem .7rem .5rem;
     display: flex;
@@ -133,7 +133,7 @@ label {
 }
 
 .input-container:focus-within {
-    border: 1px solid #E09B6B;
+    border: 1px solid var(--laranja);
     transition: all .2s ease-in-out;
 }
 </style>

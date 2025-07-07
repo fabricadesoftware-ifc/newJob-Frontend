@@ -31,7 +31,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
 
 <style scoped>
 .container {
-  background-color: #1d4734;
+  background-color: var(--verde);
   padding: 100px;
 }
 .box-text{
@@ -79,7 +79,7 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
 }
 .gradient-text {
   font-size: 2em; 
-  background-image: linear-gradient(45deg, #ffffff, #ffffff, #555555);
+  background-image: linear-gradient(45deg, var(--branco), var(--branco), var(--cinza-escuro));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
