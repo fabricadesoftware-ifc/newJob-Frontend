@@ -52,6 +52,11 @@ import { Plus } from '../../icons/index.js';
 </template>
 
 <style scoped>
+.container {
+    display: flex;
+    padding: 15vh 5vw;
+}
+
 .number {
     display: flex;
     color: var(--branco);
@@ -88,7 +93,7 @@ import { Plus } from '../../icons/index.js';
 }
 
 h1 {
-    background: -webkit-linear-gradient(left, #c9c9c9 0%, var(--branco) 50%, var(--branco) 100%);
+    color: var(--branco);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 3rem;
@@ -122,11 +127,6 @@ button {
 h2 {
     font-size: 2rem;
     font-weight: 400;
-}
-
-.container {
-    display: flex;
-    padding: 15vh 5vw;
 }
 
 .about-container {

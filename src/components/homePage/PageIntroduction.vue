@@ -41,9 +41,7 @@ p {
 }
 
 h1 {
-    background: -webkit-linear-gradient(left, #c9c9c9 0%, #fff 50%, var(--branco) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--branco);
     max-width: 80%;
     font-size: 4rem;
     font-weight: 600;
@@ -71,7 +69,7 @@ h1 {
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(28deg, #1D4734 30%, #29634b, #1D4734 70%);
+    background: linear-gradient(28deg, #0E301C 15%, #07734B, #0E301C 85%);
 }
 
 .main-image {
