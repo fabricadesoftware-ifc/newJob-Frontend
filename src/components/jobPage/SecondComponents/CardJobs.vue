@@ -49,13 +49,13 @@ defineProps(["image", "company", "title", "local", "id"]);
 
 .btn {
   border: none;
-  background-color: #e09b6b;
+  background-color: var(--laranja);
   padding: 0.8em 6rem;
   font-weight: bold;
   cursor: pointer;
   border-radius: 30px;
   font-size: 18.5px;
-  color: #000000;
+  color: var(--preto-escuro);
 }
 
 .box-info {

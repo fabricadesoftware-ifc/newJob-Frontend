@@ -36,12 +36,12 @@ import { ArrowTopRight } from '../icons';
 
 p {
     max-width: 30%;
-    color: #FFFFFF99;
+    color: var(--branco);
     font-size: .9rem;
 }
 
 h1 {
-    background: -webkit-linear-gradient(left, #c9c9c9 0%, #fff 50%, #ffffff4b 100%);
+    background: -webkit-linear-gradient(left, #c9c9c9 0%, #fff 50%, var(--branco) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     max-width: 80%;
@@ -56,7 +56,7 @@ h1 {
     align-items: center;
     right: 5%;
     top: -5%;
-    background-color: #E09B6B;
+    background-color: var(--laranja);
     border: none;
     width: 6rem;
     height: 6rem;
@@ -80,10 +80,10 @@ h1 {
     height: 100%;
     border-radius: 40em;
     rotate: 6deg;
-    box-shadow: 0px -40px 70px 10px #000 inset,
+    box-shadow: 0px -40px 70px 10px var(--preto-escuro) inset,
         -10px 5px 0px #000000a1,
         5px 5px 0px #000000a1;
-    background-color: #ffffff;
+    background-color: var(--branco);
     background: url("https://i.ibb.co/RgKjgKf/image.png");
     opacity: 80%;
     background-size: cover;

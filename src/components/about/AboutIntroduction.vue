@@ -39,7 +39,7 @@ const job = useJobStore();
   bottom: calc(100% - 8px);
   right: -5px;
   border-radius: 50%;
-  border-bottom: #1d4734 solid 10px;
+  border-bottom: var(--verde-escuro) solid 10px;
   rotate: -45deg;
 }
 
@@ -51,7 +51,7 @@ const job = useJobStore();
   top: calc(100% - 8px);
   right: -5px;
   border-radius: 50%;
-  border-bottom: #235540 solid 10px;
+  border-bottom: var(--verde) solid 10px;
   rotate: 220deg;
 }
 
@@ -90,12 +90,12 @@ const job = useJobStore();
 
 p {
   max-width: 30%;
-  color: #ffffffc9;
+  color: var(--branco);
   font-size: 0.9rem;
 }
 
 h1 {
-  background: -webkit-linear-gradient(left, #c9c9c9 0%, #fff 50%, #ffffff4b 100%);
+  background: -webkit-linear-gradient(left, #c9c9c9 0%, #fff 50%, var(--branco) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   max-width: 80%;

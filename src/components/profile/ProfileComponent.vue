@@ -88,12 +88,12 @@
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      border: 1px solid #ffffff;
+      border: 1px solid var(--branco);
     }
 
     & button {
-      background-color: #e09b6b;
-      color: #1e1e1e;
+      background-color: var(--laranja);
+      color: var(--preto-escuro);
       border-radius: 30px;
       outline: none;
       border: none;
@@ -133,13 +133,13 @@
       }
       & .reset-btn {
         background-color: transparent;
-        border: 1px solid #e09b6b;
-        color: #ffffff;
+        border: 1px solid var(--laranja);
+        color: var(--branco);
       }
 
       & .save-btn {
-        background-color: #e09b6b;
-        color: #1e1e1e;
+        background-color: var(--laranja);
+        color: var(--preto-escuro);
         border: none;
         margin-left: 1vw;
       }
@@ -148,11 +148,11 @@
   & input,
   select,
   textarea {
-    background-color: #242424;
-    border: 1px solid #505050;
+    background-color: var(--preto-escuro);
+    border: 1px solid var(--cinza-escuro);
     border-radius: 6px;
     outline: none;
-    color: #ffffff;
+    color: var(--branco);
     height: 6vh;
     min-height: 25px;
     width: 22vw;

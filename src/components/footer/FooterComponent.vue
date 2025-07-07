@@ -57,7 +57,7 @@ import { Github, Instagram, Linkedin } from "../icons";
 }
 .text {
   font-size: 0.9em;
-  color: #a0a0a0;
+  color: var(--cinza-claro);
   letter-spacing: 0.09em;
 }
 .icons {
@@ -71,7 +71,7 @@ import { Github, Instagram, Linkedin } from "../icons";
   }
 }
 .border {
-  border-top: 0.1em solid #91aca0;
+  border-top: 0.1em solid var(--cinza);
   border-left: 0.3em solid transparent;
   border-right: 0.3em solid transparent;
   width: 91%;
@@ -95,6 +95,6 @@ import { Github, Instagram, Linkedin } from "../icons";
   cursor: pointer;
 }
 .border-bottom {
-  border-right: solid #a0a0a0 1.5px;
+  border-right: solid var(--cinza-claro) 1.5px;
 }
 </style>
