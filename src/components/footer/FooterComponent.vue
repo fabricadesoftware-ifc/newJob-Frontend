@@ -38,7 +38,7 @@ import { Github, Instagram, Linkedin } from "../icons";
 
 <style scoped>
 .container-footer {
-  max-width: 100vw;
+  width: 100%;
   background: linear-gradient(45deg, #1e4835 25%, #2a694c 55%, #1e4835 80%);
   color: white;
   padding: 3vh 0;

@@ -36,8 +36,6 @@ const temeColor = ref(true)
 <style scoped>
 .container-wrapper {
   display: flex;
-  align-self: center;
-  justify-self: center;
   justify-content: space-between;
   width: 1215px;
   position: absolute;
