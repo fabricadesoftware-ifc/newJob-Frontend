@@ -1,9 +1,10 @@
 <script setup>
-import { TextSection } from '../index.js'
+import { TextSection, AboutUsSection } from '../index.js'
 </script>
 
 <template>
     <TextSection />
+    <AboutUsSection />
 </template>
 
 <style scoped></style>
