@@ -21,7 +21,6 @@ import {
   padding: 0 1% 1% 1%;
   height: 98vh;
   align-items: center;
-  
   grid-template-rows: 6% auto;
   grid-template-areas:
     'header'
