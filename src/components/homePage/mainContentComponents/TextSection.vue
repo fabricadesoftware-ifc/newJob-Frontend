@@ -35,12 +35,15 @@
   display: flex;
   justify-content: space-between;
   padding: 2% 9% 5%;
+  width: 1215px;
+  align-self: center;
+  justify-self: center;
 
   & .body-container {
     display: flex;
     flex-direction: column;
     gap: 2vw;
-    width: 40%;
+    width: 60%;
   }
 
   & img {
