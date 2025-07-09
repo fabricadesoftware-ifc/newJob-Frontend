@@ -9,8 +9,10 @@ import {
 
 <template>
   <div class="father-container">
-    <HeaderComponent />
-    <PageIntroduction />
+    <div class="teste">
+      <HeaderComponent class="header" />
+      <PageIntroduction class="introduction" />
+    </div>
     <MainContent />
     <FooterComponent />
   </div>
@@ -20,5 +22,27 @@ import {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.teste {
+  display: grid;
+  padding: 0 2vh 2vh 2vh;
+  max-height: 100vh;
+  height: 98vh;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: 8% 92%;
+  grid-template-areas:
+    "header"
+    "introduction";
+
+  & .introduction {
+    grid-area: introduction;
+  }
+
+  & .header {
+    grid-area: header;
+    margin: auto;
+  }
 }
 </style>

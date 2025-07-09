@@ -24,6 +24,12 @@ import { ArrowTopRight } from '../icons';
 </template>
 
 <style scoped>
+.container {
+    border-radius: 40px;
+    min-height: 100%;
+    background: linear-gradient(28deg, #0E301C 15%, #07734B, #0E301C 85%);
+}
+
 .content-container {
     position: relative;
     padding: 10% 0 0 5%;
@@ -63,13 +69,6 @@ h1 {
 
 .image-btn span {
     translate: 0 10%;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(28deg, #0E301C 15%, #07734B, #0E301C 85%);
 }
 
 .main-image {

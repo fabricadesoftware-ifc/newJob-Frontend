@@ -38,10 +38,7 @@ const temeColor = ref(true)
   display: flex;
   justify-content: space-between;
   width: 1215px;
-  position: absolute;
-  z-index: 1;
   top: 0px;
-  padding: 0.5vw;
 }
 
 .container {
