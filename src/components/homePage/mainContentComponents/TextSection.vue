@@ -1,142 +1,118 @@
-<script setup>
-import { Plus } from '../../icons/index.js';
-
-</script>
-
 <template>
-    <div class="container">
-        <div class="about-container">
-            <span class="about-title">
-                <img src="https://i.ibb.co/1Z5CPWL/about-icon.png" alt="">
-                <h2>Sobre nós</h2>
-            </span>
-            <p>A NewJob permite que os indivíduos com diversas habilidades e experiências tenham acesso a oportunidades
-                no setor agrícola. Seja você um engenheiro agrônomo, um técnico em irrigação ou alguém com habilidades
-                manuais para o trabalho no campo, a NewJob tem algo para você.</p>
-            <button>Saiba mais</button>
-        </div>
-        <div class="info-container">
-            <h1>CONECTANDO TALENTOS AO SETOR AGRÍCOLA</h1>
-            <p>New Job Agro business é mais do que apenas um software de busca de empregos - é uma plataforma que visa
-                fortalecer o setor agrícola, conectando empresas e profissionais de maneira eficiente e eficaz. Junte-se
-                a nós hoje e descubra como podemos transformar sua jornada de busca de emprego ou recrutamento.</p>
-            <div class="numbers-conteiner">
-                <span class="info">
-                    <span class="number">105
-                        <span class="icon">
-                            <Plus size="40" />
-                        </span>
-                    </span>
-                    <p>Empresas</p>
-                </span>
-                <span class="info">
-                    <span class="number">7000
-                        <span class="icon">
-                            <Plus size="40" />
-                        </span>
-                    </span>
-                    <p>Empresas</p>
-                </span>
-                <span class="info">
-                    <span class="number">5000
-                        <span class="icon">
-                            <Plus size="40" />
-                        </span>
-                    </span>
-                    <p>Empresas</p>
-                </span>
-            </div>
-
-        </div>
+  <div class="container">
+    <div class="body-container">
+      <div class="text-container">
+        <p class="top-text">UM SANTO NA SUA CARREIRA</p>
+        <h2>Conectando talentos do setor agrícola</h2>
+        <div class="line"></div>
+        <p class="text">
+          A NewJob permite que os indivíduos com diversas habilidades e experiências tenham acesso a
+          oportunidades no setor agrícola. Seja você um engenheiro agrônomo, um técnico em irrigação
+          ou alguém com habilidades manuais para o trabalho no campo, a NewJob tem algo para você.
+        </p>
+      </div>
+      <div class="numbers-conteiner">
+        <span class="info">
+          <span class="number">105<span class="icon">+</span></span>
+          <p class="info-text">Empresas</p>
+        </span>
+        <span class="info">
+          <span class="number">7000<span class="icon">+</span></span>
+          <p class="info-text">Vagas cadastradas</p>
+        </span>
+        <span class="info">
+          <span class="number">5000<span class="icon">+</span></span>
+          <p class="info-text">Candidaturas</p>
+        </span>
+      </div>
     </div>
+    <img src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
+  </div>
 </template>
 
 <style scoped>
 .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 9% 5%;
+
+  & .body-container {
     display: flex;
-    padding: 15vh 5vw;
+    flex-direction: column;
+    gap: 2vw;
+    width: 40%;
+  }
+
+  & img {
+    width: 30%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
 }
 
-.number {
-    display: flex;
-    color: var(--branco);
-    gap: .1rem;
-    font-weight: 500;
-    font-size: 2.8rem;
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9vw;
+
+  & .top-text {
+    color: var(--verde-claro);
+    letter-spacing: 2px;
+    font-size: 0.8em;
+  }
+
+  & .line {
+    width: 70px;
+    height: 4px;
+    background: #0e301c;
+    background: linear-gradient(
+      90deg,
+      rgba(14, 48, 28, 1) 0%,
+      rgba(7, 115, 75, 1) 50%,
+      rgba(14, 48, 28, 1) 100%
+    );
+  }
+
+  & h2 {
+    font-size: 2.9rem;
+    font-weight: 600;
+  }
+
+  & .text {
+    color: var(--cinza-claro);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 }
 
-.info {
+.numbers-conteiner {
+  display: flex;
+  justify-content: space-between;
+
+  & .info {
     display: flex;
     flex-direction: column;
     align-items: normal;
     gap: 0;
+
+    & .info-text {
+      color: var(--branco-escuro);
+      font-size: 1.2rem;
+    }
+
+    & .number {
+      display: flex;
+      font-weight: 600;
+      font-size: 2.8rem;
+      color: var(--branco);
+
+      & .icon {
+        color: var(--laranja);
+      }
+    }
+  }
 }
 
-.info p {
-    margin-top: 0;
-}
-
-.icon {
-    color: var(--laranja);
-}
-
-.info-container {
-    width: 50%;
-    margin-left: 10%;
-}
-
-.numbers-conteiner {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin-top: 2.3rem;
-}
-
-h1 {
-    color: var(--branco);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 3rem;
-}
-
-span {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-img {
-    width: 6rem;
-}
-
-button {
-    background-color: var(--laranja);
-    padding: .6rem 2em;
-    font-weight: 600;
-    border: none;
-    border-radius: 3rem;
-    margin-top: 2rem;
-}
-
-.about-title {
-    display: flex;
-    margin-bottom: 3rem;
-}
-
-
-h2 {
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-.about-container {
-    width: 35%;
-}
-
-p {
-    color: var(--cinza-claro);
-    font-size: .8rem;
-    width: 80%;
-    margin-top: 1rem;
+.image-container {
 }
 </style>
