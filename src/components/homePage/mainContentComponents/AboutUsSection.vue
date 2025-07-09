@@ -3,13 +3,14 @@
     <div class="about-container">
       <img class="about-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
       <div class="text-container">
-        <p class="top-text">UM SANTO NA SUA CARREIRA</p>
-        <h2>Conectando talentos do setor agrícola</h2>
+        <p class="top-text">SOBRE NÓS</p>
+        <h2>O que é a New Job?</h2>
         <div class="line"></div>
         <p class="text">
-          A NewJob permite que os indivíduos com diversas habilidades e experiências tenham acesso a
-          oportunidades no setor agrícola. Seja você um engenheiro agrônomo, um técnico em irrigação
-          ou alguém com habilidades manuais para o trabalho no campo, a NewJob tem algo para você.
+          New Job Agro business é mais do que apenas um software de busca de empregos - é uma
+          plataforma que visa fortalecer o setor agrícola, conectando empresas e profissionais de
+          maneira eficiente e eficaz. Junte-se a nós hoje e descubra como podemos transformar sua
+          jornada de busca de emprego ou recrutamento.
         </p>
       </div>
     </div>
@@ -37,7 +38,7 @@
 
 .about-img {
   width: 45%;
-  height: 30vw;
+  height: 26vw;
   border-radius: 20px;
   object-fit: cover;
 }
