@@ -90,7 +90,7 @@ a,
   border-radius: 7px;
   color: var(--branco-claro);
   font-weight: 500;
-  font-size: 16px;
+  font-size: clamp(1rem, 1vw, 2rem);
   cursor: pointer;
   padding: 0.3vh 1vw;
 }

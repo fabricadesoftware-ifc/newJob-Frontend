@@ -28,7 +28,7 @@ import { ArrowTopRight } from '../icons'
   border-radius: 40px;
   min-height: 100%;
   background: linear-gradient(28deg, #0e301c 15%, #07734b, #0e301c 85%);
-  overflow: hidden;
+  
 }
 
 .bg-img {
@@ -85,14 +85,14 @@ import { ArrowTopRight } from '../icons'
 .content-container {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 5vh;
   position: relative;
   padding: 7% 0 0 8%;
   width: 70%;
 
   & h1 {
     color: var(--branco);
-    font-size: clamp(3rem, 3rem, 4rem);
+    font-size: clamp(2rem, 5vw, 6rem);
     font-weight: 600;
     line-height: 1.2;
   }
@@ -113,7 +113,7 @@ import { ArrowTopRight } from '../icons'
     rgba(185, 103, 45, 1) 100%
   );
   border: none;
-  height: 2.5vw;
+  height: 3vw;
   width: 12vw;
   border-radius: 30px;
   font-weight: 600;
