@@ -28,6 +28,7 @@ import { ArrowTopRight } from '../icons'
   border-radius: 40px;
   min-height: 100%;
   background: linear-gradient(28deg, #0e301c 15%, #07734b, #0e301c 85%);
+  overflow: hidden;
 }
 
 .bg-img {
@@ -91,8 +92,7 @@ import { ArrowTopRight } from '../icons'
 
   & h1 {
     color: var(--branco);
-    max-width: 80%;
-    font-size: 5.7rem;
+    font-size: clamp(3rem, 3rem, 4rem);
     font-weight: 600;
     line-height: 1.2;
   }

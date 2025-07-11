@@ -19,6 +19,11 @@ h6 {
 
 }
 
+html {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
+}
+
 body {
   margin: 0;
   background-color: var(--preto-escuro);
