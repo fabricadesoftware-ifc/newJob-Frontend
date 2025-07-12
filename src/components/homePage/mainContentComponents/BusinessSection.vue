@@ -177,7 +177,22 @@
 
   & .carousel-card:hover .arrow-button {
     display: flex;
-  }
+    /* position: absolute;
+    display: flex;
+    bottom: 30%;
+    left: 73%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--laranja);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+
+    & span {
+      display: flex;
+      align-items: center;
+    }
+  } */
 
   & .carousel-card:hover {
     background-color: var(--preto);
