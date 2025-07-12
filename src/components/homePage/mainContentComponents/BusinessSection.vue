@@ -1,0 +1,159 @@
+<script setup>
+import { ArrowTopRight } from '@/components/icons'
+</script>
+<template>
+  <div class="business-container">
+    <div class="text-container">
+      <p class="top-text">NEW JOB PARA EMPRESAS</p>
+      <h2>Aumente o alcance da sua empresa</h2>
+      <div class="line"></div>
+      <p class="text">Possui uma empresa na área de agropecuária ou medicina veterinária?</p>
+      <button>Cadaste-se</button>
+    </div>
+    <div class="carousel">
+      <div class="carousel-card">
+        <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
+        <div class="arrow-button">
+          <ArrowTopRight size="30" />
+        </div>
+        <p>A sua empresa já está no sistema? reivindique-a</p>
+      </div>
+      <div class="carousel-card">
+        <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
+        <div class="arrow-button">
+          <ArrowTopRight size="30" />
+        </div>
+        <p>Filtragem para a seleção de funcionários</p>
+      </div>
+      <div class="carousel-card">
+        <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
+        <div class="arrow-button">
+          <ArrowTopRight size="30" />
+        </div>
+        <p>Fácil acesso pelos usuários</p>
+      </div>
+    </div>
+  </div>
+</template>
+<style scoped>
+.business-container {
+  display: flex;
+  padding: 10% 9% 5%;
+  width: 1215px;
+  align-items: center;
+  justify-self: center;
+  gap: 110px;
+  justify-content: space-between;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9vw;
+  width: 50%;
+
+  & .top-text {
+    color: var(--verde-claro);
+    letter-spacing: 2px;
+    font-size: 0.8em;
+  }
+
+  & .line {
+    width: 70px;
+    height: 4px;
+    background: #0e301c;
+    background: linear-gradient(
+      90deg,
+      rgba(14, 48, 28, 1) 0%,
+      rgba(7, 115, 75, 1) 50%,
+      rgba(14, 48, 28, 1) 100%
+    );
+  }
+
+  & h2 {
+    font-size: 2.9rem;
+    font-weight: 600;
+  }
+
+  & .text {
+    color: var(--cinza-claro);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+button {
+  border: none;
+  background: #0e301c;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 48, 28, 1) 0%,
+    rgba(7, 115, 75, 1) 50%,
+    rgba(14, 48, 28, 1) 100%
+  );
+  width: 40%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  color: var(--branco);
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+
+  & .carousel-card {
+    position: relative;
+    height: 15vw !important;
+    min-width: 12vw;
+    width: 12vw;
+    padding: 15px;
+    border-radius: 15px;
+    height: 10vw;
+
+    & .carousel-img {
+      height: 75%;
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+    }
+
+    .arrow-button {
+      display: none;
+    }
+
+    & p {
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+  }
+
+  & .carousel-card:hover .arrow-button {
+    position: absolute;
+    display: flex;
+    bottom: 30%;
+    left: 73%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--laranja);
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+
+    & span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  & .carousel-card:hover {
+    background-color: var(--preto);
+  }
+}
+
+::-webkit-scrollbar {
+  background-color: var(--laranja);
+  border-radius: 10px;
+  height: 8px;
+}
+</style>

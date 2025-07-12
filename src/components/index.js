@@ -14,6 +14,7 @@ import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
 import AboutUsSection from './homePage/mainContentComponents/AboutUsSection.vue'
+import BusinessSection from "./homePage/mainContentComponents/BusinessSection.vue";
 
 export {
     ImageForm,
@@ -32,4 +33,5 @@ export {
     LoadingPage,
     ProfileComponent,
     AboutUsSection,
+    BusinessSection
 }
