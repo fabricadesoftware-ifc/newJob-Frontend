@@ -85,14 +85,14 @@ import { ArrowTopRight } from '../icons'
 .content-container {
   display: flex;
   flex-direction: column;
-  gap: 5vh;
+  gap: 6vh;
   position: relative;
   padding: 7% 0 0 8%;
-  width: 70%;
+  width: 65%;
 
   & h1 {
     color: var(--branco);
-    font-size: clamp(2rem, 5vw, 6rem);
+    font-size: clamp(2rem, 4.8vw, 6rem);
     font-weight: 600;
     line-height: 1.2;
   }
