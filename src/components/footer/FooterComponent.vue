@@ -57,7 +57,7 @@ import { Github, Instagram, Linkedin } from "../icons";
 }
 .text {
   font-size: 0.9em;
-  color: var(--cinza-claro);
+  color: var(--branco);
   letter-spacing: 0.09em;
 }
 .icons {
