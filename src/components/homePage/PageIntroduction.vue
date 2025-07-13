@@ -1,5 +1,8 @@
 <script setup>
-import { ArrowTopRight } from '../icons'
+import { ref } from 'vue'
+import { ArrowTopRight, ChevronRight } from '../icons'
+
+const changeIcon = ref(false)
 </script>
 
 <template>
@@ -28,7 +31,6 @@ import { ArrowTopRight } from '../icons'
   border-radius: 40px;
   min-height: 100%;
   background: linear-gradient(28deg, #0e301c 15%, #07734b, #0e301c 85%);
-  
 }
 
 .bg-img {
@@ -37,7 +39,6 @@ import { ArrowTopRight } from '../icons'
   filter: brightness(3) opacity(30%);
   height: 90%;
 }
-
 
 .image-container {
   position: absolute;
@@ -88,7 +89,7 @@ import { ArrowTopRight } from '../icons'
   gap: 6vh;
   position: relative;
   padding: 7% 0 0 8%;
-  width: 65%;
+  width: 60%;
 
   & h1 {
     color: var(--branco);
@@ -105,19 +106,47 @@ import { ArrowTopRight } from '../icons'
   }
 
   & .button-show-more {
+    transition: all 0.45s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background: #b9672d;
+    background: linear-gradient(
+      90deg,
+      rgba(185, 103, 45, 1) 0%,
+      rgba(224, 155, 107, 1) 50%,
+      rgba(185, 103, 45, 1) 100%
+    );
+    border: none;
+    height: 2.5vw;
+    width: 12vw;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1em;
+    box-shadow: -1px -1px 72px -15px rgba(224, 155, 107, 0.63);
+    -webkit-box-shadow: -1px -1px 72px -15px rgba(224, 155, 107, 0.63);
+    -moz-box-shadow: -1px -1px 72px -15px rgba(224, 155, 107, 0.63);
+
+    & span {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.button-show-more:hover {
+  transition: all 0.1s all;
+  transform: translate(0, -3px);
+  box-shadow: -1px -1px 72px 2px rgba(224, 155, 107, 0.45);
+  -webkit-box-shadow: -1px -1px 72px 2px rgba(224, 155, 107, 0.45);
+  -moz-box-shadow: -1px -1px 72px 2px rgba(224, 155, 107, 0.45);
   background: #b9672d;
   background: linear-gradient(
     90deg,
     rgba(185, 103, 45, 1) 0%,
-    rgba(224, 155, 107, 1) 50%,
+    rgb(243, 178, 132) 50%,
     rgba(185, 103, 45, 1) 100%
   );
-  border: none;
-  height: 3vw;
-  width: 12vw;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1.1em;
-}
 }
 </style>
