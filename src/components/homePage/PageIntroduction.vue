@@ -21,7 +21,7 @@ const changeIcon = ref(false)
         recrutamento agrícola. Nosso objetivo é criar uma ponte entre profissionais talentosos e
         empresas agrícolas em busca de mão de obra qualificada.
       </p>
-      <button class="button-show-more">Ver vagas</button>
+      <router-link class="button-show-more" to="/jobs">Ver vagas</router-link>
     </div>
   </div>
 </template>
@@ -106,7 +106,8 @@ const changeIcon = ref(false)
   }
 
   & .button-show-more {
-    transition: all 0.45s ease-in-out;
+    color: var(--preto-escuro);
+    transition: all 0.2s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +137,6 @@ const changeIcon = ref(false)
 }
 
 .button-show-more:hover {
-  transition: all 0.1s all;
   transform: translate(0, -3px);
   box-shadow: -1px -1px 72px 2px rgba(224, 155, 107, 0.45);
   -webkit-box-shadow: -1px -1px 72px 2px rgba(224, 155, 107, 0.45);

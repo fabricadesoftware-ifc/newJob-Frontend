@@ -8,7 +8,7 @@ import { ArrowTopRight } from '@/components/icons'
       <h2>Aumente o alcance da sua empresa</h2>
       <div class="line"></div>
       <p class="text">Possui uma empresa na área de agropecuária ou medicina veterinária?</p>
-      <button>Cadaste-se</button>
+      <router-link class="button-login" to="/login">Cadaste-se</router-link>
     </div>
     <div class="carousel">
       <div class="carousel-card">
@@ -82,7 +82,10 @@ import { ArrowTopRight } from '@/components/icons'
   }
 }
 
-button {
+.button-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: #0e301c;
   background: linear-gradient(
@@ -96,6 +99,24 @@ button {
   font-size: 1.1rem;
   border-radius: 30px;
   color: var(--branco);
+  transition: all 0.2s ease-in-out;
+  box-shadow: -1px -1px 72px -15px rgba(14, 48, 28, 0.63);
+  -webkit-box-shadow: -1px -1px 72px -15px rgba(14, 48, 28, 0.63);
+  -moz-box-shadow: -1px -1px 72px -15px rgba(14, 48, 28, 0.63);
+}
+
+.button-login:hover {
+  transform: translate(0, -3px);
+box-shadow: 1px 1px 66px -5px rgba(7,115,75,0.46);
+-webkit-box-shadow: 1px 1px 66px -5px rgba(7,115,75,0.46);
+-moz-box-shadow: 1px 1px 66px -5px rgba(7,115,75,0.46);
+  background: #0e301c;
+  background: linear-gradient(
+    90deg,
+    rgba(14, 48, 28, 1) 0%,
+    rgb(12, 136, 90) 50%,
+    rgba(14, 48, 28, 1) 100%
+  );
 }
 
 .carousel {
