@@ -21,7 +21,7 @@ const temeColor = ref(true)
     </div>
     <div class="container" style="gap: 1vw">
       <div class="input-container">
-        <Magnify size="20" />
+        <Magnify size=20 />
         <input type="text" placeholder="Pesquisar" />
       </div>
       <div class="teme-icon" @click="temeColor = !temeColor">

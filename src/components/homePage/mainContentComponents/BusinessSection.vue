@@ -14,21 +14,21 @@ import { ArrowTopRight } from '@/components/icons'
       <div class="carousel-card">
         <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
-          <ArrowTopRight size="30" />
+          <ArrowTopRight size=30 />
         </div>
         <p>A sua empresa já está no sistema? reivindique-a</p>
       </div>
       <div class="carousel-card">
         <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
-          <ArrowTopRight size="30" />
+          <ArrowTopRight size=30 />
         </div>
         <p>Filtragem para a seleção de funcionários</p>
       </div>
       <div class="carousel-card">
         <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
-          <ArrowTopRight size="30" />
+          <ArrowTopRight size=30 />
         </div>
         <p>Fácil acesso pelos usuários</p>
       </div>

@@ -11,7 +11,7 @@ const changeIcon = ref(false)
     <div class="image-container">
       <span class="main-image"> </span>
       <div class="image-btn">
-        <ArrowTopRight size="100" />
+        <ArrowTopRight size=100 />
       </div>
     </div>
     <div class="content-container">
