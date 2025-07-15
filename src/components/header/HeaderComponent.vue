@@ -37,7 +37,8 @@ const temeColor = ref(true)
 .container-wrapper {
   display: flex;
   justify-content: space-between;
-  width: 1215px;
+  width: 100%;
+  max-width: 1215px;
   top: 0px;
 }
 

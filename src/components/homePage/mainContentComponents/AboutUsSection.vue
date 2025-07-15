@@ -30,7 +30,7 @@
 .about-container {
   display: flex;
   padding: 10% 9% 5%;
-  width: 1215px;
+  max-width: 1215px;
   align-items: center;
   justify-self: center;
   justify-content: space-between;

@@ -14,21 +14,21 @@ import { ArrowTopRight } from '@/components/icons'
       <div class="carousel-card">
         <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
-          <ArrowTopRight size=30 />
+          <ArrowTopRight size="30" />
         </div>
         <p>A sua empresa já está no sistema? reivindique-a</p>
       </div>
       <div class="carousel-card">
         <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
-          <ArrowTopRight size=30 />
+          <ArrowTopRight size="30" />
         </div>
         <p>Filtragem para a seleção de funcionários</p>
       </div>
       <div class="carousel-card">
         <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
-          <ArrowTopRight size=30 />
+          <ArrowTopRight size="30" />
         </div>
         <p>Fácil acesso pelos usuários</p>
       </div>
@@ -39,7 +39,7 @@ import { ArrowTopRight } from '@/components/icons'
 .business-container {
   display: flex;
   padding: 10% 9% 5%;
-  width: 1215px;
+  max-width: 1215px;
   align-items: center;
   justify-self: center;
   gap: 110px;
@@ -107,9 +107,9 @@ import { ArrowTopRight } from '@/components/icons'
 
 .button-login:hover {
   transform: translate(0, -3px);
-box-shadow: 1px 1px 66px -5px rgba(7,115,75,0.46);
--webkit-box-shadow: 1px 1px 66px -5px rgba(7,115,75,0.46);
--moz-box-shadow: 1px 1px 66px -5px rgba(7,115,75,0.46);
+  box-shadow: 1px 1px 66px -5px rgba(7, 115, 75, 0.46);
+  -webkit-box-shadow: 1px 1px 66px -5px rgba(7, 115, 75, 0.46);
+  -moz-box-shadow: 1px 1px 66px -5px rgba(7, 115, 75, 0.46);
   background: #0e301c;
   background: linear-gradient(
     90deg,

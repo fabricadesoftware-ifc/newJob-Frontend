@@ -8,7 +8,7 @@ import {
 </script>
 
 <template>
-  <div class="teste">
+  <div class="top">
     <HeaderComponent class="header" />
     <PageIntroduction class="introduction" />
   </div>
@@ -16,7 +16,7 @@ import {
   <FooterComponent />
 </template>
 <style scoped>
-.teste {
+.top {
   display: grid;
   padding: 0 2% 2% 2%;
   height: 96vh;
