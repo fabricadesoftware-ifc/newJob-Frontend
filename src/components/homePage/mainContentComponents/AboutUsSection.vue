@@ -29,7 +29,7 @@
 
 .about-container {
   display: flex;
-  padding: 10% 9% 5%;
+  padding: 7% 9% 5%;
   max-width: 1215px;
   align-items: center;
   justify-self: center;

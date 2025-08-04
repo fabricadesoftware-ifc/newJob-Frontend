@@ -18,8 +18,8 @@ import {
 <style scoped>
 .top {
   display: grid;
-  padding: 0 2% 2% 2%;
-  height: 96vh;
+  padding: 0 1% 1% 1%;
+  height: 98vh;
   align-items: center;
   
   grid-template-rows: 6% auto;

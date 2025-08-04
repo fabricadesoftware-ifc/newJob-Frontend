@@ -34,7 +34,7 @@
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 2% 9% 5%;
+  padding: 5% 9% 5%;
   max-width: 1215px;
   align-self: center;
   justify-self: center;

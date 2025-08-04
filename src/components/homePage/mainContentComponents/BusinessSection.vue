@@ -38,7 +38,7 @@ import { ArrowTopRight } from '@/components/icons'
 <style scoped>
 .business-container {
   display: flex;
-  padding: 10% 9% 5%;
+  padding: 7% 9% 7%;
   max-width: 1215px;
   align-items: center;
   justify-self: center;
