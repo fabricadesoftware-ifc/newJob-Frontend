@@ -101,4 +101,8 @@ const changeIcon = ref(false)
     rgba(185, 103, 45, 1) 100%
   );
 }
+
+/* @media (max-width: 600px) {
+
+} */
 </style>
