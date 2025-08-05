@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import { HoverBox } from '@/components'
 
 const temeColor = ref(true)
-
 const mensagem = ref('Texto original')
 </script>
 
