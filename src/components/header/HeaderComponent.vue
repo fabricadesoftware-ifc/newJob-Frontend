@@ -1,8 +1,11 @@
 <script setup>
 import { ref } from 'vue'
 import { Magnify, WeatherSunny, WeatherNight } from '@/components/icons'
+import { HoverBox } from '@/components'
 
 const temeColor = ref(true)
+
+const mensagem = ref('Texto original')
 </script>
 
 <template>
@@ -21,14 +24,18 @@ const temeColor = ref(true)
     </div>
     <div class="container" style="gap: 1vw">
       <div class="input-container">
-        <Magnify size=20 />
+        <Magnify size="20" />
         <input type="text" placeholder="Pesquisar" />
       </div>
       <div class="teme-icon" @click="temeColor = !temeColor">
         <WeatherSunny v-if="temeColor" />
         <WeatherNight v-if="!temeColor" />
+        <HoverBox texto="Tema de cores" />
       </div>
-      <img class="user-image" src="https://i.ibb.co/HfSFj38g/image.png" alt="" />
+      <div class="user-image">
+        <img src="https://i.ibb.co/HfSFj38g/image.png" alt="" />
+        <HoverBox texto="Sair" />
+      </div>
     </div>
   </div>
 </template>
@@ -86,6 +93,23 @@ const temeColor = ref(true)
   }
 }
 
+.teme-icon {
+  padding: 0.3vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.teme-icon:hover .hoverbox {
+  /* PERGUNTAR SE É CORRETO */
+  opacity: 1;
+}
+
+a {
+  padding: 0.3vh 1vw;
+}
+
 a,
 .teme-icon {
   border-radius: 7px;
@@ -93,16 +117,11 @@ a,
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
-  padding: 0.3vh 1vw;
 }
 
 a:hover,
 .teme-icon:hover {
   background-color: var(--preto-claro);
-}
-
-.teme-icon {
-  padding: 0.3vh;
 }
 
 .input-container {
@@ -134,6 +153,19 @@ input::placeholder {
 }
 
 .user-image {
-  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+  }
+}
+
+.user-image:hover .hoverbox {
+  /* PERGUNTAR SE É CORRETO */
+  opacity: 1;
 }
 </style>
