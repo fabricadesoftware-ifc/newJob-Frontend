@@ -17,7 +17,7 @@ defineProps({
   border-radius: 5px;
   font-size: 0.8rem;
   font-weight: 600;
-  top: 120%;
+  top: 145%;
   background-color: var(--preto-claro);
   color: var(--branco-escuro);
   opacity: 0;

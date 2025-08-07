@@ -122,25 +122,40 @@ import { ArrowTopRight } from '@/components/icons'
 .carousel {
   display: flex;
   overflow-x: scroll;
+  height: 16vw;
+  min-height: 240px;
+  max-width: 50%;
 
   & .carousel-card {
     position: relative;
-    height: 15vw !important;
-    min-width: 12vw;
-    width: 12vw;
-    padding: 15px;
+    min-height: 200px;
+    width: 23vw !important;
+    padding: 0.8rem;
     border-radius: 15px;
-    height: 10vw;
 
     & .carousel-img {
-      height: 75%;
+      height: 65%;
       width: 100%;
       border-radius: 14px;
       object-fit: cover;
     }
 
     .arrow-button {
-      display: none;
+      display: flex;
+      position: absolute;
+      bottom: 40%;
+      left: 73%;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--laranja);
+      width: 2.5vw;
+      height: 2.5vw;
+      border-radius: 50%;
+
+      & span {
+        display: flex;
+        align-items: center;
+      }
     }
 
     & p {
@@ -150,21 +165,7 @@ import { ArrowTopRight } from '@/components/icons'
   }
 
   & .carousel-card:hover .arrow-button {
-    position: absolute;
     display: flex;
-    bottom: 30%;
-    left: 73%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--laranja);
-    width: 2.5vw;
-    height: 2.5vw;
-    border-radius: 50%;
-
-    & span {
-      display: flex;
-      align-items: center;
-    }
   }
 
   & .carousel-card:hover {
