@@ -122,19 +122,24 @@ import { ArrowTopRight } from '@/components/icons'
 .carousel {
   display: flex;
   overflow-x: scroll;
-  height: 16vw;
-  min-height: 240px;
-  max-width: 50%;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 1rem;
+  width: 50%;
 
   & .carousel-card {
+    flex: 0 0 auto;
     position: relative;
-    min-height: 200px;
-    width: 23vw !important;
+    min-height: 210px;
+    height: 14vw;
+    width: 14vw;
+    min-width: 190px;
     padding: 0.8rem;
     border-radius: 15px;
 
     & .carousel-img {
-      height: 65%;
+      height: 80%;
       width: 100%;
       border-radius: 14px;
       object-fit: cover;
@@ -143,8 +148,8 @@ import { ArrowTopRight } from '@/components/icons'
     .arrow-button {
       display: flex;
       position: absolute;
-      bottom: 40%;
-      left: 73%;
+      bottom: 25%;
+      left: 76%;
       align-items: center;
       justify-content: center;
       background-color: var(--laranja);
@@ -174,6 +179,13 @@ import { ArrowTopRight } from '@/components/icons'
 }
 
 ::-webkit-scrollbar {
+  border-radius: 10px;
+height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
   background-color: var(--laranja);
   border-radius: 10px;
   height: 8px;
