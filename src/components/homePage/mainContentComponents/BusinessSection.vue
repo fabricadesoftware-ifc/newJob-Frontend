@@ -131,17 +131,18 @@ import { ArrowTopRight } from '@/components/icons'
   & .carousel-card {
     flex: 0 0 auto;
     position: relative;
-    min-height: 210px;
-    height: 14vw;
+    /* min-height: 210px;
+    height: 14vw; */
     width: 14vw;
-    min-width: 190px;
+    min-width: 180px;
+    aspect-ratio: 24/23;
     padding: 0.8rem;
     border-radius: 15px;
 
     & .carousel-img {
-      height: 80%;
       width: 100%;
-      border-radius: 14px;
+      height: 70%;
+      border-radius: 14px;  
       object-fit: cover;
     }
 
