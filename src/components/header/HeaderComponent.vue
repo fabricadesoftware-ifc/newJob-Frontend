@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import { Magnify, WeatherSunny, WeatherNight } from '@/components/icons'
 import { HoverBox } from '@/components'
 
 const temeColor = ref(true)
@@ -24,12 +23,12 @@ const mensagem = ref('Texto original')
     </div>
     <div class="container" style="gap: 1vw">
       <div class="input-container">
-        <Magnify size="20" />
+        <i class="mdi mdi-magnify"></i>
         <input type="text" placeholder="Pesquisar" />
       </div>
       <div class="teme-icon" @click="temeColor = !temeColor">
-        <WeatherSunny v-if="temeColor" />
-        <WeatherNight v-if="!temeColor" />
+        <i class="mdi mdi-weather-sunny" v-if="temeColor"></i>
+        <i class="mdi mdi-weather-night" v-if="!temeColor"></i>
         <HoverBox texto="Tema de cores" />
       </div>
       <div class="user-image">
@@ -57,11 +56,6 @@ const mensagem = ref('Texto original')
   & a:first-of-type {
     display: flex;
     background-color: transparent;
-  }
-
-  & span {
-    display: flex;
-    align-items: center;
   }
 }
 
@@ -111,7 +105,7 @@ a {
 }
 
 a,
-.teme-icon {
+.teme-icon{
   border-radius: 7px;
   color: var(--branco-escuro);
   font-weight: 500;
@@ -147,7 +141,7 @@ input {
   color: var(--branco);
 }
 
-span,
+.mdi,
 input::placeholder {
   color: var(--branco-escuro);
 }

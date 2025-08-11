@@ -1,7 +1,3 @@
-<script setup>
-import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icons';
-</script>
-
 <template>
   <div class="container">
     <div class="box-text">
@@ -22,8 +18,8 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
       <img src="https://i.ibb.co/vH30fjP/img-carrosel-job-4x.png" alt="" class="img">
     </div>
     <div class="buttons">
-      <ArrowLeftThinCircleOutline class="arrow"/>
-      <ArrowRightThinCircleOutline class="arrow"/>
+      <i class="mdi mdi-arrow-left-thin-circle-outline"></i>
+      <i class="mdi mdi-arrow-right-thin-circle-outline"></i>
     </div>
     </div>
   </div>
@@ -69,12 +65,8 @@ import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from '../icon
   color: white;
   padding: 1.5em 0px 0px 0px;
 }
-.arrow {
-  cursor: pointer;
-  transition: transform 0.3s;
-}
 
-.arrow:hover {
+.mdi:hover {
   transform: scale(1.2);
 }
 .gradient-text {

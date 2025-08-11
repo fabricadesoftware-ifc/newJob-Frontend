@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import { ArrowTopRight, ChevronRight } from '../icons'
 
 const changeIcon = ref(false)
 </script>
@@ -10,9 +9,9 @@ const changeIcon = ref(false)
     <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" />
     <div class="image-container">
       <span class="main-image"> </span>
-      <div class="image-btn">
-        <ArrowTopRight size=100 />
-      </div>
+      <button class="image-btn">
+        <i class="mdi mdi-arrow-top-right"></i>
+      </button>
     </div>
     <div class="content-container">
       <h1>VAGAS AGRÍCOLAS PARA DIVERAS HABILIDADES.</h1>
@@ -136,6 +135,10 @@ const changeIcon = ref(false)
   }
 }
 
+.image-btn .mdi {
+  font-size: 60px;
+}
+
 .button-show-more:hover {
   transform: translate(0, -3px);
   box-shadow: -1px -1px 72px 2px rgba(224, 155, 107, 0.45);
@@ -149,8 +152,4 @@ const changeIcon = ref(false)
     rgba(185, 103, 45, 1) 100%
   );
 }
-
-/* @media (max-width: 600px) {
-
-} */
 </style>

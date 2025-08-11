@@ -115,7 +115,4 @@
     }
   }
 }
-
-.image-container {
-}
 </style>

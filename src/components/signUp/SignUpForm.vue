@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue';
-import { CheckCircle } from '../icons';
 import { useAuthStore } from '@/stores/auth'; 
 import { useRouter } from 'vue-router';
 
@@ -54,7 +53,7 @@ const registerUser = async () => {
             <p>Email</p>
             <div class="input-container">
                 <input type="email" v-model="email" required>
-                <CheckCircle />
+                <i class="mdi mdi-check-circle"></i>
             </div>
         </label>
         <label>

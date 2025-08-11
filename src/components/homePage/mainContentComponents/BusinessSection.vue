@@ -1,5 +1,4 @@
 <script setup>
-import { ArrowTopRight } from '@/components/icons'
 </script>
 <template>
   <div class="business-container">
