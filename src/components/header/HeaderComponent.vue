@@ -1,8 +1,6 @@
 <script setup>
-import { ref } from 'vue'
-import { Magnify, WeatherSunny, WeatherNight } from '@/components/icons'
-
-const temeColor = ref(true)
+import { ref } from "vue";
+const temeColor = ref(true);
 </script>
 
 <template>
@@ -21,12 +19,12 @@ const temeColor = ref(true)
     </div>
     <div class="container" style="gap: 1vw">
       <div class="input-container">
-        <Magnify size="20" />
+        <i class="mdi mdi-magnify"></i>
         <input type="text" placeholder="Pesquisar" />
       </div>
       <div class="teme-icon" @click="temeColor = !temeColor">
-        <WeatherSunny v-if="temeColor" />
-        <WeatherNight v-if="!temeColor" />
+        <i class="mdi mdi-weather-sunny" v-if="temeColor"></i>
+        <i class="mdi mdi-weather-night" v-if="!temeColor"></i>
       </div>
       <img class="user-image" src="https://i.ibb.co/HfSFj38g/image.png" alt="" />
     </div>
@@ -54,11 +52,6 @@ const temeColor = ref(true)
   & a:first-of-type {
     display: flex;
     background-color: transparent;
-  }
-
-  & span {
-    display: flex;
-    align-items: center;
   }
 }
 
@@ -91,13 +84,15 @@ const temeColor = ref(true)
 }
 
 a,
-.teme-icon {
+.teme-icon{
   border-radius: 7px;
   color: var(--branco-claro);
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
   padding: 0.3vh 1vw;
+  display: flex;
+  align-items: center;
 }
 
 a:hover,
@@ -106,7 +101,7 @@ a:hover,
 }
 
 .teme-icon {
-  padding: 0.3vh;
+  padding: 3px;
 }
 
 .input-container {
@@ -132,7 +127,7 @@ input {
   color: var(--branco);
 }
 
-span,
+.mdi,
 input::placeholder {
   color: var(--branco-escuro);
 }
