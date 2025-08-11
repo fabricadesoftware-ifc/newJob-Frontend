@@ -1,7 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
 import CardJobs from "./SecondComponents/CardJobs.vue";
-import { ArrowLeftThinCircleOutline, ArrowRightThinCircleOutline } from "../icons";
 import { useJobStore } from "@/stores";
 
 const jobStore = useJobStore();
@@ -40,16 +39,16 @@ async function changeJobs(page) {
       </div>
     </div>
     <div class="buttons">
-      <ArrowLeftThinCircleOutline
+      <i class="mdi mdi-arrow-left-thin-circle-outline"
         @click="changeJobs(jobStore.jobs.previous)"
         :class="jobStore.jobs.previous ? `arrow` : `disable arrow`"
-      />
-      <ArrowRightThinCircleOutline
+      ></i>
+      <i class="mdi mdi-arrow-right-thin-circle-outline"
         @click="changeJobs(jobStore.jobs.next)"
         :class="jobStore.jobs.next ? `arrow` : `disable arrow`"
-      />
+      ></i>
     </div>
-  </div>
+  </div>  
 </template>
 
 <style scoped>

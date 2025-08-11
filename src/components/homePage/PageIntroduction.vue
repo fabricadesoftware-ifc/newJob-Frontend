@@ -1,8 +1,3 @@
-<script setup>
-import { ArrowTopRight } from '../icons';
-
-</script>
-
 <template>
     <div class="container">
         <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="">
@@ -10,7 +5,7 @@ import { ArrowTopRight } from '../icons';
             <span class="main-image">
             </span>
             <button class="image-btn">
-                <ArrowTopRight size="60" />
+                <i class="mdi mdi-arrow-top-right"></i>
             </button>
         </div>
         <div class="content-container">
@@ -63,8 +58,8 @@ h1 {
     border-radius: 50%;
 }
 
-.image-btn span {
-    translate: 0 10%;
+.image-btn .mdi {
+    font-size: 60px;
 }
 
 .container {
