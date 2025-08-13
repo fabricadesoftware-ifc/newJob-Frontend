@@ -12,21 +12,22 @@ import { ArrowTopRight } from '@/components/icons'
     </div>
     <div class="carousel">
       <div class="carousel-card">
-        <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
-        <div class="arrow-button">
-          <ArrowTopRight size="30" />
+        <div class="carousel-img-container" src="https://i.ibb.co/9mLfT1FW/image.png" alt="">
+          <div class="arrow-button">
+            <ArrowTopRight size="30" />
+          </div>
         </div>
         <p>A sua empresa já está no sistema? reivindique-a</p>
       </div>
       <div class="carousel-card">
-        <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
+        <img class="carousel-img-container" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
           <ArrowTopRight size="30" />
         </div>
         <p>Filtragem para a seleção de funcionários</p>
       </div>
       <div class="carousel-card">
-        <img class="carousel-img" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
+        <img class="carousel-img-container" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
         <div class="arrow-button">
           <ArrowTopRight size="30" />
         </div>
@@ -39,10 +40,11 @@ import { ArrowTopRight } from '@/components/icons'
 .business-container {
   display: flex;
   padding: 7% 9% 7%;
-  max-width: 1215px;
+  width: 1215px;
+  max-width: 80vw;
   align-items: center;
   justify-self: center;
-  gap: 110px;
+  gap: 6vw;
   justify-content: space-between;
 }
 
@@ -126,36 +128,38 @@ import { ArrowTopRight } from '@/components/icons'
   -webkit-overflow-scrolling: touch;
   gap: 1rem;
   padding: 1rem;
-  width: 50%;
+  width: 40%;
 
   & .carousel-card {
     flex: 0 0 auto;
-    position: relative;
     /* min-height: 210px;
     height: 14vw; */
     width: 14vw;
     min-width: 180px;
-    aspect-ratio: 24/23;
+    aspect-ratio: 1/1;
     padding: 0.8rem;
     border-radius: 15px;
 
-    & .carousel-img {
+    & .carousel-img-container {
+      position: relative;
       width: 100%;
       height: 70%;
-      border-radius: 14px;  
-      object-fit: cover;
+      border-radius: 14px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(https://i.ibb.co/9mLfT1FW/image.png);
     }
 
     .arrow-button {
-      display: flex;
+      display: none;
       position: absolute;
-      bottom: 25%;
-      left: 76%;
+      bottom: 10px;
+      right: 10px;
       align-items: center;
       justify-content: center;
       background-color: var(--laranja);
-      width: 2.5vw;
-      height: 2.5vw;
+      width: 2.5em;
+      height: 2.5em;
       border-radius: 50%;
 
       & span {
@@ -181,7 +185,7 @@ import { ArrowTopRight } from '@/components/icons'
 
 ::-webkit-scrollbar {
   border-radius: 10px;
-height: 8px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
