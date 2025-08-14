@@ -12,7 +12,7 @@ import { ArrowTopRight } from '@/components/icons'
     </div>
     <div class="carousel">
       <div class="carousel-card">
-        <div class="carousel-img-container" src="https://i.ibb.co/9mLfT1FW/image.png" alt="">
+        <div class="carousel-img-container" alt="">
           <div class="arrow-button">
             <ArrowTopRight size="30" />
           </div>
@@ -20,18 +20,20 @@ import { ArrowTopRight } from '@/components/icons'
         <p>A sua empresa já está no sistema? reivindique-a</p>
       </div>
       <div class="carousel-card">
-        <img class="carousel-img-container" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
-        <div class="arrow-button">
-          <ArrowTopRight size="30" />
+        <div class="carousel-img-container" alt="">
+          <div class="arrow-button">
+            <ArrowTopRight size="30" />
+          </div>
         </div>
-        <p>Filtragem para a seleção de funcionários</p>
+        <p>A sua empresa já está no sistema? reivindique-a</p>
       </div>
       <div class="carousel-card">
-        <img class="carousel-img-container" src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
-        <div class="arrow-button">
-          <ArrowTopRight size="30" />
+        <div class="carousel-img-container" alt="">
+          <div class="arrow-button">
+            <ArrowTopRight size="30" />
+          </div>
         </div>
-        <p>Fácil acesso pelos usuários</p>
+        <p>A sua empresa já está no sistema? reivindique-a</p>
       </div>
     </div>
   </div>
