@@ -5,7 +5,7 @@ const changeIcon = ref(false)
 </script>
 
 <template>
-  <div class="container">
+  <div class="background-container">
     <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" />
     <div class="image-container">
       <span class="main-image"> </span>
@@ -26,7 +26,7 @@ const changeIcon = ref(false)
 </template>
 
 <style scoped>
-.container {
+.background-container {
   border-radius: 40px;
   min-height: 100%;
   background: linear-gradient(28deg, #0e301c 15%, #07734b, #0e301c 85%);
@@ -83,6 +83,17 @@ const changeIcon = ref(false)
 }
 
 /* CONFERIR */
+.content-container {
+  width: 60%;
+  padding: 7vw;
+
+  & h1 {
+    font-size: clamp(1rem, 4vw, 5rem) !important;
+  }
+
+  & p {
+  }
+}
 
 .image-btn .mdi {
   font-size: 60px;
@@ -101,8 +112,4 @@ const changeIcon = ref(false)
     rgba(185, 103, 45, 1) 100%
   );
 }
-
-/* @media (max-width: 600px) {
-
-} */
 </style>

@@ -108,7 +108,6 @@ a,
   border-radius: 7px;
   color: var(--branco-escuro);
   font-weight: 500;
-  font-size: 1rem;
   cursor: pointer;
 }
 

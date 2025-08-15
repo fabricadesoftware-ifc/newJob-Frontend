@@ -198,6 +198,7 @@
     background-color: var(--preto);
   }
 }
+}
 
 ::-webkit-scrollbar {
   border-radius: 10px;
