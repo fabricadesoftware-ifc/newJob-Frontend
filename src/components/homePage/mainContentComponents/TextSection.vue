@@ -38,16 +38,19 @@
   max-width: 1215px;
   align-self: center;
   justify-self: center;
+  align-items: center;
 
   & .body-container {
     display: flex;
     flex-direction: column;
     gap: 2vw;
-    width: 60%;
+    width: 55%;
   }
 
   & img {
-    width: 30%;
+    width: 35%;
+    height: 24vw;
+    max-height: 100%;
     border-radius: 20px;
     object-fit: cover;
   }
@@ -100,13 +103,13 @@
 
     & .info-text {
       color: var(--branco-escuro);
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     & .number {
       display: flex;
       font-weight: 600;
-      font-size: 2.8rem;
+      font-size: 2.7rem;
       color: var(--branco);
 
       & .icon {

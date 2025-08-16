@@ -1,5 +1,3 @@
-<script setup>
-</script>
 <template>
   <div class="business-container">
     <div class="text-container">
@@ -13,7 +11,7 @@
       <div class="carousel-card">
         <div class="carousel-img-container" alt="">
           <div class="arrow-button">
-            <ArrowTopRight size="30" />
+            <i class="mdi mdi-arrow-top-right"></i>
           </div>
         </div>
         <p>A sua empresa já está no sistema? reivindique-a</p>
@@ -21,18 +19,18 @@
       <div class="carousel-card">
         <div class="carousel-img-container" alt="">
           <div class="arrow-button">
-            <ArrowTopRight size="30" />
+            <i class="mdi mdi-arrow-top-right"></i>
           </div>
         </div>
-        <p>A sua empresa já está no sistema? reivindique-a</p>
+        <p>Filtragem para a seleção de funcionários</p>
       </div>
       <div class="carousel-card">
         <div class="carousel-img-container" alt="">
           <div class="arrow-button">
-            <ArrowTopRight size="30" />
+            <i class="mdi mdi-arrow-top-right"></i>
           </div>
         </div>
-        <p>A sua empresa já está no sistema? reivindique-a</p>
+        <p>Fácil acesso pelos usuários</p>
       </div>
     </div>
   </div>
@@ -133,8 +131,9 @@
 
   & .carousel-card {
     flex: 0 0 auto;
-    /* min-height: 210px;
-    height: 14vw; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 14vw;
     min-width: 180px;
     aspect-ratio: 1/1;
@@ -159,13 +158,12 @@
       align-items: center;
       justify-content: center;
       background-color: var(--laranja);
-      width: 2.5em;
-      height: 2.5em;
+      width: 3em;
+      height: 3em;
       border-radius: 50%;
 
-      & span {
-        display: flex;
-        align-items: center;
+      & .mdi {
+        font-size: 1.5rem;
       }
     }
 
@@ -177,27 +175,11 @@
 
   & .carousel-card:hover .arrow-button {
     display: flex;
-    /* position: absolute;
-    display: flex;
-    bottom: 30%;
-    left: 73%;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--laranja);
-    width: 2.5vw;
-    height: 2.5vw;
-    border-radius: 50%;
-
-    & span {
-      display: flex;
-      align-items: center;
-    }
-  } */
+  }
 
   & .carousel-card:hover {
     background-color: var(--preto);
   }
-}
 }
 
 ::-webkit-scrollbar {
