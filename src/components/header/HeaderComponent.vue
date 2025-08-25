@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import { HoverBox } from '@/components'
 
 const temeColor = ref(true)
-const mensagem = ref('Texto original')
 </script>
 
 <template>
@@ -120,9 +119,10 @@ a:hover,
   display: flex;
   align-items: center;
   border: hsl(0, 0%, 63%, 20%) 1px solid;
-  border-radius: 7px;
-  padding: 5px 8px;
-  gap: 5px;
+  border-radius: 10px;
+  padding: 1px 10px;
+  gap: 7px;
+  width: 18rem;
 
   & input {
     background-color: transparent;
