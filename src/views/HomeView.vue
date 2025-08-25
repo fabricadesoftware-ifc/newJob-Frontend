@@ -35,4 +35,10 @@ import {
     margin: auto;
   }
 }
+
+@media (max-width: 1230px) {
+  .top {
+    height: 60vw;
+  }
+}
 </style>

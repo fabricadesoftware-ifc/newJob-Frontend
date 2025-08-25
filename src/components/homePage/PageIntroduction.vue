@@ -5,7 +5,7 @@ import { ref } from 'vue'
 
 <template>
   <div class="container">
-    <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" />
+    <!-- <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" /> -->
     <div class="image-container">
       <span class="main-image"> </span>
       <div class="image-btn">
@@ -48,7 +48,7 @@ import { ref } from 'vue'
   & .main-image {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 30vw;
     border-radius: 40em;
     rotate: 6deg;
     box-shadow:
@@ -82,14 +82,15 @@ import { ref } from 'vue'
 .content-container {
   display: flex;
   flex-direction: column;
-  gap: 6vh;
+  gap: 3rem;
   position: relative;
-  padding: 7% 0 0 8%;
+  padding: 13vh 0 0 8%;
   width: 60%;
 
   & h1 {
     color: var(--branco);
-    font-size: clamp(2rem, 4.8vw, 6rem);
+    /* font-size: clamp(2rem, 4.8vw, 6rem); */
+    font-size: clamp(2rem, 5.5vw, 6rem);
     font-weight: 600;
     line-height: 1.2;
   }
@@ -147,4 +148,47 @@ import { ref } from 'vue'
     rgba(185, 103, 45, 1) 100%
   );
 }
+
+@media (max-width: 1220px){
+  .content-container {
+    width: 70%;
+    padding: 9vh 0 0 8%;
+
+    & h1 {
+      font-size: clamp(2rem, 6vw, 6rem);
+    }
+  }
+}
+
+@media (max-width: 1070px){
+  .content-container {
+    width: 80%;
+    padding: 8vh 0 0 8%;
+
+    & h1 {
+      font-size: clamp(2rem, 5.1vw, 6rem);
+    }
+
+    & p {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+@media (max-width: 880px){
+  .content-container {
+    & h1 {
+      font-size: clamp(2rem, 4.7vw, 6rem);
+    }
+    & p {
+      font-size: 1rem;
+    }
+  }
+
+  .image-container {
+    right: 9%;
+    bottom: 18%;
+  }
+}
+
 </style>
