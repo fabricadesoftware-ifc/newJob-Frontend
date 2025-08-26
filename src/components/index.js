@@ -1,6 +1,6 @@
 import ImageForm from "./ImageForm.vue";
 import LoginForm from "./login/LoginForm.vue";
-import HeaderComponent from "./header/HeaderComponent.vue";
+// import HeaderComponent from "./header/HeaderComponent.vue";
 import PageIntroduction from "./homePage/PageIntroduction.vue";
 import MainContent from "./homePage/MainContent.vue"
 import TextSection from "./homePage/mainContentComponents/TextSection.vue"
@@ -14,6 +14,10 @@ import MapGoogle from "./google/MapGoogle.vue"
 import LoadingPage from "./loading/LoadingPage.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
 
+import DefaultHeader from "./header/DefaultHeader.vue";
+import DesktopHeader from "./header/Desktop/DesktopHeader.vue";
+import MobileHeader from "./header/Mobile/MobileHeader.vue";
+
 export {
     ImageForm,
     LoginForm,
@@ -23,11 +27,15 @@ export {
     FooterComponent,
     AboutIntroduction,
     AboutContent,
-    HeaderComponent,
+    // HeaderComponent,
     PageIntroduction,
     MainContent,
     TextSection,
     MapGoogle,
     LoadingPage,
     ProfileComponent,
+
+    DefaultHeader,
+    DesktopHeader,
+    MobileHeader,
 }
