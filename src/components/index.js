@@ -17,6 +17,10 @@ import ProfileComponent from "./profile/ProfileComponent.vue"
 import SignUpForm from "./signUp/SignUpForm.vue";
 import TextSection from "./homePage/mainContentComponents/TextSection.vue"
 
+import DefaultHeader from "./header/DefaultHeader.vue";
+import DesktopHeader from "./header/Desktop/DesktopHeader.vue";
+import MobileHeader from "./header/Mobile/MobileHeader.vue";
+
 export {
     AboutContent,
     AboutIntroduction,
@@ -36,4 +40,8 @@ export {
     ProfileComponent,
     SignUpForm,
     TextSection,
+
+    DefaultHeader,
+    DesktopHeader,
+    MobileHeader,
 }
