@@ -36,7 +36,7 @@ import {
   }
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1530px) {
   .top {
     height: 60vw;
   }

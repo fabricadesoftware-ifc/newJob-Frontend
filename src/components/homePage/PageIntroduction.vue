@@ -1,11 +1,6 @@
-pageintroduction
-<script setup>
-import { ref } from 'vue'
-</script>
-
 <template>
   <div class="container">
-    <!-- <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" /> -->
+    <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" />
     <div class="image-container">
       <span class="main-image"> </span>
       <div class="image-btn">
@@ -69,12 +64,13 @@ import { ref } from 'vue'
     top: -5%;
     background: #b9672d;
     background: linear-gradient(0deg, rgba(185, 103, 45, 1) 0%, rgba(224, 155, 107, 1) 50%);
-    width: 9rem;
-    height: 9rem;
+    width: 9vw;
+    max-width: 120px;
+    aspect-ratio: 1/1;
     border-radius: 50%;
 
     & .mdi {
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
 }
@@ -149,7 +145,7 @@ import { ref } from 'vue'
   );
 }
 
-@media (max-width: 1220px){
+@media (max-width: 1220px) {
   .content-container {
     width: 70%;
     padding: 9vh 0 0 8%;
@@ -160,7 +156,7 @@ import { ref } from 'vue'
   }
 }
 
-@media (max-width: 1070px){
+@media (max-width: 1090px) {
   .content-container {
     width: 80%;
     padding: 8vh 0 0 8%;
@@ -173,9 +169,15 @@ import { ref } from 'vue'
       font-size: 1.15rem;
     }
   }
+
+  .image-container {
+    right: 9%;
+    bottom: 17%;
+
+  }
 }
 
-@media (max-width: 880px){
+@media (max-width: 950px) {
   .content-container {
     & h1 {
       font-size: clamp(2rem, 4.7vw, 6rem);
@@ -187,8 +189,11 @@ import { ref } from 'vue'
 
   .image-container {
     right: 9%;
-    bottom: 18%;
+    bottom: 23%;
+
+    & .mdi {
+      font-size: 3rem !important;
+    }
   }
 }
-
 </style>
