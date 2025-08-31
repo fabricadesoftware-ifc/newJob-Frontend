@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <img class="bg-img" src="https://i.ibb.co/6gZqqxG/line-bg.png" alt="" />
     <div class="image-container">
       <span class="main-image"> </span>
       <div class="image-btn">
@@ -116,18 +115,12 @@
     width: 18%;
     min-width: 90px;
     padding: 10px 20px;
-    font-size: 1.1rem;
     border-radius: 30px;
     font-weight: 600;
     font-size: 1.1em;
     box-shadow: -1px -1px 72px -15px rgba(224, 155, 107, 0.63);
     -webkit-box-shadow: -1px -1px 72px -15px rgba(224, 155, 107, 0.63);
     -moz-box-shadow: -1px -1px 72px -15px rgba(224, 155, 107, 0.63);
-
-    & span {
-      display: flex;
-      align-items: center;
-    }
   }
 }
 

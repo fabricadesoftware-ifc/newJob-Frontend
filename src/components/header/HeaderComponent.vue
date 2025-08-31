@@ -94,7 +94,6 @@ const temeColor = ref(true)
 }
 
 .teme-icon:hover .hoverbox {
-  /* PERGUNTAR SE É CORRETO */
   opacity: 1;
 }
 
