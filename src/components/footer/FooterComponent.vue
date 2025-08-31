@@ -33,8 +33,8 @@
 
 <style scoped>
 .container-footer {
-  max-width: 100vw;
-  background: linear-gradient(45deg, #1e4835 25%, #2a694c 55%, #1e4835 80%);
+  width: 100%;
+  background: linear-gradient(28deg, #0e301c 15%, #07734b, #0e301c 85%);
   color: white;
   padding: 3vh 0;
 }
@@ -52,7 +52,7 @@
 }
 .text {
   font-size: 0.9em;
-  color: var(--cinza-claro);
+  color: var(--branco);
   letter-spacing: 0.09em;
 }
 .icons {

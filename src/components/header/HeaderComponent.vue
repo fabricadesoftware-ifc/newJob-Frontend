@@ -1,6 +1,8 @@
 <script setup>
-import { ref } from "vue";
-const temeColor = ref(true);
+import { ref } from 'vue'
+import { HoverBox } from '@/components'
+
+const temeColor = ref(true)
 </script>
 
 <template>
@@ -25,8 +27,12 @@ const temeColor = ref(true);
       <div class="teme-icon" @click="temeColor = !temeColor">
         <i class="mdi mdi-weather-sunny" v-if="temeColor"></i>
         <i class="mdi mdi-weather-night" v-if="!temeColor"></i>
+        <HoverBox texto="Tema de cores" />
       </div>
-      <img class="user-image" src="https://i.ibb.co/HfSFj38g/image.png" alt="" />
+      <div class="user-image">
+        <img src="https://i.ibb.co/HfSFj38g/image.png" alt="" />
+        <HoverBox texto="Sair" />
+      </div>
     </div>
   </div>
 </template>
@@ -34,14 +40,10 @@ const temeColor = ref(true);
 <style scoped>
 .container-wrapper {
   display: flex;
-  align-self: center;
-  justify-self: center;
   justify-content: space-between;
-  width: 1215px;
-  position: absolute;
-  z-index: 1;
+  width: 100%;
+  max-width: 1215px;
   top: 0px;
-  padding: 0.5vw;
 }
 
 .container {
@@ -83,16 +85,28 @@ const temeColor = ref(true);
   }
 }
 
+.teme-icon {
+  padding: 0.3vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.teme-icon:hover .hoverbox {
+  opacity: 1;
+}
+
+a {
+  padding: 0.3vh 1vw;
+}
+
 a,
 .teme-icon{
   border-radius: 7px;
-  color: var(--branco-claro);
+  color: var(--branco-escuro);
   font-weight: 500;
-  font-size: 16px;
   cursor: pointer;
-  padding: 0.3vh 1vw;
-  display: flex;
-  align-items: center;
 }
 
 a:hover,
@@ -100,17 +114,14 @@ a:hover,
   background-color: var(--preto-claro);
 }
 
-.teme-icon {
-  padding: 3px;
-}
-
 .input-container {
   display: flex;
   align-items: center;
   border: hsl(0, 0%, 63%, 20%) 1px solid;
-  border-radius: 7px;
-  padding: 5px 8px;
-  gap: 5px;
+  border-radius: 10px;
+  padding: 1px 10px;
+  gap: 7px;
+  width: 18rem;
 
   & input {
     background-color: transparent;
@@ -133,6 +144,19 @@ input::placeholder {
 }
 
 .user-image {
-  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    width: 30px;
+  }
+}
+
+.user-image:hover .hoverbox {
+  /* PERGUNTAR SE É CORRETO */
+  opacity: 1;
 }
 </style>

@@ -1,33 +1,39 @@
-import ImageForm from "./ImageForm.vue";
-import LoginForm from "./login/LoginForm.vue";
-import HeaderComponent from "./header/HeaderComponent.vue";
-import PageIntroduction from "./homePage/PageIntroduction.vue";
-import MainContent from "./homePage/MainContent.vue"
-import TextSection from "./homePage/mainContentComponents/TextSection.vue"
-import SignUpForm from "./signUp/SignUpForm.vue";
-import IntroductionJobs from "./jobPage/IntroductionJobs.vue";
-import MainContentJobs from "./jobPage/MainContentJobs.vue";
-import FooterComponent from "./footer/FooterComponent.vue";
-import AboutIntroduction from './about/AboutIntroduction.vue';
 import AboutContent from "./about/AboutContent.vue";
-import MapGoogle from "./google/MapGoogle.vue"
+import AboutIntroduction from './about/AboutIntroduction.vue';
+import AboutUsSection from './homePage/mainContentComponents/AboutUsSection.vue'
+import BusinessSection from "./homePage/mainContentComponents/BusinessSection.vue";
+import FooterComponent from "./footer/FooterComponent.vue";
+import HeaderComponent from "./header/HeaderComponent.vue";
+import HoverBox from "./HoverBox.vue";
+import ImageForm from "./ImageForm.vue";
+import IntroductionJobs from "./jobPage/IntroductionJobs.vue";
 import LoadingPage from "./loading/LoadingPage.vue";
+import LoginForm from "./login/LoginForm.vue";
+import MainContent from "./homePage/MainContent.vue"
+import MainContentJobs from "./jobPage/MainContentJobs.vue";
+import MapGoogle from "./google/MapGoogle.vue"
+import PageIntroduction from "./homePage/PageIntroduction.vue";
 import ProfileComponent from "./profile/ProfileComponent.vue"
+import SignUpForm from "./signUp/SignUpForm.vue";
+import TextSection from "./homePage/mainContentComponents/TextSection.vue"
 
 export {
-    ImageForm,
-    LoginForm,
-    SignUpForm,
-    IntroductionJobs,
-    MainContentJobs,
-    FooterComponent,
-    AboutIntroduction,
     AboutContent,
+    AboutIntroduction,
+    AboutUsSection,
+    BusinessSection,
+    FooterComponent,
     HeaderComponent,
-    PageIntroduction,
-    MainContent,
-    TextSection,
-    MapGoogle,
+    HoverBox,
+    ImageForm,
+    IntroductionJobs,
     LoadingPage,
+    LoginForm,
+    MainContent,
+    MainContentJobs,
+    MapGoogle,
+    PageIntroduction,
     ProfileComponent,
+    SignUpForm,
+    TextSection,
 }

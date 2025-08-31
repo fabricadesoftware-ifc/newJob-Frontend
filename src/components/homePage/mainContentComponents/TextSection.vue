@@ -1,149 +1,121 @@
 <template>
   <div class="container">
-    <div class="about-container">
-      <span class="about-title">
-        <img src="https://i.ibb.co/1Z5CPWL/about-icon.png" alt="" />
-        <h2>Sobre nós</h2>
-      </span>
-      <p>
-        A NewJob permite que os indivíduos com diversas habilidades e experiências tenham
-        acesso a oportunidades no setor agrícola. Seja você um engenheiro agrônomo, um
-        técnico em irrigação ou alguém com habilidades manuais para o trabalho no campo, a
-        NewJob tem algo para você.
-      </p>
-      <button>Saiba mais</button>
-    </div>
-    <div class="info-container">
-      <h1>CONECTANDO TALENTOS AO SETOR AGRÍCOLA</h1>
-      <p>
-        New Job Agro business é mais do que apenas um software de busca de empregos - é
-        uma plataforma que visa fortalecer o setor agrícola, conectando empresas e
-        profissionais de maneira eficiente e eficaz. Junte-se a nós hoje e descubra como
-        podemos transformar sua jornada de busca de emprego ou recrutamento.
-      </p>
+    <div class="body-container">
+      <div class="text-container">
+        <p class="top-text">UM SANTO NA SUA CARREIRA</p>
+        <h2>Conectando talentos do setor agrícola</h2>
+        <div class="line"></div>
+        <p class="text">
+          A NewJob permite que os indivíduos com diversas habilidades e experiências tenham acesso a
+          oportunidades no setor agrícola. Seja você um engenheiro agrônomo, um técnico em irrigação
+          ou alguém com habilidades manuais para o trabalho no campo, a NewJob tem algo para você.
+        </p>
+      </div>
       <div class="numbers-conteiner">
         <span class="info">
-          <span class="number"
-            >105
-            <span class="icon">
-              <span>+</span>
-            </span>
-          </span>
-          <p>Empresas</p>
+          <span class="number">105<span class="icon">+</span></span>
+          <p class="info-text">Empresas</p>
         </span>
         <span class="info">
-          <span class="number"
-            >7000
-            <span class="icon">
-              <span>+</span>
-            </span>
-          </span>
-          <p>Empresas</p>
+          <span class="number">7000<span class="icon">+</span></span>
+          <p class="info-text">Vagas cadastradas</p>
         </span>
         <span class="info">
-          <span class="number"
-            >5000
-            <span class="icon">
-              <span>+</span>
-            </span>
-          </span>
-          <p>Empresas</p>
+          <span class="number">5000<span class="icon">+</span></span>
+          <p class="info-text">Candidaturas</p>
         </span>
       </div>
     </div>
+    <img src="https://i.ibb.co/9mLfT1FW/image.png" alt="" />
   </div>
 </template>
 
 <style scoped>
-.number {
+.container {
   display: flex;
-  color: var(--branco);
-  gap: 0.1rem;
-  font-weight: 500;
-  font-size: 2.8rem;
+  justify-content: space-between;
+  padding: 5% 9% 5%;
+  max-width: 1215px;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+
+  & .body-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 55%;
+  }
+
+  & img {
+    width: 35%;
+    height: 24vw;
+    max-height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+  }
 }
 
-.info {
+.text-container {
   display: flex;
   flex-direction: column;
-  align-items: normal;
-  gap: 0;
-}
+  gap: 0.9vw;
 
-.info p {
-  margin-top: 0;
-}
+  & .top-text {
+    color: var(--verde-claro);
+    letter-spacing: 2px;
+    font-size: 0.8em;
+  }
 
-.icon {
-  color: var(--laranja);
-}
+  & .line {
+    width: 70px;
+    height: 4px;
+    background: #0e301c;
+    background: linear-gradient(
+      90deg,
+      rgba(14, 48, 28, 1) 0%,
+      rgba(7, 115, 75, 1) 50%,
+      rgba(14, 48, 28, 1) 100%
+    );
+  }
 
-.info-container {
-  width: 50%;
-  margin-left: 10%;
+  & h2 {
+    font-size: 2.9rem;
+    font-weight: 600;
+  }
+
+  & .text {
+    color: var(--cinza-claro);
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 }
 
 .numbers-conteiner {
   display: flex;
   justify-content: space-between;
-  width: 80%;
-  margin-top: 2.3rem;
-}
 
-h1 {
-  background: -webkit-linear-gradient(
-    left,
-    #c9c9c9 0%,
-    var(--branco) 50%,
-    var(--branco) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 3rem;
-}
+  & .info {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    gap: 0;
 
-span {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+    & .info-text {
+      color: var(--branco-escuro);
+      font-size: 1rem;
+    }
 
-img {
-  width: 6rem;
-}
+    & .number {
+      display: flex;
+      font-weight: 600;
+      font-size: 2.7rem;
+      color: var(--branco);
 
-button {
-  background-color: var(--laranja);
-  padding: 0.6rem 2em;
-  font-weight: 600;
-  border: none;
-  border-radius: 3rem;
-  margin-top: 2rem;
-}
-
-.about-title {
-  display: flex;
-  margin-bottom: 3rem;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 400;
-}
-
-.container {
-  display: flex;
-  padding: 15vh 5vw;
-}
-
-.about-container {
-  width: 35%;
-}
-
-p {
-  color: var(--cinza-claro);
-  font-size: 0.8rem;
-  width: 80%;
-  margin-top: 1rem;
+      & .icon {
+        color: var(--laranja);
+      }
+    }
+  }
 }
 </style>
