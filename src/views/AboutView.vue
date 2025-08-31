@@ -1,7 +1,6 @@
 <script setup>
 import {
   AboutIntroduction,
-  HeaderComponent,
   AboutContent,
   FooterComponent,
 } from "@/components";
@@ -16,7 +15,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <HeaderComponent />
   <AboutIntroduction />
   <AboutContent />
   <FooterComponent />

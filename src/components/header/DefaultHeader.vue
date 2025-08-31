@@ -2,7 +2,7 @@
 import DesktopHeader from "./Desktop/DesktopHeader.vue";
 import MobileHeader from "./Mobile/MobileHeader.vue";
 
-import { useScreen } from "/@composable/screen";
+import { useScreen } from "@/composables";
 
 const { isMobile } = useScreen();
 </script>
