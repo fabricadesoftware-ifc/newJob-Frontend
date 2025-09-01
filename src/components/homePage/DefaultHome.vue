@@ -1,6 +1,6 @@
 <script setup>
 import { MobileHome, DesktopHome } from "@/components";
-import { useScreen } from "@/composables";
+import { useScreen } from "@/composables/screen";
 
 const { isMobile } = useScreen();
 </script>
