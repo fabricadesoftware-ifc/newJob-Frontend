@@ -1,16 +1,7 @@
 <script setup>
-import {ImageForm, LoginForm} from '@/components/';
+import { DefaultLogin } from "@/components"
 </script>
 
 <template>
-    <div class="container">
-    <ImageForm side="left" image="https://i.ibb.co/ZVnJqr3/image.png"/>
-    <LoginForm/>
-    </div>
+  <DefaultLogin />
 </template>
-
-<style scoped>
-    .container{
-        display: flex;
-    }
-</style>

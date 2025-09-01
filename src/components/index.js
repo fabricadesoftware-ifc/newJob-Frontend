@@ -34,6 +34,10 @@ import DefaultJobs from './jobPage/DefaultJobs.vue'
 import DesktopJobs from './jobPage/Desktop/DesktopJobs.vue'
 import MobileJobs from './jobPage/Mobile/MobileJobs.vue'
 
+import DefaultLogin from './login/DefaultLogin.vue'
+import DesktopLogin from './login/Desktop/DesktopLogin.vue'
+import MobileLogin from './login/Mobile/MobileLogin.vue'
+
 export {
   AboutContent,
   AboutIntroduction,
@@ -65,5 +69,8 @@ export {
   MobileHome,
   DefaultJobs,
   DesktopJobs,
-  MobileJobs
+  MobileJobs,
+  DefaultLogin,
+  DesktopLogin,
+  MobileLogin
 }
