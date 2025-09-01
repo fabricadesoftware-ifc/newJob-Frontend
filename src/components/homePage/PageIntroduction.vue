@@ -35,7 +35,7 @@
 .image-container {
   position: absolute;
   right: 9%;
-  bottom: 14%;
+  bottom: 18%;
   width: 49%;
   height: 56%;
 
@@ -79,12 +79,12 @@
   flex-direction: column;
   gap: 3rem;
   position: relative;
-  padding: 13vh 0 0 8%;
+  padding: 12vh 0 0 8%;
   width: 60%;
 
   & h1 {
     color: var(--branco);
-    /* font-size: clamp(2rem, 4.8vw, 6rem); */
+
     font-size: clamp(2rem, 5.5vw, 6rem);
     font-weight: 600;
     line-height: 1.2;
@@ -103,8 +103,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
-    background: #b9672d;
+    background: var(--laranja);
     background: linear-gradient(
       90deg,
       rgba(185, 103, 45, 1) 0%,
@@ -114,7 +113,7 @@
     border: none;
     width: 18%;
     min-width: 90px;
-    padding: 10px 20px;
+    padding: 0.7rem 20px;
     border-radius: 30px;
     font-weight: 600;
     font-size: 1.1em;
@@ -138,10 +137,10 @@
   );
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1400px) {
   .content-container {
     width: 70%;
-    padding: 9vh 0 0 8%;
+    padding: 8vh 0 0 8%;
 
     & h1 {
       font-size: clamp(2rem, 6vw, 6rem);
@@ -149,7 +148,7 @@
   }
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 1250px) {
   .content-container {
     width: 80%;
     padding: 8vh 0 0 8%;
@@ -165,12 +164,11 @@
 
   .image-container {
     right: 9%;
-    bottom: 17%;
-
+    bottom: 19%;
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1150px) {
   .content-container {
     & h1 {
       font-size: clamp(2rem, 4.7vw, 6rem);
@@ -182,11 +180,23 @@
 
   .image-container {
     right: 9%;
-    bottom: 19%;
+    bottom: 24%;
 
     & .mdi {
       font-size: 3rem !important;
     }
+  }
+}
+
+@media (max-width: 900px) {
+  .content-container {
+    padding: 6vh 0 0 8%;
+    gap: 1rem;
+  }
+
+  .image-container {
+    right: 9%;
+    bottom: 26%;
   }
 }
 </style>

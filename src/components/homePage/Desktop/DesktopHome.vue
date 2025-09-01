@@ -12,13 +12,13 @@ import { PageIntroduction, MainContent } from '@/components'
 .hero {
   
   padding: 0 1% 1% 1%;
-  height: 97vh;
+  height: 93vh;
   align-items: center;
 }
 
-@media (max-width: 1530px) {
+@media (max-width: 1730px) {
   .hero {
-    height: 60vw;
+    height: 50vw;
   }
 }
 </style>
