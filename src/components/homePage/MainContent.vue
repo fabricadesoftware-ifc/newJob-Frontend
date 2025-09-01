@@ -1,5 +1,5 @@
 <script setup>
-import { TextSection } from '../index.js'
+import { TextSection } from '@/components'
 </script>
 
 <template>

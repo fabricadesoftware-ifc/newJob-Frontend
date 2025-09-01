@@ -1,15 +1,7 @@
 <script setup>
-import { IntroductionJobs, MainContentJobs, FooterComponent } from "@/components";
+import { DefaultJobs } from "@/components"
 </script>
 
 <template>
-  <div>
-    <IntroductionJobs/>
-    <MainContentJobs/>
-    <FooterComponent/>  
-  </div>
+  <DefaultJobs />
 </template>
-
-<style scoped>
-
-</style>
