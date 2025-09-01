@@ -2,7 +2,6 @@
 
 <template>
   <div class="container">
-    <h1>Perfil</h1>
     <div class="profile-image">
       <img
         src=""
@@ -68,8 +67,10 @@
 
 <style scoped>
 .container {
-  width: 60vw;
-  padding: 20vh 0 5vh 0;
+  width: 100vw;
+  align-items: center;
+  align-content: center;
+  padding-top: 10vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
