@@ -33,6 +33,10 @@ import DefaultLogin from './login/DefaultLogin.vue'
 import DesktopLogin from './login/Desktop/DesktopLogin.vue'
 import MobileLogin from './login/Mobile/MobileLogin.vue'
 
+import DefaultSignUp from './signUp/DefaultSignUp.vue'
+import DesktopSignUp from './signUp/Desktop/DesktopSignUp.vue'
+import MobileSignUp from './signUp/Mobile/MobileSignUp.vue'
+
 export {
   ImageForm,
   LoginForm,
@@ -62,5 +66,8 @@ export {
   MobileJobs,
   DefaultLogin,
   DesktopLogin,
-  MobileLogin
+  MobileLogin,
+  DefaultSignUp,
+  DesktopSignUp,
+  MobileSignUp
 }
