@@ -1,5 +1,5 @@
 <script setup>
-import DefaultHome from "@/components"
+import { DefaultHome } from "@/components"
 </script>
 
 <template>
