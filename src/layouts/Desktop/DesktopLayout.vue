@@ -1,5 +1,5 @@
 <script setup>
-import { DefaultHeader } from "@/components";
+import { DefaultHeader, DefaultFooter } from "@/components";
 </script>
 
 <template>
@@ -7,6 +7,7 @@ import { DefaultHeader } from "@/components";
   <main id="router-container">
     <RouterView />
   </main>
+  <DefaultFooter />
 </template>
 <style scoped>
 #router-container {

@@ -1,12 +1,11 @@
 <script setup>
-import { IntroductionJobs, MainContentJobs, FooterComponent } from "@/components";
+import { IntroductionJobs, MainContentJobs } from "@/components";
 </script>
 
 <template>
   <div>
     <IntroductionJobs/>
     <MainContentJobs/>
-    <FooterComponent/>  
   </div>
 </template>
 

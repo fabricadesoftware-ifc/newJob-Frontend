@@ -1,9 +1,8 @@
 <script setup>
-import { PageIntroduction, MainContent, FooterComponent } from '@/components/index.js'
+import { PageIntroduction, MainContent } from '@/components/index.js'
 </script>
 
 <template>
   <PageIntroduction />
   <MainContent />
-  <FooterComponent />
 </template>
