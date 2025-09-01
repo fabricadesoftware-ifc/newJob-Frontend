@@ -70,7 +70,7 @@
   width: 100vw;
   align-items: center;
   align-content: center;
-  padding-top: 10vh;
+  padding: 10vh 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

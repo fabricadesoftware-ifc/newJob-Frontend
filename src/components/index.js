@@ -42,6 +42,10 @@ import DefaultSignUp from './signUp/DefaultSignUp.vue'
 import DesktopSignUp from './signUp/Desktop/DesktopSignUp.vue'
 import MobileSignUp from './signUp/Mobile/MobileSignUp.vue'
 
+import DefaultFooter from './footer/DefaultFooter.vue'
+import DesktopFooter from './footer/Desktop/DesktopFooter.vue'
+import MobileFooter from './footer/Mobile/MobileFooter.vue'
+
 export {
   AboutContent,
   AboutIntroduction,
@@ -79,5 +83,8 @@ export {
   MobileLogin,
   DefaultSignUp,
   DesktopSignUp,
-  MobileSignUp
+  MobileSignUp,
+  DefaultFooter,
+  DesktopFooter,
+  MobileFooter
 }
