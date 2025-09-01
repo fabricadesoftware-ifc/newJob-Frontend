@@ -1,11 +1,11 @@
 import ImageForm from './ImageForm.vue'
 import LoginForm from './login/LoginForm.vue'
-import PageIntroduction from './homePage/PageIntroduction.vue'
-import MainContent from './homePage/MainContent.vue'
+import PageIntroduction from './homePage/Desktop/PageIntroduction.vue'
+import MainContent from './homePage/Desktop/MainContent.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
 import SignUpForm from './signUp/SignUpForm.vue'
-import IntroductionJobs from './jobPage/Desktop/IntroductionJobs.vue'
-import MainContentJobs from './jobPage/Desktop/MainContentJobs.vue'
+import IntroductionJobs from './jobPage/IntroductionJobs.vue'
+import MainContentJobs from './jobPage/MainContentJobs.vue'
 import FooterComponent from './footer/FooterComponent.vue'
 import AboutIntroduction from './about/AboutIntroduction.vue'
 import AboutContent from './about/AboutContent.vue'
@@ -28,6 +28,10 @@ import MobileHome from './homePage/Mobile/MobileHome.vue'
 import DefaultJobs from './jobPage/DefaultJobs.vue'
 import DesktopJobs from './jobPage/Desktop/DesktopJobs.vue'
 import MobileJobs from './jobPage/Mobile/MobileJobs.vue'
+
+import DefaultLogin from './login/DefaultLogin.vue'
+import DesktopLogin from './login/Desktop/DesktopLogin.vue'
+import MobileLogin from './login/Mobile/MobileLogin.vue'
 
 export {
   ImageForm,
@@ -55,5 +59,8 @@ export {
   MobileHome,
   DefaultJobs,
   DesktopJobs,
-  MobileJobs
+  MobileJobs,
+  DefaultLogin,
+  DesktopLogin,
+  MobileLogin
 }

@@ -58,7 +58,7 @@ const handleLogin = async () => {
 
     <p>
       Ainda não possui conta?
-      <router-link to="/signUp" class="link-text">Crie uma</router-link>
+      <router-link to="/sign-up" class="link-text">Crie uma</router-link>
     </p>
   </form>
 </template>
