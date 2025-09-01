@@ -1,11 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useLoadingStore } from '@/stores/loading';
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/LoginView.vue'
-import SignUpView from '../views/SignUpView.vue'
-import JobsView from '@/views/JobsView.vue'
-import AboutView from '@/views/AboutView.vue'
-import ProfileView from '@/views/ProfileView.vue';
+// import LoginView from '../views/LoginView.vue'
+// import SignUpView from '../views/SignUpView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,33 +9,50 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: () => import('../layouts/DefaultLayout.vue'),
+      children: [
+        {
+          path: '/',
+          name: 'home',
+          component: () => import('../views/HomeView.vue')
+        },
+        {
+          path: '/jobs',
+          name: 'Vagas',
+          component: () => import('../views/JobsView.vue')
+        },
+        {
+          path: '/profile',
+          name: 'Perfil',
+          component: () => import('../views/ProfileView.vue')
+        },
+        {
+          path: '/about',
+          name: 'Sobre',
+          component: () => import('../views/AboutView.vue')
+        }
+      ],
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/login',
       name: 'login',
-      component: LoginView
-    },  
-    {
-      path: '/signUp',
-      name: 'signUp',
-      component: SignUpView
-    },
-    {
-      path: '/jobs',
-      name: 'jobs',
-      component: JobsView
-    },
-    {
-      path: '/about/:id',
-      name: 'about',
-      component: AboutView
-    },
-    {
-      path: '/profile',
-      name: 'profile',
-      component: ProfileView
-    },
+      component: () => import('../layouts/BlanckLayout.vue'),
+      children: [
+        {
+          path: '/login',
+          name: 'login',
+          component: () => import('../views/LoginView.vue')
+        },
+        {
+          path: '/sign-up',
+          name: 'entrar',
+          component: () => import('../views/SignUpView.vue')
+        },
+      ]
+    }
   ]
 })
 

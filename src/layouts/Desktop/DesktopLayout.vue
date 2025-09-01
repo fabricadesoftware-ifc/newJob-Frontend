@@ -13,6 +13,5 @@ import { DefaultHeader } from "@/components";
   display: flex;
   max-width: 100vw;
   height: auto;
-  padding-left: 25vw;
 }
 </style>

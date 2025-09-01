@@ -1,7 +1,7 @@
 <script setup>
 import DesktopLayout from "./Desktop/DesktopLayout.vue";
 import MobileLayout from "./Mobile/MobileLayout.vue";
-import { useScreen } from "@/composables";
+import { useScreen } from "@/composables/screen";
 
 const { isMobile } = useScreen();
 </script>
