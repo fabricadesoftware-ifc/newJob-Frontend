@@ -182,7 +182,7 @@
 
   .image-container {
     right: 9%;
-    bottom: 23%;
+    bottom: 19%;
 
     & .mdi {
       font-size: 3rem !important;

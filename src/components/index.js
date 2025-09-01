@@ -2,8 +2,6 @@ import AboutContent from './about/AboutContent.vue'
 import AboutIntroduction from './about/AboutIntroduction.vue'
 import AboutUsSection from './homePage/mainContentComponents/AboutUsSection.vue'
 import BusinessSection from './homePage/mainContentComponents/BusinessSection.vue'
-import FooterComponent from './footer/FooterComponent.vue'
-import HeaderComponent from './header/HeaderComponent.vue'
 import HoverBox from './HoverBox.vue'
 import ImageForm from './ImageForm.vue'
 import IntroductionJobs from './jobPage/IntroductionJobs.vue'
@@ -13,7 +11,6 @@ import MainContent from './homePage/MainContent.vue'
 import MainContentJobs from './jobPage/MainContentJobs.vue'
 import MapGoogle from './google/MapGoogle.vue'
 import PageIntroduction from './homePage/PageIntroduction.vue'
-import ProfileComponent from './profile/ProfileComponent.vue'
 import SignUpForm from './signUp/SignUpForm.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
 import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
@@ -51,8 +48,6 @@ export {
   AboutIntroduction,
   AboutUsSection,
   BusinessSection,
-  FooterComponent,
-  HeaderComponent,
   HoverBox,
   ImageForm,
   IntroductionJobs,
@@ -64,7 +59,6 @@ export {
   LoadingPage,
   LoginForm,
   MainContentJobs,
-  ProfileComponent,
   SignUpForm,
   DefaultProfile,
   DesktopProfile,
