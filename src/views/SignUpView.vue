@@ -1,16 +1,7 @@
 <script setup>
-import {ImageForm, SignUpForm} from '@/components/index';
+import { DefaultSignUp } from "@/components"
 </script>
 
 <template>
-    <div class="container">
-    <SignUpForm/>
-    <ImageForm side="right" image="https://i.ibb.co/ygh8VM8/image.png"/>
-    </div>
+  <DefaultSignUp />
 </template>
-
-<style scoped>
-    .container{
-        display: flex;
-    }
-</style>

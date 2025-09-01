@@ -1,0 +1,3 @@
+<template>
+    mobile footer
+</template>

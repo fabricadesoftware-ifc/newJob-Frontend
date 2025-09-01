@@ -1,5 +1,5 @@
 <script setup>
-import { MobileHome, DesktopHome } from "@/components";
+import { MobileJobs, DesktopJobs } from "@/components";
 import { useScreen } from "@/composables/screen";
 
 const { isMobile } = useScreen();
@@ -7,7 +7,7 @@ const { isMobile } = useScreen();
 
 <template>
   <section>
-    <MobileHome v-if="isMobile" />
-    <DesktopHome v-else />
+    <MobileJobs v-if="isMobile" />
+    <DesktopJobs v-else />
   </section>
 </template>

@@ -42,8 +42,9 @@ const temeColor = ref(true)
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 5px;
+  justify-self: center;
   max-width: 1215px;
-  top: 0px;
 }
 
 .container {
@@ -126,7 +127,7 @@ a:hover,
   & input {
     background-color: transparent;
     border: none;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 
   & input:focus {

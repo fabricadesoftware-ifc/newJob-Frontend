@@ -1,8 +1,7 @@
 <script setup>
-import { HeaderComponent, ProfileComponent } from '@/components';
+import { DefaultProfile } from "@/components"
 </script>
 
 <template>
-    <HeaderComponent/>
-    <ProfileComponent/>
+  <DefaultProfile />
 </template>
