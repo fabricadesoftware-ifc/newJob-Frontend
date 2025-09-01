@@ -1,6 +1,5 @@
 import ImageForm from './ImageForm.vue'
 import LoginForm from './login/LoginForm.vue'
-// import HeaderComponent from './header/HeaderComponent.vue' // apagar
 import PageIntroduction from './homePage/PageIntroduction.vue'
 import MainContent from './homePage/MainContent.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
@@ -31,7 +30,6 @@ export {
   FooterComponent,
   AboutIntroduction,
   AboutContent,
-//   HeaderComponent, // apagar
   PageIntroduction,
   MainContent,
   TextSection,
