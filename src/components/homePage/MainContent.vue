@@ -1,5 +1,5 @@
 <script setup>
-import { TextSection, AboutUsSection, BusinessSection } from '../index.js'
+import { TextSection, AboutUsSection, BusinessSection } from '@/components'
 </script>
 
 <template>

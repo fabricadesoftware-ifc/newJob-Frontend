@@ -16,6 +16,7 @@ import PageIntroduction from './homePage/PageIntroduction.vue'
 import ProfileComponent from './profile/ProfileComponent.vue'
 import SignUpForm from './signUp/SignUpForm.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
+import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
 
 import DefaultProfile from './profile/DefaultProfile.vue'
 import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
@@ -28,6 +29,10 @@ import MobileHeader from './header/Mobile/MobileHeader.vue'
 import DefaultHome from './homePage/DefaultHome.vue'
 import DesktopHome from './homePage/Desktop/DesktopHome.vue'
 import MobileHome from './homePage/Mobile/MobileHome.vue'
+
+import DefaultJobs from './jobPage/DefaultJobs.vue'
+import DesktopJobs from './jobPage/Desktop/DesktopJobs.vue'
+import MobileJobs from './jobPage/Mobile/MobileJobs.vue'
 
 export {
   AboutContent,
@@ -43,21 +48,22 @@ export {
   MainContent,
   TextSection,
   MapGoogle,
+  CardJobs,
   LoadingPage,
   LoginForm,
   MainContentJobs,
   ProfileComponent,
   SignUpForm,
-
   DefaultProfile,
   DesktopProfile,
   MobileProfile,
-
   DefaultHeader,
   DesktopHeader,
   MobileHeader,
-  
   DefaultHome,
   DesktopHome,
-  MobileHome
+  MobileHome,
+  DefaultJobs,
+  DesktopJobs,
+  MobileJobs
 }

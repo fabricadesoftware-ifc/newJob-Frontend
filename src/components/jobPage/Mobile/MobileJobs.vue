@@ -1,0 +1,3 @@
+<template>
+    mobile vagas
+</template>

@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted } from "vue";
-import CardJobs from "./SecondComponents/CardJobs.vue";
+import { CardJobs } from '@/components'
 import { useJobStore } from "@/stores";
 
 const jobStore = useJobStore();
