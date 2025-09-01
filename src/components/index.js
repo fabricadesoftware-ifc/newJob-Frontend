@@ -11,7 +11,10 @@ import AboutIntroduction from './about/AboutIntroduction.vue'
 import AboutContent from './about/AboutContent.vue'
 import MapGoogle from './google/MapGoogle.vue'
 import LoadingPage from './loading/LoadingPage.vue'
-import ProfileComponent from './profile/ProfileComponent.vue'
+
+import DefaultProfile from './profile/DefaultProfile.vue'
+import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
+import MobileProfile from './profile/Mobile/MobileProfile.vue'
 
 import DefaultHeader from './header/DefaultHeader.vue'
 import DesktopHeader from './header/Desktop/DesktopHeader.vue'
@@ -35,10 +38,15 @@ export {
   TextSection,
   MapGoogle,
   LoadingPage,
-  ProfileComponent,
+
+  DefaultProfile,
+  DesktopProfile,
+  MobileProfile,
+
   DefaultHeader,
   DesktopHeader,
   MobileHeader,
+  
   DefaultHome,
   DesktopHome,
   MobileHome

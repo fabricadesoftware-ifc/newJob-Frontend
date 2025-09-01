@@ -5,5 +5,3 @@ import { DefaultHome } from "@/components"
 <template>
   <DefaultHome />
 </template>
-
-<style scoped></style>
