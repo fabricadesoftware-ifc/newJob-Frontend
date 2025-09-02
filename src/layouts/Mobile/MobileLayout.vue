@@ -11,6 +11,6 @@ import { DefaultHeader, DefaultFooter } from "@/components";
 </template>
 <style scoped>
 #router-container {
-  padding-top: 15vh;
+  padding-top: 1vh;
 }
 </style>
