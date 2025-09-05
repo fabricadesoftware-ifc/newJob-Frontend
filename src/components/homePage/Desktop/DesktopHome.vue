@@ -1,10 +1,10 @@
 <script setup>
-import { PageIntroduction, MainContent } from '@/components'
+import { DesktopHeroComponent, MainContent } from '@/components'
 </script>
 
 <template>
   <div class="hero">
-    <PageIntroduction />
+    <DesktopHeroComponent />
   </div>
   <MainContent />
 </template>
