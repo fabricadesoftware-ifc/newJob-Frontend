@@ -57,7 +57,7 @@
 .text-container {
   display: flex;
   flex-direction: column;
-  gap: 0.9vw;
+  gap: 2vw;
 
   & .top-text {
     color: var(--verde-claro);

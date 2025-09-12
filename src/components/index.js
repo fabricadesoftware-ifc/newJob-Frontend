@@ -16,6 +16,7 @@ import DesktopTextSection from './homePage/Desktop/DesktopTextSection.vue'
 import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
 import MobileTextSection from './homePage/Mobile/MobileTextSection.vue'
 import MobileAboutUs from './homePage/Mobile/MobileAboutUsSectiom.vue'
+import MobileBusinessSection from './homePage/Mobile/MobileBusinessSection.vue'
 
 import DefaultProfile from './profile/DefaultProfile.vue'
 import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
@@ -63,6 +64,7 @@ export {
   LoadingPage,
   LoginForm,
   MainContentJobs,
+  MobileBusinessSection,
   SignUpForm,
   DefaultProfile,
   DesktopProfile,
