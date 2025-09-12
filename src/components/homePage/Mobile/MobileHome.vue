@@ -1,8 +1,9 @@
 <script setup>
-import { MobileHeroComponent, MobileTextSection } from "@/components"
+import { MobileHeroComponent, MobileTextSection, MobileAboutUs } from "@/components"
 </script>
 <template>
   <MobileHeroComponent />
   <MobileTextSection />
+  <MobileAboutUs />
 </template>
 <style scoped></style>

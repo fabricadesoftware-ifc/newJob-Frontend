@@ -15,6 +15,7 @@ import SignUpForm from './signUp/SignUpForm.vue'
 import DesktopTextSection from './homePage/Desktop/DesktopTextSection.vue'
 import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
 import MobileTextSection from './homePage/Mobile/MobileTextSection.vue'
+import MobileAboutUs from './homePage/Mobile/MobileAboutUsSectiom.vue'
 
 import DefaultProfile from './profile/DefaultProfile.vue'
 import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
@@ -56,6 +57,7 @@ export {
   MobileHeroComponent,
   MobileTextSection,
   DesktopTextSection,
+  MobileAboutUs,
   MapGoogle,
   CardJobs,
   LoadingPage,
