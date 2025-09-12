@@ -1,19 +1,18 @@
 import AboutContent from './about/AboutContent.vue'
 import AboutIntroduction from './about/AboutIntroduction.vue'
-import AboutUsSection from './homePage/mainContentComponents/AboutUsSection.vue'
-import BusinessSection from './homePage/mainContentComponents/BusinessSection.vue'
+import DesktopAboutUsSection from './homePage/Desktop/DesktopAboutUsSection.vue'
+import DesktopBusinessSection from './homePage/Desktop/DesktopBusinessSection.vue'
 import DesktopHeroComponent from './homePage/Desktop/DesktopHeroComponent.vue'
 import HoverBox from './HoverBox.vue'
 import ImageForm from './ImageForm.vue'
 import IntroductionJobs from './jobPage/IntroductionJobs.vue'
 import LoadingPage from './loading/LoadingPage.vue'
 import LoginForm from './login/LoginForm.vue'
-import MainContent from './homePage/Desktop/MainContent.vue'
 import MainContentJobs from './jobPage/MainContentJobs.vue'
 import MapGoogle from './google/MapGoogle.vue'
 import MobileHeroComponent from './homePage/Mobile/MobileHeroComponent.vue'
 import SignUpForm from './signUp/SignUpForm.vue'
-import TextSection from './homePage/mainContentComponents/TextSection.vue'
+import DesktopTextSection from './homePage/Desktop/DesktopTextSection.vue'
 import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
 import MobileTextSection from './homePage/Mobile/MobileTextSection.vue'
 
@@ -48,16 +47,15 @@ import MobileFooter from './footer/Mobile/MobileFooter.vue'
 export {
   AboutContent,
   AboutIntroduction,
-  AboutUsSection,
-  BusinessSection,
+  DesktopAboutUsSection,
+  DesktopBusinessSection,
   DesktopHeroComponent,
   HoverBox,
   ImageForm,
   IntroductionJobs,
-  MainContent,
   MobileHeroComponent,
   MobileTextSection,
-  TextSection,
+  DesktopTextSection,
   MapGoogle,
   CardJobs,
   LoadingPage,

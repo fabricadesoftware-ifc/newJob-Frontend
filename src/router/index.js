@@ -5,8 +5,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
+      // Problema no nome da rota dos componentes de layout - futuramente colocar o nome deles como o mesmo dos seus primeiros filhos
+      path: '/a',
+      name: 'a',
       component: () => import('../layouts/DefaultLayout.vue'),
       children: [
         {
@@ -35,8 +36,8 @@ const router = createRouter({
       }
     },
     {
-      path: '/login',
-      name: 'login',
+      path: '/b',
+      name: 'b',
       component: () => import('../layouts/BlanckLayout.vue'),
       children: [
         {
