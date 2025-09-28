@@ -16,15 +16,15 @@
 </template>
 <style scoped>
 .container {
-  /* position: fixed;
+  position: fixed;
   z-index: 4;
   bottom: 0;
-  width: 100vw; */
+  width: 100%;
+  max-width: 100vw;
   background-color: var(--preto);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 50px;
   height: 49px;
   border-radius: 20px 20px 0 0;
 }

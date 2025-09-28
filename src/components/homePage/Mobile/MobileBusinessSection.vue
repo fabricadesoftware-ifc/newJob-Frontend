@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container">
+  <div class="business-container">
     <div class="text-container">
       <p class="top-text">NEW JOB PARA EMPRESAS</p>
       <h2>Aumente o alcance da sua empresa</h2>
@@ -7,36 +7,43 @@
       <p class="text">Possui uma empresa na área de agropecuária ou medicina veterinária?</p>
       <router-link class="button-login" to="/login">Cadaste-se</router-link>
     </div>
-    <div class="carousel">
-      <div class="carousel-card">
-        <div class="carousel-img-container" alt="">
-          <div class="arrow-button">
-            <i class="mdi mdi-arrow-top-right"></i>
+    <div class="overflow-box">
+      <div class="carousel">
+        <div class="carousel-card">
+          <div class="carousel-img-container" alt="">
+            <div class="arrow-button">
+              <i class="mdi mdi-arrow-top-right"></i>
+            </div>
           </div>
+          <p>A sua empresa já está no sistema? reivindique-a</p>
         </div>
-        <p>A sua empresa já está no sistema? reivindique-a</p>
-      </div>
-      <div class="carousel-card">
-        <div class="carousel-img-container" alt="">
-          <div class="arrow-button">
-            <i class="mdi mdi-arrow-top-right"></i>
+        <div class="carousel-card">
+          <div class="carousel-img-container" alt="">
+            <div class="arrow-button">
+              <i class="mdi mdi-arrow-top-right"></i>
+            </div>
           </div>
+          <p>Filtragem para a seleção de funcionários</p>
         </div>
-        <p>Filtragem para a seleção de funcionários</p>
-      </div>
-      <div class="carousel-card">
-        <div class="carousel-img-container" alt="">
-          <div class="arrow-button">
-            <i class="mdi mdi-arrow-top-right"></i>
+        <div class="carousel-card">
+          <div class="carousel-img-container" alt="">
+            <div class="arrow-button">
+              <i class="mdi mdi-arrow-top-right"></i>
+            </div>
           </div>
+          <p>Fácil acesso pelos usuários</p>
         </div>
-        <p>Fácil acesso pelos usuários</p>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
-.about-container {
+.overflow-box {
+  max-width: 80%;
+  overflow: visible;
+}
+
+.business-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -44,14 +51,6 @@
   align-self: center;
   justify-self: center;
   align-items: left;
-  width: 80%;
-}
-
-.about-img {
-  width: 100%;
-  height: 200px;
-  border-radius: 20px;
-  object-fit: cover;
 }
 
 .text-container {
@@ -129,11 +128,10 @@
 .carousel {
   display: flex;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   gap: 1rem;
-  padding: 1rem;
-  width: 80%;
+  padding: 1rem 0;
+  width: 86vw;
 
   & .carousel-card {
     flex: 0 0 auto;
@@ -149,7 +147,8 @@
     & .carousel-img-container {
       position: relative;
       width: 100%;
-      height: 70%;
+      height: 14vh;
+      max-height: 14vh;
       border-radius: 14px;
       background-size: cover;
       background-repeat: no-repeat;
