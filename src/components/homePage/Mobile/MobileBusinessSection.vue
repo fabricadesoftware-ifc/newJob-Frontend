@@ -40,6 +40,7 @@
 <style scoped>
 .overflow-box {
   max-width: 80%;
+  width: 80vw;
   overflow: visible;
 }
 
