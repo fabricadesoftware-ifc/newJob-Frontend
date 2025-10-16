@@ -91,7 +91,7 @@
 
 .numbers-conteiner {
   display: flex;
-  justify-content: space-between;
+  gap: 10vw;
 
   & .info {
     display: flex;

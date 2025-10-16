@@ -101,7 +101,7 @@
     rgba(7, 115, 75, 1) 50%,
     rgba(14, 48, 28, 1) 100%
   );
-  width: 50%;
+  width: 32vw;
   padding: 10px;
   font-size: 1.1rem;
   border-radius: 30px;
@@ -148,7 +148,8 @@
     & .carousel-img-container {
       position: relative;
       width: 100%;
-      height: 14vh;
+      height: 20vh;
+      min-height: 140px;
       max-height: 14vh;
       border-radius: 14px;
       background-size: cover;
@@ -199,5 +200,30 @@
   background-color: var(--laranja);
   border-radius: 10px;
   height: 8px;
+}
+
+@media (max-width: 768px) and (min-width: 562px) {
+  .carousel-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 32vw !important;
+    min-width: 180px;
+    aspect-ratio: 1/1;
+    padding: 0.8rem;
+    border-radius: 15px;
+
+    & .carousel-img-container {
+      position: relative;
+      width: 100%;
+      height: 18vh !important;
+      max-height: 40vh !important;
+      border-radius: 14px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(https://i.ibb.co/9mLfT1FW/image.png);
+    }
+  }
 }
 </style>
