@@ -3,6 +3,7 @@
     <div class="hero">
       <div class="title-section">
         <h1>VAGAS AGRÍCOLAS PARA DIVERSAS HABILIDADES</h1>
+        <!-- <h1>Vagas agrícolas para diversas habilidades</h1> -->
         <p>
           New Job é um software inovador projetado para criar uma ponte entre profissionais
           talentosos e empresas agrícolas em busca de mão de obra qualificada.
@@ -53,6 +54,10 @@ main {
   position: relative;
   top: 20%;
   aspect-ratio: 30/17;
+  /* background-color: red
+  ; */
+  display: flex;
+  align-items: center;
 
   & .main-image {
     position: absolute;
@@ -101,5 +106,38 @@ main {
   padding: 10px;
   font-weight: 600;
   font-size: 1.3rem;
+}
+
+@media (max-width: 768px) and (min-width: 580px) {
+  .image-container {
+    width: 100%;
+    height: 50vw;
+  }
+
+  .show-jobs-bt {
+    padding: 12px;
+    font-size: 1.5rem;
+  }
+
+  .title-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & h1 {
+      font-weight: 500;
+      font-size: 3.7rem;
+      line-height: 120%;
+    }
+
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .image-btn {
+    right: 5% !important;
+    top: 5% !important;
+  }
 }
 </style>

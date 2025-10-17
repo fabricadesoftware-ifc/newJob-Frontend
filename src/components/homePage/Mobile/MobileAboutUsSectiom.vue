@@ -27,10 +27,10 @@
 }
 
 .about-img {
-  width: 100%;
-  height: 300px;
-  border-radius: 20px;
-  object-fit: cover;
+    width: 100%;
+    height: 50vw;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
 .text-container {

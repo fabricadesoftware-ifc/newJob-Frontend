@@ -204,25 +204,11 @@
 
 @media (max-width: 768px) and (min-width: 562px) {
   .carousel-card {
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     width: 32vw !important;
-    min-width: 180px;
-    aspect-ratio: 1/1;
-    padding: 0.8rem;
-    border-radius: 15px;
 
     & .carousel-img-container {
-      position: relative;
-      width: 100%;
       height: 18vh !important;
       max-height: 40vh !important;
-      border-radius: 14px;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-image: url(https://i.ibb.co/9mLfT1FW/image.png);
     }
   }
 }

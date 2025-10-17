@@ -48,7 +48,7 @@
 
   & img {
     width: 100%;
-    height: 300px;
+    height: 50vw;
     border-radius: 20px;
     object-fit: cover;
   }
@@ -101,13 +101,12 @@
 
     & .info-text {
       color: var(--branco-escuro);
-      font-size: 1rem;
     }
 
     & .number {
       display: flex;
       font-weight: 600;
-      font-size: 2.7rem;
+      font-size: 2.2rem;
       color: var(--branco);
 
       & .icon {
