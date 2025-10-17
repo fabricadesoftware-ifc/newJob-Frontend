@@ -54,8 +54,7 @@ main {
   position: relative;
   top: 20%;
   aspect-ratio: 30/17;
-  /* background-color: red
-  ; */
+  margin-bottom: 2vw;
   display: flex;
   align-items: center;
 
@@ -138,6 +137,14 @@ main {
   .image-btn {
     right: 5% !important;
     top: 5% !important;
+  }
+}
+
+@media (min-width: 580px) {
+  .image-btn {
+    & .mdi {
+      font-size: 2em !important;
+    }
   }
 }
 </style>

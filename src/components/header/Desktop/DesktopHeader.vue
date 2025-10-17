@@ -20,7 +20,7 @@ const temeColor = ref(true)
       </div>
     </div>
     <div class="container" style="gap: 1vw">
-      <div class="input-container">
+      <div class="search-bar">
         <i class="mdi mdi-magnify"></i>
         <input type="text" placeholder="Pesquisar" />
       </div>
@@ -115,7 +115,7 @@ a:hover,
   background-color: var(--preto-claro);
 }
 
-.input-container {
+.search-bar {
   display: flex;
   align-items: center;
   border: hsl(0, 0%, 63%, 20%) 1px solid;
