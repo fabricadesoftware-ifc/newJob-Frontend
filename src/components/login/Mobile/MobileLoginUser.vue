@@ -72,14 +72,15 @@ const showPassword = ref(false)
 }
 
 .header {
-  height: 44px;
+  height: 39px;
+  padding: 5px;
   display: flex;
   align-items: center;
   width: 100%;
 
   & img {
     width: 200px;
-    max-width: 25vw;
+    max-width: 23vw;
   }
 }
 
