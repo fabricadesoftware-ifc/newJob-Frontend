@@ -19,10 +19,19 @@ const showPassword = ref(true)
         <div>
           <p>Senha</p>
           <div class="input">
-            <input type="password" placeholder="Digite sua senha" v-if="showPassword"/>
-            <input type="text" placeholder="Digite sua senha" v-if="!showPassword">
-            <i class="mdi mdi-eye-off-outline" @click="showPassword = !showPassword" v-if="showPassword"></i>
-            <i class="mdi mdi-eye-outline" @click="showPassword = !showPassword" v-if="!showPassword"></i>
+            <input :type="showPassword ? 'text' : 'password'" placeholder="Digite sua senha" />
+            <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
+            <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
+            <i
+              class="mdi mdi-eye-off-outline"
+              @click="showPassword = !showPassword"
+              v-if="showPassword"
+            ></i>
+            <i
+              class="mdi mdi-eye-outline"
+              @click="showPassword = !showPassword"
+              v-if="!showPassword"
+            ></i>
           </div>
         </div>
         <div class="buttons">
@@ -88,7 +97,7 @@ const showPassword = ref(true)
     display: flex;
     background-color: var(--preto-claro);
     padding: 15px;
-    border-radius: 7px;
+    border-radius: 9px;
 
     & .mdi {
       height: 20px;
@@ -98,6 +107,7 @@ const showPassword = ref(true)
       background-color: transparent;
       width: 100%;
       border: none;
+      color: var(--branco);
     }
 
     & input:focus {
