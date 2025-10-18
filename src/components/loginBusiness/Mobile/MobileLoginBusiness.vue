@@ -39,9 +39,7 @@ const showPassword = ref(false)
         </div>
       </div>
     </div>
-    <div class="bottom-text">
-      <p>Procuro emprego</p>
-    </div>
+    <router-link to="/login-user" class="bottom-text">Procuro emprego</router-link>
   </div>
 </template>
 <style scoped>
@@ -132,10 +130,8 @@ const showPassword = ref(false)
   width: 100%;
   justify-content: end;
   margin: 30px;
-  p {
-    color: var(--verde-claro);
-    font-weight: 500;
-    font-size: 1.1em;
-  }
+  color: var(--verde-claro);
+  font-weight: 500;
+  font-size: 1.1em;
 }
 </style>
