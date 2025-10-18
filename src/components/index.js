@@ -35,9 +35,9 @@ import DefaultLoginUser from './login/DefaultLoginUser.vue'
 import DesktopLoginUser from './login/Desktop/DesktopLoginUser.vue'
 import MobileLoginUser from './login/Mobile/MobileLoginUser.vue'
 
-import DefaultSignUp from './signUp/DefaultSignUp.vue'
-import DesktopSignUp from './signUp/Desktop/DesktopSignUp.vue'
-import MobileSignUp from './signUp/Mobile/MobileSignUp.vue'
+import DefaultSignUpUser from './signUp/DefaultSignUpUser.vue'
+import DesktopSignUpUser from './signUp/Desktop/DesktopSignUpUser.vue'
+import MobileSignUpUser from './signUp/Mobile/MobileSignUpUser.vue'
 
 import DefaultFooter from './footer/DefaultFooter.vue'
 import DesktopFooter from './footer/Desktop/DesktopFooter.vue'
@@ -75,9 +75,9 @@ export {
   DefaultLoginUser,
   DesktopLoginUser,
   MobileLoginUser,
-  DefaultSignUp,
-  DesktopSignUp,
-  MobileSignUp,
+  DefaultSignUpUser,
+  DesktopSignUpUser,
+  MobileSignUpUser,
   DefaultFooter,
   DesktopFooter,
   MobileFooter

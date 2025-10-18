@@ -1,5 +1,5 @@
 <script setup>
-import { MobileSignUp, DesktopSignUp } from "@/components";
+import { MobileSignUpUser, DesktopSignUpUser } from "@/components";
 import { useScreen } from "@/composables/screen";
 
 const { isMobile } = useScreen();
@@ -7,7 +7,7 @@ const { isMobile } = useScreen();
 
 <template>
   <section>
-    <MobileSignUp v-if="isMobile" />
-    <DesktopSignUp v-else />
+    <MobileSignUpUser v-if="isMobile" />
+    <DesktopSignUpUser v-else />
   </section>
 </template>

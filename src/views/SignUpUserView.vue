@@ -1,7 +1,7 @@
 <script setup>
-import { DefaultSignUp } from "@/components"
+import { DefaultSignUpUser } from "@/components"
 </script>
 
 <template>
-  <DefaultSignUp />
+  <DefaultSignUpUser />
 </template>
