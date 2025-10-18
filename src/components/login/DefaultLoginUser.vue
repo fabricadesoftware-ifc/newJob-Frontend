@@ -1,5 +1,5 @@
 <script setup>
-import { MobileLogin, DesktopLogin } from "@/components";
+import { MobileLoginUser, DesktopLoginUser } from "@/components";
 import { useScreen } from "@/composables/screen";
 
 const { isMobile } = useScreen();
@@ -7,7 +7,7 @@ const { isMobile } = useScreen();
 
 <template>
   <section>
-    <MobileLogin v-if="isMobile" />
-    <DesktopLogin v-else />
+    <MobileLoginUser v-if="isMobile" />
+    <DesktopLoginUser v-else />
   </section>
 </template>

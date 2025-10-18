@@ -40,14 +40,19 @@ const router = createRouter({
       component: () => import('../layouts/BlanckLayout.vue'),
       children: [
         {
-          path: '/login',
-          name: 'login',
-          component: () => import('../views/LoginView.vue')
+          path: '/login-user',
+          name: 'Entrar Usuário',
+          component: () => import('../views/LoginUserView.vue')
         },
         {
-          path: '/sign-up',
-          name: 'entrar',
-          component: () => import('../views/SignUpView.vue')
+          path: '/sign-up-user',
+          name: 'Cadastro Usuário',
+          component: () => import('../views/SignUpUserView.vue')
+        },
+                {
+          path: '/sign-up-business',
+          name: 'Cadastro Empresa',
+          component: () => import('../views/SignUpUserView.vue')
         },
       ]
     }

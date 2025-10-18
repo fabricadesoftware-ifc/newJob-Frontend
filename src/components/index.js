@@ -31,9 +31,9 @@ import DefaultJobs from './jobPage/DefaultJobs.vue'
 import DesktopJobs from './jobPage/Desktop/DesktopJobs.vue'
 import MobileJobs from './jobPage/Mobile/MobileJobs.vue'
 
-import DefaultLogin from './login/DefaultLogin.vue'
-import DesktopLogin from './login/Desktop/DesktopLogin.vue'
-import MobileLogin from './login/Mobile/MobileLogin.vue'
+import DefaultLoginUser from './login/DefaultLoginUser.vue'
+import DesktopLoginUser from './login/Desktop/DesktopLoginUser.vue'
+import MobileLoginUser from './login/Mobile/MobileLoginUser.vue'
 
 import DefaultSignUp from './signUp/DefaultSignUp.vue'
 import DesktopSignUp from './signUp/Desktop/DesktopSignUp.vue'
@@ -72,9 +72,9 @@ export {
   DefaultJobs,
   DesktopJobs,
   MobileJobs,
-  DefaultLogin,
-  DesktopLogin,
-  MobileLogin,
+  DefaultLoginUser,
+  DesktopLoginUser,
+  MobileLoginUser,
   DefaultSignUp,
   DesktopSignUp,
   MobileSignUp,

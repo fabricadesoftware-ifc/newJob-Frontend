@@ -37,7 +37,7 @@ const showPassword = ref(true)
         <div class="buttons">
           <button class="foget-password-bt">Esqueceu sua senha</button>
           <button class="login-bt">Entrar</button>
-          <p>Não possui senha? <span style="color: var(--verde-claro)">Cadaste-se</span></p>
+          <router-link to="/sign-up-user" >Não possui conta? <span style="color: var(--verde-claro)">Cadaste-se</span></router-link>
         </div>
       </div>
     </div>
@@ -154,7 +154,8 @@ const showPassword = ref(true)
     width: 100%;
   }
 
-  & p {
+  & a {
+    color: var(--branco-escuro);
     font-weight: 500;
     font-size: 1.1em;
   }
