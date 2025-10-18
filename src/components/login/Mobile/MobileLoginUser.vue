@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-const showPassword = ref(true)
+import { FormInputComponent } from '@/components'
+
+const showPassword = ref(false)
 </script>
 <template>
   <div class="container">
@@ -10,18 +12,27 @@ const showPassword = ref(true)
     <div class="body">
       <h1>Entrar</h1>
       <div class="info-container">
-        <div>
-          <p>Email</p>
-          <div class="input">
-            <input type="email" placeholder="Digite o seu email" />
-          </div>
-        </div>
-        <div>
+        <FormInputComponent texto="Email" type="email" placeholder="Digite seu email" />
+        <FormInputComponent
+          texto="Senha"
+          :type="showPassword ? 'text' : 'password'"
+          placeholder="Digite sua senha"
+        >
+          <i
+            class="mdi mdi-eye-off-outline"
+            @click="showPassword = !showPassword"
+            v-if="showPassword"
+          ></i>
+          <i
+            class="mdi mdi-eye-outline"
+            @click="showPassword = !showPassword"
+            v-if="!showPassword"
+          ></i>
+        </FormInputComponent>
+        <!-- <div>
           <p>Senha</p>
           <div class="input">
             <input :type="showPassword ? 'text' : 'password'" placeholder="Digite sua senha" />
-            <EyeOutline v-if="!showPass" @click="showPass = !showPass" />
-            <EyeOffOutline v-if="showPass" @click="showPass = !showPass" />
             <i
               class="mdi mdi-eye-off-outline"
               @click="showPassword = !showPassword"
@@ -33,11 +44,14 @@ const showPassword = ref(true)
               v-if="!showPassword"
             ></i>
           </div>
-        </div>
+        </div> -->
         <div class="buttons">
           <button class="foget-password-bt">Esqueceu sua senha</button>
           <button class="login-bt">Entrar</button>
-          <router-link to="/sign-up-user" >Não possui conta? <span style="color: var(--verde-claro)">Cadaste-se</span></router-link>
+          <router-link to="/sign-up-user"
+            >Não possui conta?
+            <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
+          >
         </div>
       </div>
     </div>
@@ -88,7 +102,7 @@ const showPassword = ref(true)
   flex-direction: column;
   gap: 25px;
 
-  & p {
+  /* & p {
     font-size: 1.2em;
     color: var(--branco-escuro);
   }
@@ -118,9 +132,13 @@ const showPassword = ref(true)
     input::placeholder {
       color: var(--branco-escuro);
       font-weight: 500;
-    }
-  }
+    } */
 }
+
+/* & .input:focus-within {
+  border: 1px solid var(--verde);
+  transition: all 0.2s ease-in-out;
+} */
 
 .buttons {
   display: flex;

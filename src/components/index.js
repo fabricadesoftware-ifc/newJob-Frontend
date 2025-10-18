@@ -14,6 +14,7 @@ import PageIntroduction from './homePage/PageIntroduction.vue'
 import SignUpForm from './signUp/SignUpForm.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
 import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
+import FormInputComponent from './FormInputComponent.vue'
 
 import DefaultProfile from './profile/DefaultProfile.vue'
 import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
@@ -56,6 +57,7 @@ export {
   TextSection,
   MapGoogle,
   CardJobs,
+  FormInputComponent,
   LoadingPage,
   LoginForm,
   MainContentJobs,
