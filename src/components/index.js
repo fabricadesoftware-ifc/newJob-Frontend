@@ -41,7 +41,7 @@ import DesktopSignUpUser from './signUp/Desktop/DesktopSignUpUser.vue'
 import MobileSignUpUser from './signUp/Mobile/MobileSignUpUser.vue'
 
 import DefaultLoginBusiness from './loginBusiness/DefaultLoginBusiness.vue'
-import DesktopLoginBusiness from './loginBusiness/Deskop/DesktopLoginBusiness.vue'
+import DesktopLoginBusiness from './loginBusiness/Desktop/DesktopLoginBusiness.vue'
 import MobileLoginBusiness from './loginBusiness/Mobile/MobileLoginBusiness.vue'
 
 import DefaultFooter from './footer/DefaultFooter.vue'
