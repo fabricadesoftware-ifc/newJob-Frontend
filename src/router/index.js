@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { useLoadingStore } from '@/stores/loading';
+import { useLoadingStore } from '@/stores/loading'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -49,27 +49,32 @@ const router = createRouter({
           name: 'Cadastro Usuário',
           component: () => import('../views/SignUpUserView.vue')
         },
-                {
-          path: '/sign-up-business',
-          name: 'Cadastro Empresa',
-          component: () => import('../views/SignUpUserView.vue')
+        {
+          path: '/login-user',
+          name: 'Entrar Usuário',
+          component: () => import('../views/LoginUserView.vue')
         },
+        {
+          path: '/sign-up-user',
+          name: 'Cadastro Usuário',
+          component: () => import('../views/SignUpUserView.vue')
+        }
       ]
     }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-  const loadingStore = useLoadingStore();
-  loadingStore.startLoading();
-  next();
-});
+  const loadingStore = useLoadingStore()
+  loadingStore.startLoading()
+  next()
+})
 
 router.afterEach(() => {
-  const loadingStore = useLoadingStore();
+  const loadingStore = useLoadingStore()
   setTimeout(() => {
-    loadingStore.stopLoading();
-  }, 500); 
-});
+    loadingStore.stopLoading()
+  }, 500)
+})
 
 export default router

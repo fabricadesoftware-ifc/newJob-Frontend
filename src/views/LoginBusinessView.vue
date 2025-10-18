@@ -1,7 +1,7 @@
 <script setup>
-import { DefaultLoginUser } from "@/components"
+import { DefaultLoginBusiness } from "@/components"
 </script>
 
 <template>
-  <DefaultLoginUser />
+  <DefaultLoginBusiness />
 </template>
