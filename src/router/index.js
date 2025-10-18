@@ -55,9 +55,9 @@ const router = createRouter({
           component: () => import('../views/LoginBusinessView.vue')
         },
         {
-          path: '/sign-up-user',
-          name: 'Cadastro Usuário',
-          component: () => import('../views/SignUpUserView.vue')
+          path: '/sign-up-business',
+          name: 'Cadastro Empresa',
+          component: () => import('../views/SignUpBusinessView.vue')
         }
       ]
     }

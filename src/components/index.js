@@ -44,6 +44,10 @@ import DefaultLoginBusiness from './loginBusiness/DefaultLoginBusiness.vue'
 import DesktopLoginBusiness from './loginBusiness/Desktop/DesktopLoginBusiness.vue'
 import MobileLoginBusiness from './loginBusiness/Mobile/MobileLoginBusiness.vue'
 
+import DefaultSignUpBusiness from './signUpBusiness/DefaultSignUpBusiness.vue'
+import DesktopSignUpBusiness from './signUpBusiness/Desktop/DesktopSignUpBusiness.vue'
+import MobileSignUpBusiness from './signUpBusiness/Mobile/MobileSignUpBusiness.vue'
+
 import DefaultFooter from './footer/DefaultFooter.vue'
 import DesktopFooter from './footer/Desktop/DesktopFooter.vue'
 import MobileFooter from './footer/Mobile/MobileFooter.vue'
@@ -87,6 +91,9 @@ export {
   DefaultLoginBusiness,
   DesktopLoginBusiness,
   MobileLoginBusiness,
+  DefaultSignUpBusiness,
+  DesktopSignUpBusiness,
+  MobileSignUpBusiness,
   DefaultFooter,
   DesktopFooter,
   MobileFooter

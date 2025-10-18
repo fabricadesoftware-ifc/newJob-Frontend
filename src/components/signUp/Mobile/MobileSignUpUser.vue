@@ -33,15 +33,12 @@ const showPassword = ref(false)
         <div class="button-container">
           <button class="login-bt">Cadastrar-se</button>
           <router-link to="/login-user"
-            >Já possui uma conta?
-            <span style="color: var(--verde-claro)">Entre</span></router-link
+            >Já possui uma conta? <span style="color: var(--verde-claro)">Entre</span></router-link
           >
         </div>
       </div>
     </div>
-    <div class="bottom-text">
-      <p>Sou uma empresa</p>
-    </div>
+    <router-link class="bottom-text">Sou uma empresa</router-link>
   </div>
 </template>
 <style scoped>
@@ -132,10 +129,8 @@ const showPassword = ref(false)
   width: 100%;
   justify-content: end;
   margin: 30px;
-  p {
-    color: var(--verde-claro);
-    font-weight: 500;
-    font-size: 1.1em;
-  }
+  color: var(--verde-claro);
+  font-weight: 500;
+  font-size: 1.1em;
 }
 </style>
