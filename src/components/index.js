@@ -15,6 +15,8 @@ import SignUpForm from './signUp/SignUpForm.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
 import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
 import FormInputComponent from './FormInputComponent.vue'
+import FirstStepSignUpComponent from './signUpBusiness/Mobile/FirstStepSignUpComponent.vue'
+import SecondStepSignUpComponent from './signUpBusiness/Mobile/SecondStepSignUpComponent.vue'
 
 import DefaultProfile from './profile/DefaultProfile.vue'
 import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
@@ -70,6 +72,8 @@ export {
   LoginForm,
   MainContentJobs,
   SignUpForm,
+  FirstStepSignUpComponent,
+  SecondStepSignUpComponent,
   DefaultProfile,
   DesktopProfile,
   MobileProfile,
