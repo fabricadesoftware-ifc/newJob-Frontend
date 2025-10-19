@@ -1,8 +1,23 @@
 <script setup>
 import { ref } from 'vue'
-import { FormInputComponent, FirstStepSignUpComponent, SecondStepSignUpComponent } from '@/components'
+import {
+  FormInputComponent,
+  FirstStepSignUpComponent,
+  SecondStepSignUpComponent
+} from '@/components'
 
 const showPassword = ref(false)
+const step = ref(1)
+
+function continuarFormulario() {
+  if (step.value == 1) {
+    step.value += 1
+  }
+}
+
+function voltarFormulario() {
+  step.value -= 1
+}
 </script>
 <template>
   <div class="container">
@@ -11,9 +26,10 @@ const showPassword = ref(false)
     </div>
     <div class="body">
       <h1>Cadastro</h1>
-      <FirstStepSignUpComponent />
       <div class="info-container">
-        <FormInputComponent texto="Nome" placeholder="Digite seu nome" />
+        <FirstStepSignUpComponent v-if="step == 1"/>
+        <SecondStepSignUpComponent v-if="step == 2"/>
+        <!-- <FormInputComponent texto="Nome" placeholder="Digite seu nome" />
         <FormInputComponent texto="Nome fantasia" placeholder="Digite o nome fantasia da empresa" />
         <FormInputComponent texto="CNPJ" type="text" placeholder="Digite o CNPJ" />
         <FormInputComponent
@@ -31,11 +47,14 @@ const showPassword = ref(false)
             @click="showPassword = !showPassword"
             v-if="!showPassword"
           ></i>
-        </FormInputComponent>
+        </FormInputComponent> -->
         <div class="button-container">
-          <button class="login-bt">Cadastrar-se</button>
-          <router-link to="/login-user"
-            >Já possui uma conta? <span style="color: var(--verde-claro)">Entre</span></router-link
+          <button class="foget-password-bt" @click="voltarFormulario" v-if="step == 2">Voltar</button>
+          <button class="login-bt" @click="continuarFormulario" v-if="step == 1">Continuar</button>
+          <button class="login-bt" @click="continuarFormulario" v-else>Cadastrar-se</button>
+          <router-link to="/sign-up-user"
+            >Não possui conta?
+            <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
           >
         </div>
       </div>
