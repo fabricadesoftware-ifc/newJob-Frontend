@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { FormInputComponent } from '@/components'
+import { FormInputComponent, LoginButtonComponent } from '@/components'
 
 const showPassword = ref(false)
 </script>
@@ -29,7 +29,7 @@ const showPassword = ref(false)
             v-if="!showPassword"
           ></i>
         </FormInputComponent>
-        <!-- <div>
+        <!-- <div> PERGUNTAR PRO LUIZ COMO FAZER O ICONE APARECER
           <p>Senha</p>
           <div class="input">
             <input :type="showPassword ? 'text' : 'password'" placeholder="Digite sua senha" />
@@ -46,8 +46,8 @@ const showPassword = ref(false)
           </div>
         </div> -->
         <div class="buttons">
-          <button class="foget-password-bt">Esqueceu sua senha</button>
-          <button class="login-bt">Entrar</button>
+          <LoginButtonComponent class="foget-password-bt" texto="Esqueceu sua senha" />
+          <LoginButtonComponent class="login-bt" texto="Entrar" />
           <router-link to="/sign-up-user"
             >Não possui conta?
             <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
@@ -149,7 +149,6 @@ const showPassword = ref(false)
 
   & .foget-password-bt {
     background-color: transparent;
-    border: none;
     color: var(--verde-claro);
     border: var(--verde) 1px solid;
   }
@@ -164,13 +163,6 @@ const showPassword = ref(false)
     );
     border: none;
     color: var(--branco);
-  }
-
-  & .foget-password-bt,
-  .login-bt {
-    border-radius: 9px;
-    padding: 10px;
-    width: 100%;
   }
 
   & a {
