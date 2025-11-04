@@ -32,7 +32,7 @@ const showPassword = ref(false)
         <div class="buttons">
           <button class="foget-password-bt">Esqueceu sua senha</button>
           <button class="login-bt">Entrar</button>
-          <router-link to="/sign-up-user"
+          <router-link to="/sign-up-business"
             >Não possui conta?
             <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
           >

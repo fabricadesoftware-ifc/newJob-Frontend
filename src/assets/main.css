@@ -15,12 +15,12 @@ h2,
 h3,
 h4,
 h5,
-h6 {  
+h6 {
   color: var(--branco);
 }
 
 html {
-    font-size: clamp(0.8rem, 0.85vw, 1.2rem);
+  font-size: clamp(0.8rem, 0.85vw, 1.2rem);
   line-height: 1.5;
 }
 
@@ -43,4 +43,42 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.buttons-authentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  & .foget-password-bt {
+    background-color: transparent;
+    color: var(--verde-claro);
+    border: var(--verde) 1px solid;
+  }
+
+  & .login-bt {
+    background: #0e301c;
+    background: linear-gradient(
+      90deg,
+      rgba(14, 48, 28, 1) 0%,
+      rgba(7, 115, 75, 1) 50%,
+      rgba(14, 48, 28, 1) 100%
+    );
+    border: none;
+    color: var(--branco);
+  }
+
+  & .foget-password-bt,
+  .login-bt {
+    border-radius: 9px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  & a {
+    color: var(--branco-escuro);
+    font-weight: 500;
+    font-size: 1.1em;
+  }
 }

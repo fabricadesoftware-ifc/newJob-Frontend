@@ -52,7 +52,7 @@ function voltarFormulario() {
           <button class="foget-password-bt" @click="voltarFormulario" v-if="step == 2">Voltar</button>
           <button class="login-bt" @click="continuarFormulario" v-if="step == 1">Continuar</button>
           <button class="login-bt" @click="continuarFormulario" v-else>Cadastrar-se</button>
-          <router-link to="/sign-up-user"
+          <router-link to="/sign-up-business"
             >Não possui conta?
             <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
           >

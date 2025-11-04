@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { FormInputComponent, LoginButtonComponent } from '@/components'
+import { FormInputComponent } from '@/components'
 
 const showPassword = ref(false)
 </script>
@@ -45,9 +45,9 @@ const showPassword = ref(false)
             ></i>
           </div>
         </div> -->
-        <div class="buttons">
-          <LoginButtonComponent class="foget-password-bt" texto="Esqueceu sua senha" />
-          <LoginButtonComponent class="login-bt" texto="Entrar" />
+        <div class="buttons-authentication">
+          <button class="foget-password-bt" >Esqueceu sua senha</button>
+          <button class="login-bt" >Entrar</button>
           <router-link to="/sign-up-user"
             >Não possui conta?
             <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
@@ -140,37 +140,6 @@ const showPassword = ref(false)
   border: 1px solid var(--verde);
   transition: all 0.2s ease-in-out;
 } */
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-
-  & .foget-password-bt {
-    background-color: transparent;
-    color: var(--verde-claro);
-    border: var(--verde) 1px solid;
-  }
-
-  & .login-bt {
-    background: #0e301c;
-    background: linear-gradient(
-      90deg,
-      rgba(14, 48, 28, 1) 0%,
-      rgba(7, 115, 75, 1) 50%,
-      rgba(14, 48, 28, 1) 100%
-    );
-    border: none;
-    color: var(--branco);
-  }
-
-  & a {
-    color: var(--branco-escuro);
-    font-weight: 500;
-    font-size: 1.1em;
-  }
-}
 
 .bottom-text {
   display: flex;
