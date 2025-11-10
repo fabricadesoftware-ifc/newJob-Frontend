@@ -1,6 +1,11 @@
 <script setup>
+import { ref } from 'vue'
+
+const showPassword = ref(false)
+
 defineProps({
   texto: String,
+  checkInputPassword: Boolean,
   type: {
     type: String,
     default: 'text'
@@ -12,7 +17,9 @@ defineProps({
   <div>
     <p>{{ texto }}</p>
     <div class="input">
-      <input :type="type" :placeholder="placeholder" />
+      <input :type="checkInputPassword ? (showPassword ? 'text' : 'password') : 'type' " :placeholder="placeholder" />
+      <i class="mdi mdi-eye-off-outline" @click="showPassword = !showPassword" v-if="checkInputPassword && !showPassword"></i>
+      <i class="mdi mdi-eye-outline" @click="showPassword = !showPassword" v-if="checkInputPassword && showPassword"></i>
     </div>
   </div>
 </template>
@@ -24,12 +31,14 @@ p {
 
 .input {
   display: flex;
+  align-items: center;
   background-color: var(--preto-claro);
   padding: 0 15px;
   border-radius: 9px;
 
   & .mdi {
     height: 20px;
+    font-size: 20px !important;
   }
 
   & input {
