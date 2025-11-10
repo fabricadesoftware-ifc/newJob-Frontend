@@ -12,24 +12,8 @@ const showPassword = ref(false)
     <div class="body">
       <h1>Entrar</h1>
       <div class="info-container">
-        <FormInputComponent texto="Email" type="email" placeholder="Digite seu email" :checkInputPassword="false" />
+        <FormInputComponent texto="Email" type="email" placeholder="Digite seu email" />
         <FormInputComponent texto="Senha" :type="showPassword ? 'text' : 'password'" placeholder="Digite sua senha" :checkInputPassword="true"/>
-        <!-- <div> PERGUNTAR PRO LUIZ COMO FAZER O ICONE APARECER
-          <p>Senha</p>
-          <div class="input">
-            <input :type="showPassword ? 'text' : 'password'" placeholder="Digite sua senha" />
-            <i
-              class="mdi mdi-eye-off-outline"
-              @click="showPassword = !showPassword"
-              v-if="showPassword"
-            ></i>
-            <i
-              class="mdi mdi-eye-outline"
-              @click="showPassword = !showPassword"
-              v-if="!showPassword"
-            ></i>
-          </div>
-        </div> -->
         <div class="buttons-authentication">
           <button class="foget-password-bt" >Esqueceu sua senha</button>
           <button class="login-bt" >Entrar</button>

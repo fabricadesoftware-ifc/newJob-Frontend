@@ -5,7 +5,10 @@ const showPassword = ref(false)
 
 defineProps({
   texto: String,
-  checkInputPassword: Boolean,
+  checkInputPassword: {
+    checkInputPassword: Boolean,
+    default: false
+  },
   type: {
     type: String,
     default: 'text'
@@ -17,9 +20,20 @@ defineProps({
   <div>
     <p>{{ texto }}</p>
     <div class="input">
-      <input :type="checkInputPassword ? (showPassword ? 'text' : 'password') : 'type' " :placeholder="placeholder" />
-      <i class="mdi mdi-eye-off-outline" @click="showPassword = !showPassword" v-if="checkInputPassword && !showPassword"></i>
-      <i class="mdi mdi-eye-outline" @click="showPassword = !showPassword" v-if="checkInputPassword && showPassword"></i>
+      <input
+        :type="checkInputPassword ? (showPassword ? 'text' : 'password') : 'type'"
+        :placeholder="placeholder"
+      />
+      <i
+        class="mdi mdi-eye-off-outline"
+        @click="showPassword = !showPassword"
+        v-if="checkInputPassword && !showPassword"
+      ></i>
+      <i
+        class="mdi mdi-eye-outline"
+        @click="showPassword = !showPassword"
+        v-if="checkInputPassword && showPassword"
+      ></i>
     </div>
   </div>
 </template>
