@@ -1,8 +1,6 @@
 <script setup>
-import { ref } from 'vue'
 import { FormInputComponent } from '@/components'
 
-const showPassword = ref(false)
 </script>
 <template>
   <div class="container">
@@ -16,21 +14,11 @@ const showPassword = ref(false)
         <FormInputComponent texto="Email" type="email" placeholder="Digite seu email" />
         <FormInputComponent
           texto="Senha"
-          :type="showPassword ? 'text' : 'password'"
+          :checkInputPassword="true"
           placeholder="Digite sua senha"
-        >
-          <i
-            class="mdi mdi-eye-off-outline"
-            @click="showPassword = !showPassword"
-            v-if="showPassword"
-          ></i>
-          <i
-            class="mdi mdi-eye-outline"
-            @click="showPassword = !showPassword"
-            v-if="!showPassword"
-          ></i>
-        </FormInputComponent>
-        <div class="button-container">
+          :model="password"
+        />
+        <div class="buttons-authentication">
           <button class="login-bt">Cadastrar-se</button>
           <router-link to="/login-user"
             >Já possui uma conta? <span style="color: var(--verde-claro)">Entre</span></router-link
@@ -38,7 +26,7 @@ const showPassword = ref(false)
         </div>
       </div>
     </div>
-    <router-link class="bottom-text">Sou uma empresa</router-link>
+    <router-link class="bottom-text" to="/sign-up-business">Sou uma empresa</router-link>
   </div>
 </template>
 <style scoped>
@@ -83,45 +71,6 @@ const showPassword = ref(false)
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-
-  & .foget-password-bt {
-    background-color: transparent;
-    border: none;
-    color: var(--verde-claro);
-    border: var(--verde) 1px solid;
-  }
-
-  & .login-bt {
-    background: #0e301c;
-    background: linear-gradient(
-      90deg,
-      rgba(14, 48, 28, 1) 0%,
-      rgba(7, 115, 75, 1) 50%,
-      rgba(14, 48, 28, 1) 100%
-    );
-    border: none;
-    color: var(--branco);
-  }
-
-  & .foget-password-bt,
-  .login-bt {
-    border-radius: 9px;
-    padding: 10px;
-    width: 100%;
-  }
-
-  & a {
-    color: var(--branco-escuro);
-    font-weight: 500;
-    font-size: 1.1em;
-  }
 }
 
 .bottom-text {

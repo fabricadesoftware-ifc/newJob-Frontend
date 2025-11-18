@@ -1,8 +1,8 @@
 <script setup>
 import { FormInputComponent } from '@/components'
 
-defineProps ({
-    verifica: Boolean
+defineProps({
+  verifica: Boolean
 })
 </script>
 <template>
@@ -11,14 +11,8 @@ defineProps ({
   <FormInputComponent texto="CNPJ" type="text" placeholder="Digite o CNPJ" />
   <FormInputComponent
     texto="Senha"
-    :type="showPassword ? 'text' : 'password'"
+    :checkInputPassword="true"
     placeholder="Digite sua senha"
-  >
-    <i
-      class="mdi mdi-eye-off-outline"
-      @click="showPassword = !showPassword"
-      v-if="showPassword"
-    ></i>
-    <i class="mdi mdi-eye-outline" @click="showPassword = !showPassword" v-if="!verifica"></i>
-  </FormInputComponent>
+    :model="password"
+  />
 </template>

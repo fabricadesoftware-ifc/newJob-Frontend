@@ -35,8 +35,8 @@ const router = createRouter({
       }
     },
     {
-      path: '/login',
-      name: 'login',
+      path: '/authentication',
+      name: 'authentication',
       component: () => import('../layouts/BlanckLayout.vue'),
       children: [
         {

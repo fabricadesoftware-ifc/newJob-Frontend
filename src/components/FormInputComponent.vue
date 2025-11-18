@@ -22,7 +22,7 @@ defineProps({
     <div class="input">
       <input
         :type="checkInputPassword ? (showPassword ? 'text' : 'password') : 'type'"
-        :placeholder="placeholder"
+        :placeholder="placeholder" :model="type" required
       />
       <i
         class="mdi mdi-eye-off-outline"

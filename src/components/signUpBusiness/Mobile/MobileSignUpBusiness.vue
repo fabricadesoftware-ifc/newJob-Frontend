@@ -1,12 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import {
-  FormInputComponent,
-  FirstStepSignUpComponent,
-  SecondStepSignUpComponent
-} from '@/components'
-
-const showPassword = ref(false)
+import { FirstStepSignUpComponent, SecondStepSignUpComponent } from '@/components'
 const step = ref(1)
 
 function continuarFormulario() {
@@ -27,29 +21,20 @@ function voltarFormulario() {
     <div class="body">
       <h1>Cadastro</h1>
       <div class="info-container">
-        <FirstStepSignUpComponent v-if="step == 1"/>
-        <SecondStepSignUpComponent v-if="step == 2"/>
-        <!-- <FormInputComponent texto="Nome" placeholder="Digite seu nome" />
-        <FormInputComponent texto="Nome fantasia" placeholder="Digite o nome fantasia da empresa" />
-        <FormInputComponent texto="CNPJ" type="text" placeholder="Digite o CNPJ" />
-        <FormInputComponent
-          texto="Senha"
-          :type="showPassword ? 'text' : 'password'"
-          placeholder="Digite sua senha"
-        >
-          <i
-            class="mdi mdi-eye-off-outline"
-            @click="showPassword = !showPassword"
-            v-if="showPassword"
-          ></i>
-          <i
-            class="mdi mdi-eye-outline"
-            @click="showPassword = !showPassword"
-            v-if="!showPassword"
-          ></i>
-        </FormInputComponent> -->
-        <div class="button-container">
-          <button class="foget-password-bt" @click="voltarFormulario" v-if="step == 2">Voltar</button>
+        <FirstStepSignUpComponent v-if="step == 1" />
+        <SecondStepSignUpComponent v-if="step == 2" />
+        <div class="buttons-authentication">
+          <div class="progress-container" v-if="step == 1">
+            <label class="progress"></label>
+            <label class="to-finish"></label>
+          </div>
+          <div class="progress-container" v-if="step == 2">
+            <label class="to-finish"></label>
+            <label class="progress"></label>
+          </div>
+          <button class="foget-password-bt" @click="voltarFormulario" v-if="step == 2">
+            Voltar
+          </button>
           <button class="login-bt" @click="continuarFormulario" v-if="step == 1">Continuar</button>
           <button class="login-bt" @click="continuarFormulario" v-else>Cadastrar-se</button>
           <router-link to="/sign-up-business"
@@ -59,7 +44,7 @@ function voltarFormulario() {
         </div>
       </div>
     </div>
-    <router-link class="bottom-text">Procuro emprego</router-link>
+    <router-link class="bottom-text" to="/sign-up-user">Procuro emprego</router-link>
   </div>
 </template>
 <style scoped>
@@ -104,45 +89,6 @@ function voltarFormulario() {
   display: flex;
   flex-direction: column;
   gap: 25px;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-
-  & .foget-password-bt {
-    background-color: transparent;
-    border: none;
-    color: var(--verde-claro);
-    border: var(--verde) 1px solid;
-  }
-
-  & .login-bt {
-    background: #0e301c;
-    background: linear-gradient(
-      90deg,
-      rgba(14, 48, 28, 1) 0%,
-      rgba(7, 115, 75, 1) 50%,
-      rgba(14, 48, 28, 1) 100%
-    );
-    border: none;
-    color: var(--branco);
-  }
-
-  & .foget-password-bt,
-  .login-bt {
-    border-radius: 9px;
-    padding: 10px;
-    width: 100%;
-  }
-
-  & a {
-    color: var(--branco-escuro);
-    font-weight: 500;
-    font-size: 1.1em;
-  }
 }
 
 .bottom-text {

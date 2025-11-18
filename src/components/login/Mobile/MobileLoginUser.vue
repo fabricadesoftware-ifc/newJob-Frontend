@@ -1,32 +1,60 @@
 <script setup>
 import { ref } from 'vue'
+import { useAuthStore } from '@/stores/auth'
+import { useRouter } from 'vue-router'
 import { FormInputComponent } from '@/components'
 
-const showPassword = ref(false)
+const email = ref('')
+const password = ref('')
+const errorMessage = ref(null)
+
+const authStore = useAuthStore()
+const router = useRouter()
+
+const handleLogin = async () => {
+  try {
+    const credentials = { value: email.value, password: password.value }
+    await authStore.login(credentials)
+    router.push('/')
+  } catch (error) {
+    errorMessage.value = 'Credenciais inválidas. Tente novamente.'
+  }
+}
 </script>
 <template>
   <div class="container">
     <div class="header">
       <img src="https://i.ibb.co/bMMxBzS1/logo.png" alt="logo" />
     </div>
-    <div class="body">
+    <form class="form" @submit.prevent="handleLogin">
       <h1>Entrar</h1>
       <div class="info-container">
-        <FormInputComponent texto="Email" type="email" placeholder="Digite seu email" />
-        <FormInputComponent texto="Senha" :type="showPassword ? 'text' : 'password'" placeholder="Digite sua senha" :checkInputPassword="true"/>
+        <FormInputComponent
+          texto="Email"
+          type="email"
+          placeholder="Digite seu email"
+          :model="email"
+        />
+        <FormInputComponent
+          texto="Senha"
+          :checkInputPassword="true"
+          placeholder="Digite sua senha"
+          :model="password"
+        />
+
+        <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+
         <div class="buttons-authentication">
-          <button class="foget-password-bt" >Esqueceu sua senha</button>
-          <button class="login-bt" >Entrar</button>
+          <button class="foget-password-bt">Esqueceu sua senha</button>
+          <button class="login-bt" type="submit">Entrar</button>
           <router-link to="/sign-up-user"
             >Não possui conta?
             <span style="color: var(--verde-claro)">Cadaste-se</span></router-link
           >
         </div>
       </div>
-    </div>
-    <router-link to="/login-business" class="bottom-text">
-      Sou uma empresa
-    </router-link>
+    </form>
+    <router-link to="/login-business" class="bottom-text"> Sou uma empresa </router-link>
   </div>
 </template>
 <style scoped>
@@ -53,7 +81,7 @@ const showPassword = ref(false)
   }
 }
 
-.body {
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,38 +99,10 @@ const showPassword = ref(false)
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
 
-  /* & p {
-    font-size: 1.2em;
-    color: var(--branco-escuro);
-  }
-
-  & .input {
-    display: flex;
-    background-color: var(--preto-claro);
-    padding: 15px;
-    border-radius: 9px;
-
-    & .mdi {
-      height: 20px;
-    }
-
-    & input {
-      background-color: transparent;
-      width: 100%;
-      border: none;
-      color: var(--branco);
-    }
-
-    & input:focus {
-      outline: none;
-    }
-
-    & .mdi,
-    input::placeholder {
-      color: var(--branco-escuro);
-      font-weight: 500;
-    } */
+.error-message {
+  color: #ea4335;
 }
 
 .bottom-text {
