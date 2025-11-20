@@ -90,7 +90,7 @@ const showFilter = ref(false)
 }
 
 .filter-button-activated {
-  background-color: var(--verde-claro);
+  background-color: var(--verde);
 }
 
 .filter-button-favorite {

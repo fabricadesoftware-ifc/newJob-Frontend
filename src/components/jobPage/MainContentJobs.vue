@@ -18,13 +18,11 @@ async function changeJobs(page) {
 </script>
 <template>
   <div class="container">
-    <div class="teste">
-      <h1>Vagas</h1>
-      <FilterJobs @click="showFilter = !showFilter" />
-      <div class="company-mini-cards-container">
-        <div v-for="n in 10" :key="n">
-          <MiniCompanyCard />
-        </div>
+    <h1>Vagas</h1>
+    <FilterJobs @click="showFilter = !showFilter" />
+    <div class="company-mini-cards-container">
+      <div v-for="n in 10" :key="n">
+        <MiniCompanyCard />
       </div>
     </div>
     <div class="grid-container">
@@ -54,11 +52,6 @@ async function changeJobs(page) {
 </template>
 
 <style scoped>
-.teste {
-  display: flex;
-  flex-direction: column;
-}
-
 .container {
   display: flex;
   flex-direction: column;

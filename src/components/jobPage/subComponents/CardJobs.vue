@@ -71,7 +71,7 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
   }
 
   & .type-contract {
-    background-color: #cc9f7f;
+    background-color: var(--laranja);
     display: flex;
     align-items: center;
     padding: 3px 15px;
@@ -116,7 +116,7 @@ h2 {
   }
 
   & .button-bt {
-    background-color: var(--verde-claro);
+    background-color: var(--verde);
     color: var(--branco);
     border: none;
     padding: 8px 20px;

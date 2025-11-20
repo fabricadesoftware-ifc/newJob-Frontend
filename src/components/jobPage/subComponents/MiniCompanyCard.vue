@@ -17,7 +17,7 @@
 }
 
 .container:hover {
-  background-color: #282828;
+  background-color: var(--preto-claro);
   transition: 200ms linear;
   cursor: pointer;
 }
