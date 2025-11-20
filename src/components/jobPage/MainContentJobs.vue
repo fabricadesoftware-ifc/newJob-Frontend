@@ -21,15 +21,14 @@ async function changeJobs(page) {
     <h1>Vagas</h1>
     <FilterJobs @click="showFilter = !showFilter" />
     <div class="company-mini-cards-container">
-      <div v-for="n in 10" :key="n">
-        <MiniCompanyCard />
-      </div>
+      <MiniCompanyCard v-for="n in 10" :key="n"/>
     </div>
     <div class="grid-container">
       <div class="cards-for" v-for="n in 8" :key="n">
         <h2>Analista de Infraestrutura</h2>
         <div class="cards">
           <i class="mdi mdi-chevron-left"></i>
+          <CardJobs />
           <CardJobs />
           <CardJobs />
           <i class="mdi mdi-chevron-right"></i>
@@ -57,7 +56,8 @@ async function changeJobs(page) {
   flex-direction: column;
   width: 100%;
   max-width: 1215px;
-  margin: 0 auto;
+  margin: 5vh auto;
+  gap: 2vw;
 }
 
 .title-job {
@@ -75,7 +75,6 @@ h1 {
 .company-mini-cards-container {
   display: flex;
   justify-content: space-between;
-  margin: 2vw 0;
 }
 
 .img-title {
@@ -83,9 +82,7 @@ h1 {
 }
 
 .grid-container {
-  margin: 3vw 0;
   display: grid;
-  /* grid-template-rows: repeat(2, 1fr); */
   gap: 2em;
   justify-items: center;
   align-items: center;
@@ -96,7 +93,7 @@ h1 {
     gap: 2em;
 
     & h2 {
-      font-size: 1.8em;
+      font-size: 1.8em !important;
       font-weight: 600;
     }
 

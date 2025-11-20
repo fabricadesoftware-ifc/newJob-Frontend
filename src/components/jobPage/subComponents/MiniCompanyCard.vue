@@ -1,12 +1,12 @@
 <script setup></script>
 <template>
-  <div class="container">
+  <div class="box">
     <img src="https://i.ibb.co/fdxgSVGQ/Ellipse-7-1.png" alt="" />
     <p>Bioagric</p>
   </div>
 </template>
 <style scoped>
-.container {
+.box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@
   border-radius: 10px;
 }
 
-.container:hover {
+.box:hover {
   background-color: var(--preto-claro);
   transition: 200ms linear;
   cursor: pointer;

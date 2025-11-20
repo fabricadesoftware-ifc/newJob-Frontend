@@ -25,7 +25,6 @@ const showFilter = ref(false)
 .container-top {
   display: flex;
   gap: 10px;
-  margin: 3vw 0;
   align-items: center;
 }
 

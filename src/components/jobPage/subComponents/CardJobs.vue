@@ -20,7 +20,7 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
       </div>
       <div class="type-contract">Estágio</div>
     </div>
-    <h2>Analista de Infraestrutura</h2>
+    <h3>Analista de Infraestrutura</h3>
     <div class="skills-container">
       <div class="skills">Proatividade</div>
       <div class="skills">PHP</div>
@@ -40,10 +40,9 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
   background-color: #1a1b1d;
   border: 1px solid var(--cinza-escuro);
   padding: 20px;
-  padding: 1.2vw;
-  border-radius: 15px;
-  width: 20vw;
-  height: 32vh;
+  border-radius: 12px;
+  aspect-ratio: 10/8;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,9 +81,9 @@ defineProps(['image', 'company', 'title', 'local', 'id'])
   }
 }
 
-h2 {
-  font-weight: 600;
-  font-size: 22px;
+h3 {
+  font-weight: 500;
+  font-size: 26px !important;
 }
 
 .skills-container {
@@ -94,7 +93,7 @@ h2 {
   & .skills {
     border: 1px solid var(--cinza-escuro);
     color: var(--cinza-claro);
-    font-size: 13px;
+    font-size: 14px;
     padding: 8px 10px;
     border-radius: 12px;
   }
@@ -107,7 +106,7 @@ h2 {
 
   & p {
     color: var(--cinza-claro);
-    font-size: 1.1vw;
+    font-size: 16px;
   }
 
   & .salary {
@@ -119,8 +118,8 @@ h2 {
     background-color: var(--verde);
     color: var(--branco);
     border: none;
-    padding: 8px 20px;
-    border-radius: 13px;
+    border-radius: 10px;
+    padding: 6px 18px;
     font-size: 14px;
     font-weight: 500;
   }
@@ -157,12 +156,4 @@ h2 {
 .pt-4 {
   padding-top: 2.5em;
 } */
-
-h3 {
-  font-size: 1.3em;
-}
-
-p {
-  font-size: 1.2em;
-}
 </style>
