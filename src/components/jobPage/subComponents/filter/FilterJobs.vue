@@ -1,9 +1,8 @@
 <script setup>
 import { ref } from 'vue'
-import { FilterJobsDropdownComponent } from '@/components';
+import { FilterJobsDropdownComponent } from '@/components'
 
 const showFilter = ref(false)
-
 </script>
 <template>
   <div class="container-top">
@@ -31,13 +30,12 @@ const showFilter = ref(false)
 }
 
 .search-bar {
-  border: 1px solid var(--cinza-escuro);
-  color: var(--cinza-escuro);
+  color: var(--branco-escuro);
+  background-color: var(--preto-claro);
   display: flex;
-  padding: .3vw .6vw;
+  padding: 0 1rem;
   border-radius: 10px;
-  gap: 10px;
-  width: 23vw;
+  width: 20vw;
 
   & span {
     display: flex;
@@ -53,11 +51,6 @@ const showFilter = ref(false)
   }
 }
 
-.search-bar:focus-within {
-  border: 1px solid var(--cinza-claro);
-  color: var(--cinza-claro);
-}
-
 .filter-button-activated,
 .filter-button-default,
 .filter-button-favorite {
@@ -66,12 +59,11 @@ const showFilter = ref(false)
   align-items: center;
   justify-content: center;
   color: var(--branco);
-  background-color: transparent;
-  padding: .4vw;
-  height: 2vw;
+  padding: 0 .5em;
+  height: 2em;
   border-radius: 10px;
   cursor: pointer;
-  font-size: .9vw;
+  font-size: 0.9vw;
 
   & span {
     display: flex;
@@ -80,13 +72,8 @@ const showFilter = ref(false)
   }
 }
 
-.filter-button-default:hover, .filter-button-favorite:hover {
-  background-color: #282828;
-}
-
-.filter-button-default {
-  color: var(--branco);
-  border: 1px solid var(--cinza-escuro);
+.filter-button-default, .filter-button-favorite {
+  background-color: var(--preto-claro);
 }
 
 .filter-button-activated {
@@ -94,12 +81,11 @@ const showFilter = ref(false)
 }
 
 .filter-button-favorite {
-  padding: 0 1.3vw;
-  border: 1px solid var(--cinza-escuro);
+  padding: 0 1.1em;
 }
 
 p {
-  font-size: 1.2vw;
+  font-size: 1.2em;
   font-weight: 500;
 }
 </style>
