@@ -3,12 +3,8 @@ import { IntroductionJobs, MainContentJobs } from "@/components";
 </script>
 
 <template>
-  <div>
-    <IntroductionJobs/>
+    <!-- <IntroductionJobs/> -->
     <MainContentJobs/>
-  </div>
 </template>
-
 <style scoped>
-
 </style>

@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted } from "vue";
-import { useJobStore } from "@/stores";
-import { CardJobs, MiniCompanyCard,FilterJobs } from '@/components'
+import { onMounted } from 'vue'
+import { useJobStore } from '@/stores'
+import { CardJobs, MiniCompanyCard, FilterJobs } from '@/components'
 
 const jobStore = useJobStore()
 
@@ -18,51 +18,53 @@ async function changeJobs(page) {
 </script>
 <template>
   <div class="container">
-    <h1>VAGAS</h1>
-    <FilterJobs @click="showFilter = !showFilter" />
-    <div class="mini-company-cards-container">
-      <div v-for="n in 13" :key="n">
-        <MiniCompanyCard />
+    <div class="teste">
+      <h1>Vagas</h1>
+      <FilterJobs @click="showFilter = !showFilter" />
+      <div class="company-mini-cards-container">
+        <div v-for="n in 10" :key="n">
+          <MiniCompanyCard />
+        </div>
       </div>
     </div>
     <div class="grid-container">
-      <!-- <div class="container-card" v-for="job in jobStore.jobs.results" :key="job">
-        <CardJobs
-          :image="job.image_job"
-          :company="job.company.name"
-          :title="job.title"
-          :local="job.local"
-          :id="job.id"
-        />
-      </div> -->
       <div class="cards-for" v-for="n in 8" :key="n">
         <h2>Analista de Infraestrutura</h2>
         <div class="cards">
-          <ChevronDown size="60px" style="transform: rotate(90deg)" />
+          <i class="mdi mdi-chevron-left"></i>
           <CardJobs />
           <CardJobs />
-          <CardJobs />
-          <CardJobs />
-          <ChevronDown size="60px" style="transform: rotate(270deg)" />
+          <i class="mdi mdi-chevron-right"></i>
         </div>
       </div>
     </div>
     <div class="buttons">
-      <i class="mdi mdi-arrow-left-thin-circle-outline"
+      <i
+        class="mdi mdi-arrow-left-thin-circle-outline"
         @click="changeJobs(jobStore.jobs.previous)"
         :class="jobStore.jobs.previous ? `arrow` : `disable arrow`"
       ></i>
-      <i class="mdi mdi-arrow-right-thin-circle-outline"
+      <i
+        class="mdi mdi-arrow-right-thin-circle-outline"
         @click="changeJobs(jobStore.jobs.next)"
         :class="jobStore.jobs.next ? `arrow` : `disable arrow`"
       ></i>
     </div>
-  </div>  
+  </div>
 </template>
 
 <style scoped>
+.teste {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
-  padding: 8em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1215px;
+  margin: 0 auto;
 }
 
 .title-job {
@@ -77,7 +79,7 @@ h1 {
   font-weight: 600;
 }
 
-.mini-company-cards-container {
+.company-mini-cards-container {
   display: flex;
   justify-content: space-between;
   margin: 2vw 0;

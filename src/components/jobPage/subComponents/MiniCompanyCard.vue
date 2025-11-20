@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
-  padding: 10px;
+  padding: 10px 6px;
   border-radius: 10px;
 }
 

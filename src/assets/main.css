@@ -9,18 +9,22 @@
   font-family: 'Poppins', sans-serif;
 }
 
+section {
+  width: 100%;
+}
+
 p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {  
+h6 {
   color: var(--branco);
 }
 
 html {
-    font-size: clamp(0.8rem, 0.85vw, 1.2rem);
+  font-size: clamp(0.8rem, 0.85vw, 1.2rem);
   line-height: 1.5;
 }
 
