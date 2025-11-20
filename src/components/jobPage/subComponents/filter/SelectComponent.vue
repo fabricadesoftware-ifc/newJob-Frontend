@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import { ChevronDown, ChevronUp } from '../../../icons'
 
 const showModal = ref(false)
 const props = defineProps(['text', 'array'])
@@ -16,8 +15,8 @@ const selectedOption = ref(0)
     <div class="select" @click="showModal = !showModal">
       <div class="selected-value">{{!selectedOption? 'Todos': array[selectedOption]}}</div>
       <div class="chevrons">
-        <ChevronDown size="20" v-if="!showModal" />
-        <ChevronUp size="20" v-if="showModal" />
+        <i class="mdi mdi-chevron-down" v-if="!showModal"></i>
+        <i class="mdi mdi-chevron-up" v-if="showModal"></i>
       </div>
     </div>
     <div class="options-container" v-if="showModal">

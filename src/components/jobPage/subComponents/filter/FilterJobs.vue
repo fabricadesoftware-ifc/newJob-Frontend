@@ -1,23 +1,21 @@
 <script setup>
 import { ref } from 'vue'
-import { Magnify, FilterVariant, FilterVariantRemove } from '@/components/icons'
 import { FilterJobsDropdownComponent } from '@/components';
 
 const showFilter = ref(false)
-
 
 </script>
 <template>
   <div class="container-top">
     <div class="search-bar">
-      <Magnify />
+      <i class="mdi mdi-magnify"></i>
       <input type="text" />
     </div>
     <button class="filter-button-activated" @click="showFilter = !showFilter">
-      <FilterVariant />
+      <i class="mdi mdi-filter-variant"></i>
     </button>
     <button class="filter-button-default">
-      <FilterVariantRemove />
+      <i class="mdi mdi-filter-variant-remove"></i>
     </button>
     <button class="filter-button-favorite">Favoritos</button>
     <p>- 527 vagas encontradas</p>

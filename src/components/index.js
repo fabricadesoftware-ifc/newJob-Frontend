@@ -13,7 +13,12 @@ import MapGoogle from './google/MapGoogle.vue'
 import PageIntroduction from './homePage/PageIntroduction.vue'
 import SignUpForm from './signUp/SignUpForm.vue'
 import TextSection from './homePage/mainContentComponents/TextSection.vue'
-import CardJobs from './jobPage/SecondComponents/CardJobs.vue'
+import CardJobs from './jobPage/subComponents/CardJobs.vue'
+import FilterJobs from './jobPage/subComponents/filter/FilterJobs.vue'
+import FilterJobsDropdownComponent from './jobPage/subComponents/filter/FilterJobsDropdownComponent.vue'
+import SelectBoxComponent from './jobPage/subComponents/filter/SelectBoxComponent.vue'
+import SelectComponent from './jobPage/subComponents/filter/SelectComponent.vue'
+import MiniCompanyCard from './jobPage/subComponents/MiniCompanyCard.vue'
 
 import DefaultProfile from './profile/DefaultProfile.vue'
 import DesktopProfile from './profile/Desktop/DesktopProfile.vue'
@@ -60,6 +65,11 @@ export {
   LoginForm,
   MainContentJobs,
   SignUpForm,
+  FilterJobs,
+  FilterJobsDropdownComponent,
+  SelectBoxComponent,
+  SelectComponent,
+  MiniCompanyCard,
   DefaultProfile,
   DesktopProfile,
   MobileProfile,

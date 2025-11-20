@@ -1,5 +1,4 @@
 <script setup>
-import { ChevronDown, ChevronUp, Close } from '../../../icons'
 const lista = ['PJ', 'Estágio', 'CLT']
 </script>
 <template>
@@ -12,19 +11,19 @@ const lista = ['PJ', 'Estágio', 'CLT']
       <div class="selected-value">
         <div class="box">
           <p>PHP</p>
-          <Close size="14px" />
+          <i class="mdi mdi-close"></i>
         </div>
         <div class="box">
           <p>Arquitetura de computadores</p>
-          <Close size="14px" />
+          <i class="mdi mdi-close"></i>
         </div>
         <div class="box">
           <p>MySQL</p>
-          <Close size="14px" />
+          <i class="mdi mdi-close"></i>
         </div>
         <div class="box">
           <p>Proatividade</p>
-          <Close size="14px" />
+          <i class="mdi mdi-close"></i>
         </div>
       </div>
     </div>

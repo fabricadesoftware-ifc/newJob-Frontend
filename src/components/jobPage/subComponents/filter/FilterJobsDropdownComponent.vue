@@ -1,5 +1,4 @@
 <script setup>
-import { FilterVariant, Close } from '../../../icons'
 import { SelectComponent, SelectBoxComponent } from '@/components'
 
 const emit = defineEmits(['close'])
@@ -14,10 +13,10 @@ const contractOptions = ['Todos', 'PJ', 'Estágio', 'CLT']
   <div class="filter-jobs-container">
     <div class="tilte-container">
       <div class="title">
-        <FilterVariant size="20px" />
+        <i class="mdi mdi-filter-variant"></i>
         <h2>Filtro</h2>
       </div>
-      <Close @click="$emit('close')" size="22px" />
+      <i class="mdi mdi-close" @click="$emit('close')"></i>
     </div>
     <div class="hr"></div>
     <SelectComponent text="Tipo de contrato" :array="contractOptions" />
